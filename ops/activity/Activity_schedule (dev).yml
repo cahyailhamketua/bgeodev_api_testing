@@ -1,0 +1,141 @@
+info:
+  name: Activity_schedule (dev)
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/activities/schedule
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 109|c5htJTsHxQbVVaEPfx1JNp7Llq0iNJUo3gggzHq0e63b52c0
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Activity_schedule (dev)
+    request:
+      url: https://epatrol.bgeodev.cloud/api/activities/schedule
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Tue, 31 Mar 2026 16:16:55 GMT
+        - name: Access-Control-Allow-Origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "post_id": 5,
+                      "post_name": "absen BGEO",
+                      "project_id": 5,
+                      "type": "mobile",
+                      "assignments": []
+                  },
+                  {
+                      "post_id": 2,
+                      "post_name": "patroli dalam ",
+                      "project_id": 1,
+                      "type": "mobile",
+                      "assignments": [
+                          {
+                              "assignment_id": 3,
+                              "assignment_name": "Assignment Pagi",
+                              "items": [
+                                  {
+                                      "activity_assignment_time_id": 4,
+                                      "activity_id": 3,
+                                      "activity_name": "Patroli Area",
+                                      "location": "post",
+                                      "start_time": "09:00:00",
+                                      "end_time": "11:00:00"
+                                  }
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "post_id": 4,
+                      "post_name": "Patroli luar",
+                      "project_id": 3,
+                      "type": "mobile",
+                      "assignments": []
+                  },
+                  {
+                      "post_id": 1,
+                      "post_name": "Post Gerbang Utama",
+                      "project_id": 1,
+                      "type": "static",
+                      "assignments": [
+                          {
+                              "assignment_id": 1,
+                              "assignment_name": "Assignment Pagi",
+                              "items": [
+                                  {
+                                      "activity_assignment_time_id": 1,
+                                      "activity_id": 1,
+                                      "activity_name": "Istirahat",
+                                      "location": "masjid",
+                                      "start_time": "12:00:00",
+                                      "end_time": "13:00:00"
+                                  },
+                                  {
+                                      "activity_assignment_time_id": 3,
+                                      "activity_id": 2,
+                                      "activity_name": "Serah Terima",
+                                      "location": "posko",
+                                      "start_time": "13:30:00",
+                                      "end_time": "14:00:00"
+                                  }
+                              ]
+                          },
+                          {
+                              "assignment_id": 2,
+                              "assignment_name": "Assignment Malam",
+                              "items": [
+                                  {
+                                      "activity_assignment_time_id": 2,
+                                      "activity_id": 1,
+                                      "activity_name": "Istirahat",
+                                      "location": "masjid",
+                                      "start_time": "00:00:00",
+                                      "end_time": "01:00:00"
+                                  }
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "post_id": 3,
+                      "post_name": "Post Lobby",
+                      "project_id": 2,
+                      "type": "static",
+                      "assignments": []
+                  }
+              ]
+          }

@@ -1,0 +1,30 @@
+info:
+  name: creaT
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/schedules
+  body:
+    type: json
+    data: "{\r
+
+      \  \"user_id\": 15,\r
+
+      \  \"assignment_id\": 6,\r
+
+      \r
+
+      \  \"date\": \"2026-02-13\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 141|AXmdpe6Xpn9Luk8gReEq7Msv404UltAxXrke0749b8b66e70
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

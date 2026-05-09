@@ -1,0 +1,20 @@
+info:
+  name: Activity_schedule_by_project (dev)
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/1/activities/schedule
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 4|B7PcF09Cgr9y3iArp1PeN6gUoOg5BQJuKDRX8QGj730d26f7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

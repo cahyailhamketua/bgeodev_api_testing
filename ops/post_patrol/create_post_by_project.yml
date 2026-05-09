@@ -1,0 +1,47 @@
+info:
+  name: create_post_by_project
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/posts
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"POS LIFT PARKING TOWER b\",\r
+
+      \  \"type\": \"static\",\r
+
+      \  \"patrol_points\": [\r
+
+      \    {\r
+
+      \      \"name\": \"POS LIFT PARKING TOWER A\",\r
+
+      \      \"sequence_order\": 1,\r
+
+      \      \"latitude\": -6.54935,\r
+
+      \      \"longitude\": 106.78902,\r
+
+      \      \"radius\": 5\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: 1388|4muHMx5Fnd4nowP4uFlpI7yZ2g8iQRWxa7afMYzXd8919059
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,26 @@
+info:
+  name: regenerate_qr_by_bost
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/posts/4/patrol-points/regenerate-qr
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: regenerate_code
+        type: text
+        value: "1"
+  auth:
+    type: bearer
+    token: 563|vWZs9DELgxYxEq3pxxzJD6GMU6VQOhEu9dh2CTnoada48555
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

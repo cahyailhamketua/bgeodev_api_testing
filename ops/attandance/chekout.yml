@@ -1,0 +1,40 @@
+info:
+  name: chekout
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/attendances/check-out
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: contentttttttttttttttttttttttttttttttttttt
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+      - name: longitude
+        type: text
+        value: "106.78906"
+      - name: current_time
+        type: text
+        value: 2026-04-29 19:10:30
+      - name: attendance_id
+        type: text
+        value: "403"
+  auth:
+    type: bearer
+    token: 1648|saEUklZ9kzAkTn4Mahllms9mi4de3MzVLeZIUhLX0f980955
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

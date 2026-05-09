@@ -1,0 +1,44 @@
+info:
+  name: create_user
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/users
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: organization_id
+        type: text
+        value: "1"
+      - name: project_id
+        type: text
+        value: "1"
+      - name: full_name
+        type: text
+        value: danruofc1.2
+      - name: username
+        type: text
+        value: danruofc1.2
+      - name: email
+        type: text
+        value: danruofc1.2@gmail.com
+      - name: phone
+        type: text
+        value: "08123456542"
+      - name: role
+        type: text
+        value: komandan_regu
+  auth:
+    type: bearer
+    token: 1656|ZI8r21TIr2DSs1f4lTbuIjudbEubh2bTk8h2W7Dl812e3d34
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,20 @@
+info:
+  name: delete_assignment
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: http://127.0.0.1:8000/api/shifts/7
+  headers:
+    - name: Accept
+      value: Application/json
+  auth:
+    type: bearer
+    token: 1|eYUZu2eRFcMCFw50mZPAeYU0ao1lC8pYMjJYR3Ln3c000a5f
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

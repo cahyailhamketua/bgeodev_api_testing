@@ -1,0 +1,841 @@
+info:
+  name: Acivity_by_post_assignment Copy
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: https://epatrol.bgeodev.cloud/api/posts/activities/put
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"project_id\": 3,\r
+
+      \  \"post_id\": 4,\r
+
+      \  \"activities\": [\r
+
+      \    {\r
+
+      \      \"id\": 101,\r
+
+      \      \"name\": \"Attendance\",\r
+
+      \      \"location\": \"Main Gate\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"id\": 153,\r
+
+      \          \"assignment_id\": 10,\r
+
+      \          \"start_time\": \"07:00\",\r
+
+      \          \"end_time\": \"08:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"id\": 102,\r
+
+      \      \"name\": \"Patrol Area A\",\r
+
+      \      \"location\": \"Basement\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"id\": 154,\r
+
+      \          \"assignment_id\": 10,\r
+
+      \          \"start_time\": \"08:00\",\r
+
+      \          \"end_time\": \"09:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"id\": 95,\r
+
+      \      \"name\": \"Attendance\",\r
+
+      \      \"location\": \"Main Gate\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"id\": 147,\r
+
+      \          \"assignment_id\": 10,\r
+
+      \          \"start_time\": \"07:00\",\r
+
+      \          \"end_time\": \"08:00\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \          \"id\": 148,\r
+
+      \          \"assignment_id\": 6,\r
+
+      \          \"start_time\": \"19:00\",\r
+
+      \          \"end_time\": \"20:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"id\": 96,\r
+
+      \      \"name\": \"Patrol Area A\",\r
+
+      \      \"location\": \"Basement\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"id\": 149,\r
+
+      \          \"assignment_id\": 10,\r
+
+      \          \"start_time\": \"08:00\",\r
+
+      \          \"end_time\": \"09:00\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \          \"id\": 150,\r
+
+      \          \"assignment_id\": 6,\r
+
+      \          \"start_time\": \"19:00\",\r
+
+      \          \"end_time\": \"20:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"id\": 93,\r
+
+      \      \"name\": \"Attendance\",\r
+
+      \      \"location\": \"Main Gate1\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"id\": 143,\r
+
+      \          \"assignment_id\": 10,\r
+
+      \          \"start_time\": \"07:00\",\r
+
+      \          \"end_time\": \"08:00\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \          \"id\": 144,\r
+
+      \          \"assignment_id\": 6,\r
+
+      \          \"start_time\": \"19:00\",\r
+
+      \          \"end_time\": \"20:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"id\": 94,\r
+
+      \      \"name\": \"Patrol Area A\",\r
+
+      \      \"location\": \"Basement\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"id\": 145,\r
+
+      \          \"assignment_id\": 10,\r
+
+      \          \"start_time\": \"08:00\",\r
+
+      \          \"end_time\": \"09:00\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \          \"id\": 146,\r
+
+      \          \"assignment_id\": 6,\r
+
+      \          \"start_time\": \"19:00\",\r
+
+      \          \"end_time\": \"20:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: 133|xlBFu00o47HqoHyU68yNju9m3xNtnJQdubYMcmjra20962dc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Acivity_by_post_assignment Copy
+    request:
+      url: https://epatrol.bgeodev.cloud/api/posts/activities/put
+      method: PUT
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \  \"project_id\": 3,\r
+
+          \  \"post_id\": 4,\r
+
+          \  \"activities\": [\r
+
+          \    {\r
+
+          \      \"id\": 101,\r
+
+          \      \"name\": \"Attendance\",\r
+
+          \      \"location\": \"Main Gate\",\r
+
+          \      \"active\": true,\r
+
+          \      \"assignment_times\": [\r
+
+          \        {\r
+
+          \          \"id\": 153,\r
+
+          \          \"assignment_id\": 10,\r
+
+          \          \"start_time\": \"07:00\",\r
+
+          \          \"end_time\": \"08:00\"\r
+
+          \        }\r
+
+          \      ]\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"id\": 102,\r
+
+          \      \"name\": \"Patrol Area A\",\r
+
+          \      \"location\": \"Basement\",\r
+
+          \      \"active\": true,\r
+
+          \      \"assignment_times\": [\r
+
+          \        {\r
+
+          \          \"id\": 154,\r
+
+          \          \"assignment_id\": 10,\r
+
+          \          \"start_time\": \"08:00\",\r
+
+          \          \"end_time\": \"09:00\"\r
+
+          \        }\r
+
+          \      ]\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"id\": 95,\r
+
+          \      \"name\": \"Attendance\",\r
+
+          \      \"location\": \"Main Gate\",\r
+
+          \      \"active\": true,\r
+
+          \      \"assignment_times\": [\r
+
+          \        {\r
+
+          \          \"id\": 147,\r
+
+          \          \"assignment_id\": 10,\r
+
+          \          \"start_time\": \"07:00\",\r
+
+          \          \"end_time\": \"08:00\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \          \"id\": 148,\r
+
+          \          \"assignment_id\": 6,\r
+
+          \          \"start_time\": \"19:00\",\r
+
+          \          \"end_time\": \"20:00\"\r
+
+          \        }\r
+
+          \      ]\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"id\": 96,\r
+
+          \      \"name\": \"Patrol Area A\",\r
+
+          \      \"location\": \"Basement\",\r
+
+          \      \"active\": true,\r
+
+          \      \"assignment_times\": [\r
+
+          \        {\r
+
+          \          \"id\": 149,\r
+
+          \          \"assignment_id\": 10,\r
+
+          \          \"start_time\": \"08:00\",\r
+
+          \          \"end_time\": \"09:00\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \          \"id\": 150,\r
+
+          \          \"assignment_id\": 6,\r
+
+          \          \"start_time\": \"19:00\",\r
+
+          \          \"end_time\": \"20:00\"\r
+
+          \        }\r
+
+          \      ]\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"id\": 93,\r
+
+          \      \"name\": \"Attendance\",\r
+
+          \      \"location\": \"Main Gate1\",\r
+
+          \      \"active\": true,\r
+
+          \      \"assignment_times\": [\r
+
+          \        {\r
+
+          \          \"id\": 143,\r
+
+          \          \"assignment_id\": 10,\r
+
+          \          \"start_time\": \"07:00\",\r
+
+          \          \"end_time\": \"08:00\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \          \"id\": 144,\r
+
+          \          \"assignment_id\": 6,\r
+
+          \          \"start_time\": \"19:00\",\r
+
+          \          \"end_time\": \"20:00\"\r
+
+          \        }\r
+
+          \      ]\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"id\": 94,\r
+
+          \      \"name\": \"Patrol Area A\",\r
+
+          \      \"location\": \"Basement\",\r
+
+          \      \"active\": true,\r
+
+          \      \"assignment_times\": [\r
+
+          \        {\r
+
+          \          \"id\": 145,\r
+
+          \          \"assignment_id\": 10,\r
+
+          \          \"start_time\": \"08:00\",\r
+
+          \          \"end_time\": \"09:00\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \          \"id\": 146,\r
+
+          \          \"assignment_id\": 6,\r
+
+          \          \"start_time\": \"19:00\",\r
+
+          \          \"end_time\": \"20:00\"\r
+
+          \        }\r
+
+          \      ]\r
+
+          \    }\r
+
+          \  ]\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 31 Mar 2026 19:06:08 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Activities updated successfully",
+              "data": [
+                  {
+                      "id": 101,
+                      "project_id": 3,
+                      "post_id": 4,
+                      "name": "Attendance",
+                      "location": "Main Gate",
+                      "active": true,
+                      "created_at": "2026-03-31T18:50:19.000000Z",
+                      "updated_at": "2026-03-31T19:06:08.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 153,
+                              "activity_id": 101,
+                              "assignment_id": 10,
+                              "start_time": "07:00:00",
+                              "end_time": "08:00:00",
+                              "created_at": "2026-03-31T18:50:19.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 10,
+                                  "project_id": 3,
+                                  "name": "pagi",
+                                  "code": "p",
+                                  "is_off": 0,
+                                  "start_time": "07:00:00",
+                                  "end_time": "19:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:19:46.000000Z",
+                                  "updated_at": "2026-03-27T14:19:46.000000Z"
+                              }
+                          }
+                      ],
+                      "post": {
+                          "id": 4,
+                          "project_id": 3,
+                          "name": "Patroli luar",
+                          "type": "mobile",
+                          "created_at": null,
+                          "updated_at": null
+                      }
+                  },
+                  {
+                      "id": 102,
+                      "project_id": 3,
+                      "post_id": 4,
+                      "name": "Patrol Area A",
+                      "location": "Basement",
+                      "active": true,
+                      "created_at": "2026-03-31T18:50:19.000000Z",
+                      "updated_at": "2026-03-31T19:06:08.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 154,
+                              "activity_id": 102,
+                              "assignment_id": 10,
+                              "start_time": "08:00:00",
+                              "end_time": "09:00:00",
+                              "created_at": "2026-03-31T18:50:19.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 10,
+                                  "project_id": 3,
+                                  "name": "pagi",
+                                  "code": "p",
+                                  "is_off": 0,
+                                  "start_time": "07:00:00",
+                                  "end_time": "19:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:19:46.000000Z",
+                                  "updated_at": "2026-03-27T14:19:46.000000Z"
+                              }
+                          }
+                      ],
+                      "post": {
+                          "id": 4,
+                          "project_id": 3,
+                          "name": "Patroli luar",
+                          "type": "mobile",
+                          "created_at": null,
+                          "updated_at": null
+                      }
+                  },
+                  {
+                      "id": 95,
+                      "project_id": 3,
+                      "post_id": 4,
+                      "name": "Attendance",
+                      "location": "Main Gate",
+                      "active": true,
+                      "created_at": "2026-03-31T18:40:53.000000Z",
+                      "updated_at": "2026-03-31T19:06:08.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 148,
+                              "activity_id": 95,
+                              "assignment_id": 6,
+                              "start_time": "19:00:00",
+                              "end_time": "20:00:00",
+                              "created_at": "2026-03-31T18:40:53.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 6,
+                                  "project_id": 3,
+                                  "name": "malam 3",
+                                  "code": "m",
+                                  "is_off": 0,
+                                  "start_time": "19:00:00",
+                                  "end_time": "07:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:16:33.000000Z",
+                                  "updated_at": "2026-03-27T14:16:33.000000Z"
+                              }
+                          },
+                          {
+                              "id": 147,
+                              "activity_id": 95,
+                              "assignment_id": 10,
+                              "start_time": "07:00:00",
+                              "end_time": "08:00:00",
+                              "created_at": "2026-03-31T18:40:53.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 10,
+                                  "project_id": 3,
+                                  "name": "pagi",
+                                  "code": "p",
+                                  "is_off": 0,
+                                  "start_time": "07:00:00",
+                                  "end_time": "19:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:19:46.000000Z",
+                                  "updated_at": "2026-03-27T14:19:46.000000Z"
+                              }
+                          }
+                      ],
+                      "post": {
+                          "id": 4,
+                          "project_id": 3,
+                          "name": "Patroli luar",
+                          "type": "mobile",
+                          "created_at": null,
+                          "updated_at": null
+                      }
+                  },
+                  {
+                      "id": 96,
+                      "project_id": 3,
+                      "post_id": 4,
+                      "name": "Patrol Area A",
+                      "location": "Basement",
+                      "active": true,
+                      "created_at": "2026-03-31T18:40:53.000000Z",
+                      "updated_at": "2026-03-31T19:06:08.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 150,
+                              "activity_id": 96,
+                              "assignment_id": 6,
+                              "start_time": "19:00:00",
+                              "end_time": "20:00:00",
+                              "created_at": "2026-03-31T18:40:53.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 6,
+                                  "project_id": 3,
+                                  "name": "malam 3",
+                                  "code": "m",
+                                  "is_off": 0,
+                                  "start_time": "19:00:00",
+                                  "end_time": "07:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:16:33.000000Z",
+                                  "updated_at": "2026-03-27T14:16:33.000000Z"
+                              }
+                          },
+                          {
+                              "id": 149,
+                              "activity_id": 96,
+                              "assignment_id": 10,
+                              "start_time": "08:00:00",
+                              "end_time": "09:00:00",
+                              "created_at": "2026-03-31T18:40:53.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 10,
+                                  "project_id": 3,
+                                  "name": "pagi",
+                                  "code": "p",
+                                  "is_off": 0,
+                                  "start_time": "07:00:00",
+                                  "end_time": "19:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:19:46.000000Z",
+                                  "updated_at": "2026-03-27T14:19:46.000000Z"
+                              }
+                          }
+                      ],
+                      "post": {
+                          "id": 4,
+                          "project_id": 3,
+                          "name": "Patroli luar",
+                          "type": "mobile",
+                          "created_at": null,
+                          "updated_at": null
+                      }
+                  },
+                  {
+                      "id": 93,
+                      "project_id": 3,
+                      "post_id": 4,
+                      "name": "Attendance",
+                      "location": "Main Gate1",
+                      "active": true,
+                      "created_at": "2026-03-31T18:18:46.000000Z",
+                      "updated_at": "2026-03-31T19:06:08.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 144,
+                              "activity_id": 93,
+                              "assignment_id": 6,
+                              "start_time": "19:00:00",
+                              "end_time": "20:00:00",
+                              "created_at": "2026-03-31T18:27:23.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 6,
+                                  "project_id": 3,
+                                  "name": "malam 3",
+                                  "code": "m",
+                                  "is_off": 0,
+                                  "start_time": "19:00:00",
+                                  "end_time": "07:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:16:33.000000Z",
+                                  "updated_at": "2026-03-27T14:16:33.000000Z"
+                              }
+                          },
+                          {
+                              "id": 143,
+                              "activity_id": 93,
+                              "assignment_id": 10,
+                              "start_time": "07:00:00",
+                              "end_time": "08:00:00",
+                              "created_at": "2026-03-31T18:27:23.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 10,
+                                  "project_id": 3,
+                                  "name": "pagi",
+                                  "code": "p",
+                                  "is_off": 0,
+                                  "start_time": "07:00:00",
+                                  "end_time": "19:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:19:46.000000Z",
+                                  "updated_at": "2026-03-27T14:19:46.000000Z"
+                              }
+                          }
+                      ],
+                      "post": {
+                          "id": 4,
+                          "project_id": 3,
+                          "name": "Patroli luar",
+                          "type": "mobile",
+                          "created_at": null,
+                          "updated_at": null
+                      }
+                  },
+                  {
+                      "id": 94,
+                      "project_id": 3,
+                      "post_id": 4,
+                      "name": "Patrol Area A",
+                      "location": "Basement",
+                      "active": true,
+                      "created_at": "2026-03-31T18:18:46.000000Z",
+                      "updated_at": "2026-03-31T19:06:08.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 146,
+                              "activity_id": 94,
+                              "assignment_id": 6,
+                              "start_time": "19:00:00",
+                              "end_time": "20:00:00",
+                              "created_at": "2026-03-31T18:27:23.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 6,
+                                  "project_id": 3,
+                                  "name": "malam 3",
+                                  "code": "m",
+                                  "is_off": 0,
+                                  "start_time": "19:00:00",
+                                  "end_time": "07:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:16:33.000000Z",
+                                  "updated_at": "2026-03-27T14:16:33.000000Z"
+                              }
+                          },
+                          {
+                              "id": 145,
+                              "activity_id": 94,
+                              "assignment_id": 10,
+                              "start_time": "08:00:00",
+                              "end_time": "09:00:00",
+                              "created_at": "2026-03-31T18:27:23.000000Z",
+                              "updated_at": "2026-03-31T19:06:08.000000Z",
+                              "assignment": {
+                                  "id": 10,
+                                  "project_id": 3,
+                                  "name": "pagi",
+                                  "code": "p",
+                                  "is_off": 0,
+                                  "start_time": "07:00:00",
+                                  "end_time": "19:00:00",
+                                  "grace_period": 15,
+                                  "created_at": "2026-03-27T14:19:46.000000Z",
+                                  "updated_at": "2026-03-27T14:19:46.000000Z"
+                              }
+                          }
+                      ],
+                      "post": {
+                          "id": 4,
+                          "project_id": 3,
+                          "name": "Patroli luar",
+                          "type": "mobile",
+                          "created_at": null,
+                          "updated_at": null
+                      }
+                  }
+              ]
+          }

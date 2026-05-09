@@ -1,0 +1,29 @@
+info:
+  name: generate_schedule_template
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/projects/1/teams/5/schedule-template
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"pattern\": [\"p\", \"p\", \"m\", \"m\", \"o\", \"o\"],\r
+
+      \  \"start_date\": \"2026-03-01\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 2|f2VkHfpmrknNN2U4VyPCsaWdblQh2LbJTctA2RE0a34b2902
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

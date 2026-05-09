@@ -1,0 +1,42 @@
+info:
+  name: check-in danru
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/attendances/check-in
+  params:
+    - name: contentttttttttttttttttttttttttttttttttttt
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+      - name: longitude
+        type: text
+        value: "106.78906"
+      - name: current_time
+        type: text
+        value: 2026-05-01 12:10:30
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f1095bd-72b0-4230-ac89-751815a85ba4
+      - name: overtime_work_code
+        type: text
+        value: m
+        disabled: true
+  auth:
+    type: bearer
+    token: 1716|e071m8AjHbkTBUXy8BH9XQ4vUxt80LLiINMhIICx0396668f
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,20 @@
+info:
+  name: post_by_project
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/3/posts
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 1938|mbu84z5kaXt9WNfOO3nuMs9H5fy4L2l6Pzqf91Vl7bc24408
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

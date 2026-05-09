@@ -1,0 +1,29 @@
+info:
+  name: activate
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: https://epatrol.bgeodev.cloud/api/users/6/activate
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: active
+        type: text
+        value: "1"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 985|ySfKR368LAyJDSMYPNUApdpmsIPRJyBqWqlYoqTl41a05fe8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

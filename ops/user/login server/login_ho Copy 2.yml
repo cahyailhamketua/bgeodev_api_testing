@@ -1,0 +1,24 @@
+info:
+  name: login_ho Copy 2
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/login
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: headofc
+      - name: password
+        type: text
+        value: ho1234567
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

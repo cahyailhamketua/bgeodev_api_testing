@@ -1,0 +1,22 @@
+info:
+  name: assignment_by_project
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/3/assignments
+  headers:
+    - name: Accept
+      value: Application/json
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: 1927|MZXxZcmNhOKSSYn3FV2kQz28GImfWlqDaCFtDk1t17ce42cb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

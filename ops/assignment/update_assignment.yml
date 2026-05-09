@@ -1,0 +1,48 @@
+info:
+  name: update_assignment
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/assignments/6
+  headers:
+    - name: Accept
+      value: Application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Assignment Pagi
+        disabled: true
+      - name: code
+        type: text
+        value: m
+        disabled: true
+      - name: start_time
+        type: text
+        value: 01:00
+      - name: end_time
+        type: text
+        value: 07:00
+      - name: grace_period
+        type: text
+        value: "15"
+        disabled: true
+      - name: _method
+        type: text
+        value: PUT
+      - name: is_off
+        type: text
+        value: "0"
+        disabled: true
+  auth:
+    type: bearer
+    token: 1927|MZXxZcmNhOKSSYn3FV2kQz28GImfWlqDaCFtDk1t17ce42cb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

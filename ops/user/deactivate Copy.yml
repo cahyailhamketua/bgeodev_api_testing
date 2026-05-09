@@ -1,0 +1,29 @@
+info:
+  name: deactivate Copy
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: http://127.0.0.1:8000/api/users/8/deactivate
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: active
+        type: text
+        value: "1"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 4|deyA4d3x3ctvNWA0HVQjf6GG9RaeeZHuQCcPWFM85711e0d2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

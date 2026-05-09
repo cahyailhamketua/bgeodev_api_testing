@@ -1,0 +1,54 @@
+info:
+  name: update_organization
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/organizations/4
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: PT Satu Solid Indonesia
+      - name: email
+        type: text
+        value: solidsecurity@gmail.com
+      - name: phone
+        type: text
+        value: "02172794416"
+      - name: logo
+        type: text
+        value: ""
+        disabled: true
+      - name: code
+        type: text
+        value: bujp
+      - name: address
+        type: text
+        value: ""
+        disabled: true
+      - name: start_date
+        type: text
+        value: ""
+        disabled: true
+      - name: end_date
+        type: text
+        value: ""
+        disabled: true
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 309|0C2p78FznpiTsMH0mhisfSyCsggbpoBOkC4pmDHx3c11d336
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

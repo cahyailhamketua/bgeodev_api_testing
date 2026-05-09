@@ -1,0 +1,32 @@
+info:
+  name: update_team
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/teams/5
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: regu 1
+      - name: leader_id
+        type: text
+        value: "6"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 53|lbREroog4yAdwwVa9BkRAXdzIlq6GiAPL29eQpvce3549d51
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

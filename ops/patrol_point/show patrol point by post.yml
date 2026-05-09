@@ -1,0 +1,22 @@
+info:
+  name: show patrol point by post
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/posts/4/patrol-points
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: 1762|VnPWJVaFSdXbljOXnAsRjGyD5j8pl423fvxjHhwhcb4a8906
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

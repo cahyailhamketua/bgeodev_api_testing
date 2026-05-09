@@ -1,0 +1,44 @@
+info:
+  name: patrol_point_by_post
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/posts/4/patrol-points
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: belakang4
+      - name: sequence_order
+        type: text
+        value: "4"
+      - name: latitude
+        type: text
+        value: "-6.54938"
+      - name: longitude
+        type: text
+        value: "106.78917"
+      - name: radius
+        type: text
+        value: "5"
+      - name: code
+        type: text
+        value: ""
+      - name: active
+        type: text
+        value: ""
+  auth:
+    type: bearer
+    token: 515|4k8ozfQkl0jb4ZKC2oFUCubvksk598mbvBfXbI21f86d0927
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,32 @@
+info:
+  name: add_team_member
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/teams/22/members
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: user_id
+        type: text
+        value: "9"
+      - name: start_date
+        type: text
+        value: 2026-05-01
+      - name: month
+        type: text
+        value: 2026-05
+  auth:
+    type: bearer
+    token: 1717|67ZXG6SWusWPV9EBWOHuUCotY7LPxUMwsMUgCLmPacae01cd
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

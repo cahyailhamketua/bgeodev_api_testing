@@ -1,0 +1,29 @@
+info:
+  name: create_team_by_project
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/projects/1/teams
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: regu 1
+      - name: leader_id
+        type: text
+        value: "6"
+  auth:
+    type: bearer
+    token: 2|f2VkHfpmrknNN2U4VyPCsaWdblQh2LbJTctA2RE0a34b2902
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

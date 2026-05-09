@@ -1,0 +1,27 @@
+info:
+  name: update_schedule
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: http://127.0.0.1:8000/api/schedules/1327
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"assignment_code\": \"m\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 91|Zn2Nhxuct0OSpEBDa0BremUYo062giTvDquEYorFea13944e
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

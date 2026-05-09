@@ -1,0 +1,29 @@
+info:
+  name: store_absence
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/absences
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: schedule_id
+        type: text
+        value: "35"
+      - name: absence_type
+        type: text
+        value: SOC-A
+  auth:
+    type: bearer
+    token: 1787|nlxCCtVx4bzak9y52EKb2wZ2HLu5WO5pZ2q2Wp21102c29e3
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

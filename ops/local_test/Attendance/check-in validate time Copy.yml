@@ -1,0 +1,38 @@
+info:
+  name: check-in validate time Copy
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/attendances/check-in
+  params:
+    - name: contentttttttttttttttttttttttttttttttttttt
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.548973052510065"
+      - name: longitude
+        type: text
+        value: "106.78894868181371"
+      - name: current_time
+        type: text
+        value: 2026-02-14 01:10:30
+      - name: selfie_photo
+        type: file
+        value:
+          - /C:/Users/LENOVO/Pictures/Screenshots/Screenshot 2026-02-10 073328.png
+  auth:
+    type: bearer
+    token: 4|obFmTtiJddJ1279fIKAeiynVzWvYRQbpmLOtJHLt82289cca
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

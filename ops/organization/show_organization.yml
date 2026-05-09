@@ -1,0 +1,17 @@
+info:
+  name: show_organization
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/organizations/5
+  auth:
+    type: bearer
+    token: 477|pHo0NbpNHmwWvS5wwMcXzPkrB2f5O7qoodVG5ivH728e0586
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

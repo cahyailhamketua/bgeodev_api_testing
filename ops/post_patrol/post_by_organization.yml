@@ -1,0 +1,20 @@
+info:
+  name: post_by_organization
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/organizations/1/posts
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 1209|oPQz2KlGxZmH55wTmclVEC2AZurevg02qCGx34TO2baf7908
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

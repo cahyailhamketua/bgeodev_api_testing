@@ -1,0 +1,32 @@
+info:
+  name: update_post
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/posts/7
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: PATROLI DALAM T A
+      - name: type
+        type: text
+        value: mobile
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 309|0C2p78FznpiTsMH0mhisfSyCsggbpoBOkC4pmDHx3c11d336
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

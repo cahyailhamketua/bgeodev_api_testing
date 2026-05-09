@@ -1,0 +1,30 @@
+info:
+  name: get activity by post or project (aktivitas ishoma real
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/posts/activities/get
+  body:
+    type: multipart-form
+    data:
+      - name: post_id
+        type: text
+        value: "4"
+      - name: assignment_id
+        type: text
+        value: "10"
+      - name: current_time
+        type: text
+        value: 2026-04-26 10:10:30
+        disabled: true
+  auth:
+    type: bearer
+    token: 1892|djiVxBzhF8casS0M4kLXbH1Ao0IRC12m25Xa6lJT989c7efb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

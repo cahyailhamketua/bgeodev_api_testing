@@ -1,0 +1,20 @@
+info:
+  name: project_by_organization
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/organizations/2/projects
+  headers:
+    - name: Accept
+      value: Application/json
+  auth:
+    type: bearer
+    token: 48|QIfp6HcEJGJ3ZWT1ccTYeZIwTyT9LIGniNFy5x98c679390a
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

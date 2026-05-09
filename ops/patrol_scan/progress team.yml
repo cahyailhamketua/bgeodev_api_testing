@@ -1,0 +1,354 @@
+info:
+  name: progress team
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/attendances/progress?project_id=3
+  params:
+    - name: accept
+      value: application/json
+      type: query
+      disabled: true
+    - name: current_time
+      value: 2026-04-30 22:34:00
+      type: query
+      disabled: true
+    - name: project_id
+      value: "3"
+      type: query
+    - name: attendance_id
+      value: "107"
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: attendance_id
+        type: text
+        value: "58"
+        disabled: true
+      - name: current_time
+        type: text
+        value: 2026-04-03 21:43:00
+        disabled: true
+      - name: project_id
+        type: text
+        value: "3"
+        disabled: true
+      - name: p
+        type: text
+        value: ""
+        disabled: true
+      - name: project_id
+        type: text
+        value: "3"
+        disabled: true
+  auth:
+    type: bearer
+    token: 1918|WkNeQZcbDw0R9neT9N2tJVacjVV7Rwv0Nynh4i3Cd6af7b57
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: progress team
+    request:
+      url: https://epatrol.bgeodev.cloud/api/attendances/progress?project_id=3
+      method: GET
+      params:
+        - name: accept
+          value: application/json
+          type: query
+          disabled: true
+        - name: attendance_id
+          value: "55"
+          type: query
+          disabled: true
+        - name: current_time
+          value: 2026-04-02 07:34:00
+          type: query
+          disabled: true
+        - name: project_id
+          value: "3"
+          type: query
+        - name: assignment_id
+          value: "6"
+          type: query
+          disabled: true
+      body:
+        type: multipart-form
+        data:
+          - name: attendance_id
+            type: text
+            value: "2"
+          - name: current_time
+            type: text
+            value: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Fri, 03 Apr 2026 14:54:22 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Progress assignment aktif berhasil diambil.",
+              "project_id": 3,
+              "date": "2026-04-03",
+              "time": "21:54:22",
+              "timezone": "Asia/Jakarta",
+              "assignment": {
+                  "id": 6,
+                  "name": "malam 3",
+                  "start_time": "19:00:00",
+                  "end_time": "07:00:00"
+              },
+              "danru": {
+                  "attendance_id": 54,
+                  "check_in_at": "2026-04-03T14:46:21.000000Z",
+                  "computed_status": "HADIR TELAT",
+                  "scan_progress": {
+                      "total": 1,
+                      "scanned": 0,
+                      "remaining": 1,
+                      "percentage": 0,
+                      "completed": false
+                  }
+              },
+              "progress": {
+                  "total": 2,
+                  "checked_in": 1,
+                  "not_checked_in": 1,
+                  "percentage": 50
+              },
+              "members": [
+                  {
+                      "user": {
+                          "id": 17,
+                          "full_name": "Anggota buj 1.1",
+                          "role": "anggota"
+                      },
+                      "schedule": {
+                          "id": 128
+                      },
+                      "post": {
+                          "post_id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "attendance": {
+                          "id": 53,
+                          "post_id": 4,
+                          "post_name": "Patroli luar",
+                          "post_type": "mobile",
+                          "check_in_at": "2026-04-03T14:40:17.000000Z",
+                          "check_out_at": null,
+                          "computed_status": "HADIR TELAT"
+                      },
+                      "checkin_status": "CHECKED_IN",
+                      "scan_progress": {
+                          "total": 2,
+                          "scanned": 1,
+                          "remaining": 1,
+                          "percentage": 50,
+                          "completed": false
+                      }
+                  },
+                  {
+                      "user": null,
+                      "schedule": null,
+                      "post": {
+                          "post_id": 6,
+                          "name": "Post depan",
+                          "type": "static"
+                      },
+                      "attendance": null,
+                      "checkin_status": "NOT_YET",
+                      "scan_progress": null
+                  }
+              ]
+          }
+  - name: progress team
+    request:
+      url: https://epatrol.bgeodev.cloud/api/attendances/progress
+      method: GET
+      params:
+        - name: accept
+          value: application/json
+          type: query
+          disabled: true
+        - name: current_time
+          value: 2026-04-30 22:34:00
+          type: query
+          disabled: true
+        - name: project_id
+          value: "3"
+          type: query
+          disabled: true
+        - name: attendance_id
+          value: "107"
+          type: query
+          disabled: true
+      body:
+        type: multipart-form
+        data:
+          - name: attendance_id
+            type: text
+            value: "58"
+            disabled: true
+          - name: current_time
+            type: text
+            value: 2026-04-03 21:43:00
+            disabled: true
+          - name: project_id
+            type: text
+            value: "3"
+            disabled: true
+          - name: p
+            type: text
+            value: ""
+            disabled: true
+          - name: project_id
+            type: text
+            value: "3"
+            disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Fri, 17 Apr 2026 16:44:53 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Progress assignment aktif berhasil diambil.",
+              "project_id": 3,
+              "date": "2026-04-17",
+              "time": "23:44:53",
+              "timezone": "Asia/Jakarta",
+              "assignment": {
+                  "id": 6,
+                  "name": "malam 3",
+                  "start_time": "18:00:00",
+                  "end_time": "07:00:00"
+              },
+              "danru": {
+                  "attendance_id": 143,
+                  "check_in_at": "2026-04-17T15:36:39.000000Z",
+                  "computed_status": "HADIR TELAT",
+                  "scan_progress": {
+                      "total": 1,
+                      "scanned": 0,
+                      "remaining": 1,
+                      "percentage": 0,
+                      "completed": false
+                  },
+                  "attendances": [
+                      {
+                          "id": 143,
+                          "user_id": 15,
+                          "full_name": "Danru buj 1.1",
+                          "check_in_at": "2026-04-17T15:36:39.000000Z",
+                          "computed_status": "HADIR TELAT"
+                      }
+                  ]
+              },
+              "progress": {
+                  "total_posts": 3,
+                  "posts_covered": 1,
+                  "not_covered": 2,
+                  "total_users_checked_in": 2,
+                  "total_users_scheduled": 3,
+                  "percentage": 33.33
+              },
+              "members": [
+                  {
+                      "users": [],
+                      "schedule": null,
+                      "post": {
+                          "post_id": 33,
+                          "name": "POS LIFT PARKING TOWER A",
+                          "type": "static"
+                      },
+                      "attendance": null,
+                      "checkin_status": "NOT_YET",
+                      "scan_progress": {
+                          "total": 1,
+                          "scanned": 0,
+                          "remaining": 1,
+                          "percentage": 0,
+                          "completed": false
+                      }
+                  },
+                  {
+                      "users": [
+                          {
+                              "id": 18,
+                              "full_name": "Anggota buj 1.2",
+                              "role": "anggota",
+                              "attendance_id": 144,
+                              "check_in_at": "2026-04-17T16:44:28.000000Z",
+                              "assignment_code": "m"
+                          }
+                      ],
+                      "post": {
+                          "post_id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "scan_progress": {
+                          "total": 2,
+                          "scanned": 0,
+                          "remaining": 2,
+                          "percentage": 0,
+                          "completed": false
+                      }
+                  },
+                  {
+                      "users": [],
+                      "schedule": null,
+                      "post": {
+                          "post_id": 6,
+                          "name": "PATROLI DALAM T A",
+                          "type": "mobile"
+                      },
+                      "attendance": null,
+                      "checkin_status": "NOT_YET",
+                      "scan_progress": {
+                          "total": 1,
+                          "scanned": 0,
+                          "remaining": 1,
+                          "percentage": 0,
+                          "completed": false
+                      }
+                  }
+              ]
+          }

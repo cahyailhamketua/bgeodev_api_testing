@@ -1,0 +1,17 @@
+info:
+  name: creaT Copy
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/3/schedules
+  auth:
+    type: bearer
+    token: 52|H0yhYL2idzmWEAtxEdwRz35IyXRnvOqAmt49JKh464b595e9
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

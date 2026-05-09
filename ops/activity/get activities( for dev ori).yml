@@ -1,0 +1,423 @@
+info:
+  name: get activities( for dev ori)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/activities/indexactivity
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: project_id
+        type: text
+        value: "3"
+        disabled: true
+      - name: assignment_id
+        type: text
+        value: "6"
+        disabled: true
+  auth:
+    type: bearer
+    token: 1892|djiVxBzhF8casS0M4kLXbH1Ao0IRC12m25Xa6lJT989c7efb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get activities
+    request:
+      url: https://epatrol.bgeodev.cloud/api/activities
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: project_id
+            type: text
+            value: "3"
+          - name: assignment_id
+            type: text
+            value: "6"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Cache-Control
+          value: no-cache, private
+        - name: Date
+          value: Tue, 31 Mar 2026 16:10:27 GMT
+        - name: Access-Control-Allow-Origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "message": "All activities fetched successfully",
+              "data": [
+                  {
+                      "id": 71,
+                      "project_id": 3,
+                      "post_id": null,
+                      "name": "Attendance",
+                      "location": "Main Gate",
+                      "active": 1,
+                      "created_at": "2026-03-31T13:14:03.000000Z",
+                      "updated_at": "2026-03-31T13:26:05.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 111,
+                              "activity_id": 71,
+                              "assignment_id": 10,
+                              "start_time": "07:00:00",
+                              "end_time": "08:00:00",
+                              "created_at": "2026-03-31T13:14:03.000000Z",
+                              "updated_at": "2026-03-31T13:26:05.000000Z"
+                          }
+                      ]
+                  },
+                  {
+                      "id": 72,
+                      "project_id": 3,
+                      "post_id": null,
+                      "name": "Attendance",
+                      "location": "Main Gate",
+                      "active": 1,
+                      "created_at": "2026-03-31T13:14:03.000000Z",
+                      "updated_at": "2026-03-31T13:26:05.000000Z",
+                      "assignment_times": [
+                          {
+                              "id": 113,
+                              "activity_id": 72,
+                              "assignment_id": 10,
+                              "start_time": "07:00:00",
+                              "end_time": "08:00:00",
+                              "created_at": "2026-03-31T13:14:03.000000Z",
+                              "updated_at": "2026-03-31T13:26:05.000000Z"
+                          }
+                      ]
+                  },
+                  {
+                      "id": 1,
+                      "project_id": null,
+                      "post_id": 1,
+                      "name": "Istirahat",
+                      "location": "masjid",
+                      "active": 1,
+                      "created_at": null,
+                      "updated_at": null,
+                      "assignment_times": [
+                          {
+                              "id": 1,
+                              "activity_id": 1,
+                              "assignment_id": 1,
+                              "start_time": "12:00:00",
+                              "end_time": "13:00:00",
+                              "created_at": null,
+                              "updated_at": null
+                          },
+                          {
+                              "id": 2,
+                              "activity_id": 1,
+                              "assignment_id": 2,
+                              "start_time": "00:00:00",
+                              "end_time": "01:00:00",
+                              "created_at": null,
+                              "updated_at": null
+                          }
+                      ]
+                  },
+                  {
+                      "id": 3,
+                      "project_id": null,
+                      "post_id": 2,
+                      "name": "Patroli Area",
+                      "location": "post",
+                      "active": 1,
+                      "created_at": null,
+                      "updated_at": null,
+                      "assignment_times": [
+                          {
+                              "id": 4,
+                              "activity_id": 3,
+                              "assignment_id": 3,
+                              "start_time": "09:00:00",
+                              "end_time": "11:00:00",
+                              "created_at": null,
+                              "updated_at": null
+                          }
+                      ]
+                  },
+                  {
+                      "id": 2,
+                      "project_id": null,
+                      "post_id": 1,
+                      "name": "Serah Terima",
+                      "location": "posko",
+                      "active": 1,
+                      "created_at": null,
+                      "updated_at": null,
+                      "assignment_times": [
+                          {
+                              "id": 3,
+                              "activity_id": 2,
+                              "assignment_id": 1,
+                              "start_time": "13:30:00",
+                              "end_time": "14:00:00",
+                              "created_at": null,
+                              "updated_at": null
+                          }
+                      ]
+                  }
+              ],
+              "meta": {
+                  "current_page": 1,
+                  "last_page": 1,
+                  "per_page": 10,
+                  "total": 5
+              }
+          }
+  - name: get activities( for dev ori)
+    request:
+      url: https://epatrol.bgeodev.cloud/api/activities/indexactivity
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      body:
+        type: multipart-form
+        data:
+          - name: project_id
+            type: text
+            value: "3"
+          - name: assignment_id
+            type: text
+            value: "6"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 31 Mar 2026 18:42:15 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Activities grouped successfully",
+              "data": {
+                  "with_post": [
+                      {
+                          "project_id": 1,
+                          "project_name": "office project 1",
+                          "posts": [
+                              {
+                                  "post_id": 1,
+                                  "post_name": "Post Gerbang Utama",
+                                  "activities": [
+                                      {
+                                          "id": 98,
+                                          "name": "Attendance",
+                                          "location": "Main Gate",
+                                          "active": true,
+                                          "assignment_times": [
+                                              {
+                                                  "id": 151,
+                                                  "assignment_id": 1,
+                                                  "assignment_name": "Assignment Pagi",
+                                                  "start_time": "07:00:00",
+                                                  "end_time": "08:00:00"
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "id": 99,
+                                          "name": "Patrol Area A",
+                                          "location": "Basement",
+                                          "active": true,
+                                          "assignment_times": [
+                                              {
+                                                  "id": 152,
+                                                  "assignment_id": 1,
+                                                  "assignment_name": "Assignment Pagi",
+                                                  "start_time": "08:00:00",
+                                                  "end_time": "09:00:00"
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "project_id": 3,
+                          "project_name": "bujp project 1",
+                          "posts": [
+                              {
+                                  "post_id": 4,
+                                  "post_name": "Patroli luar",
+                                  "activities": [
+                                      {
+                                          "id": 95,
+                                          "name": "Attendance",
+                                          "location": "Main Gate",
+                                          "active": true,
+                                          "assignment_times": [
+                                              {
+                                                  "id": 147,
+                                                  "assignment_id": 10,
+                                                  "assignment_name": "pagi",
+                                                  "start_time": "07:00:00",
+                                                  "end_time": "08:00:00"
+                                              },
+                                              {
+                                                  "id": 148,
+                                                  "assignment_id": 6,
+                                                  "assignment_name": "malam 3",
+                                                  "start_time": "19:00:00",
+                                                  "end_time": "20:00:00"
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "id": 96,
+                                          "name": "Patrol Area A",
+                                          "location": "Basement",
+                                          "active": true,
+                                          "assignment_times": [
+                                              {
+                                                  "id": 149,
+                                                  "assignment_id": 10,
+                                                  "assignment_name": "pagi",
+                                                  "start_time": "08:00:00",
+                                                  "end_time": "09:00:00"
+                                              },
+                                              {
+                                                  "id": 150,
+                                                  "assignment_id": 6,
+                                                  "assignment_name": "malam 3",
+                                                  "start_time": "19:00:00",
+                                                  "end_time": "20:00:00"
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "id": 93,
+                                          "name": "Attendance",
+                                          "location": "Main Gate1",
+                                          "active": true,
+                                          "assignment_times": [
+                                              {
+                                                  "id": 143,
+                                                  "assignment_id": 10,
+                                                  "assignment_name": "pagi",
+                                                  "start_time": "07:00:00",
+                                                  "end_time": "08:00:00"
+                                              },
+                                              {
+                                                  "id": 144,
+                                                  "assignment_id": 6,
+                                                  "assignment_name": "malam 3",
+                                                  "start_time": "19:00:00",
+                                                  "end_time": "20:00:00"
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "id": 94,
+                                          "name": "Patrol Area A",
+                                          "location": "Basement",
+                                          "active": true,
+                                          "assignment_times": [
+                                              {
+                                                  "id": 145,
+                                                  "assignment_id": 10,
+                                                  "assignment_name": "pagi",
+                                                  "start_time": "08:00:00",
+                                                  "end_time": "09:00:00"
+                                              },
+                                              {
+                                                  "id": 146,
+                                                  "assignment_id": 6,
+                                                  "assignment_name": "malam 3",
+                                                  "start_time": "19:00:00",
+                                                  "end_time": "20:00:00"
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "without_post": [
+                      {
+                          "project_id": 2,
+                          "project_name": "office project 2",
+                          "activities": [
+                              {
+                                  "id": 92,
+                                  "name": "aaa",
+                                  "location": "aaa",
+                                  "active": true,
+                                  "assignment_times": [
+                                      {
+                                          "id": 138,
+                                          "assignment_id": 4,
+                                          "assignment_name": "Assignment Malam",
+                                          "start_time": "16:00:00",
+                                          "end_time": "07:00:00"
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "project_id": 5,
+                          "project_name": "BGEO project 1",
+                          "activities": [
+                              {
+                                  "id": 89,
+                                  "name": "absen pagi",
+                                  "location": "rumah",
+                                  "active": true,
+                                  "assignment_times": [
+                                      {
+                                          "id": 135,
+                                          "assignment_id": 11,
+                                          "assignment_name": "absen pagi",
+                                          "start_time": "07:00:00",
+                                          "end_time": "16:00:00"
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }

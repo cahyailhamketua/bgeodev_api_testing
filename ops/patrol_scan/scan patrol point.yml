@@ -1,0 +1,26 @@
+info:
+  name: scan patrol point
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/patrol-scan
+  body:
+    type: multipart-form
+    data:
+      - name: attendance_id
+        type: text
+        value: "97"
+      - name: qr_code
+        type: text
+        value: 4C35D392-706D-45D9-82A2-E42C3651FB39
+  auth:
+    type: bearer
+    token: 619|kOZCzFDANsU57BOq5u63p4GYss32ZKJXdzkirfKW282b9bda
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

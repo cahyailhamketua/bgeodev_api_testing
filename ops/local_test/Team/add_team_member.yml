@@ -1,0 +1,32 @@
+info:
+  name: add_team_member
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/teams/1/members
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: user_id
+        type: text
+        value: "8"
+      - name: start_date
+        type: text
+        value: 2026-04-03
+      - name: month
+        type: text
+        value: 2026-04
+  auth:
+    type: bearer
+    token: 3|FMZDUKl4Jho7qcgix8wuPwX9rTAjzBlxpJLTvIzh54fb7bd7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,17 @@
+info:
+  name: show_schedule_template
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/3/teams/16/schedule-template
+  auth:
+    type: bearer
+    token: 1707|leTr4A74I2iEWH24YIsVt4zduvKVTunZlCHajVbuac499f44
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

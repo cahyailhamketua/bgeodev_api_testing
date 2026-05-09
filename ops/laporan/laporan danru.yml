@@ -1,0 +1,374 @@
+info:
+  name: laporan danru
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/4/reports/patrol-danru
+  params:
+    - name: attendance_id
+      value: "55"
+      type: query
+      disabled: true
+    - name: assignment_id
+      value: "6"
+      type: query
+      disabled: true
+    - name: Accept
+      value: application/json
+      type: query
+      disabled: true
+    - name: p-danru
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+        disabled: true
+      - name: longitude
+        type: text
+        value: "106.78906"
+        disabled: true
+      - name: current_time
+        type: text
+        value: 2026-04-02 07:10:30
+        disabled: true
+      - name: post_type
+        type: text
+        value: mobile
+        disabled: true
+      - name: post_name
+        type: text
+        value: patroli luar
+        disabled: true
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+        disabled: true
+      - name: project_id
+        type: text
+        value: "3"
+        disabled: true
+      - name: attendance_id
+        type: text
+        value: "46"
+      - name: current_time
+        type: text
+        value: 2026-04-02 21:10:30
+  auth:
+    type: bearer
+    token: 1566|8EsWcY55OrpmK1CyZW1QbJqA2pq7dVqFTwTtN8XZ64c66e30
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: laporan danru
+    request:
+      url: https://epatrol.bgeodev.cloud/api/projects/3/reports/patrol-danru
+      method: GET
+      params:
+        - name: attendance_id
+          value: "55"
+          type: query
+          disabled: true
+        - name: assignment_id
+          value: "6"
+          type: query
+          disabled: true
+        - name: Accept
+          value: application/json
+          type: query
+          disabled: true
+        - name: p-danru
+          value: ""
+          type: query
+          disabled: true
+      body:
+        type: multipart-form
+        data:
+          - name: latitude
+            type: text
+            value: "-6.54926"
+            disabled: true
+          - name: longitude
+            type: text
+            value: "106.78906"
+            disabled: true
+          - name: current_time
+            type: text
+            value: 2026-04-02 07:10:30
+            disabled: true
+          - name: post_type
+            type: text
+            value: mobile
+            disabled: true
+          - name: post_name
+            type: text
+            value: patroli luar
+            disabled: true
+          - name: selfie_photo
+            type: file
+            value:
+              - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+            disabled: true
+          - name: project_id
+            type: text
+            value: "3"
+            disabled: true
+          - name: attendance_id
+            type: text
+            value: "46"
+          - name: current_time
+            type: text
+            value: 2026-04-02 21:10:30
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 23 Apr 2026 14:23:37 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "report": "laporan_patrol_danru",
+              "project": {
+                  "id": 3,
+                  "name": "bujp project 1"
+              },
+              "filters_applied": {
+                  "dari_tanggal": "2026-04-01",
+                  "sampai_tanggal": "2026-04-30",
+                  "date_range_is_current_month_default": true,
+                  "current_time_anchor": "2026-04-23 21:23:37"
+              },
+              "summary": {
+                  "total_scan_rows": 4
+              },
+              "data": [
+                  {
+                      "scan_id": 167,
+                      "tanggal": "2026-04-23",
+                      "nama_danru": "Danru buj 1.1",
+                      "user_id": 15,
+                      "titik_patroli": "POS LIFT PARKING TOWER A",
+                      "patrol_point_id": 159,
+                      "pos": {
+                          "id": 33,
+                          "name": "POS LIFT PARKING TOWER A"
+                      },
+                      "waktu_scan": "21:21",
+                      "waktu_scan_iso": "2026-04-23T14:21:37+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69ea2a6c062819.53473586.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69ea2a6c062819.53473586.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/164/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 666,
+                              "path": "patrol-scan-photos/img_69ea2af2789289.82138964.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2af2789289.82138964.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/666/inline"
+                          },
+                          {
+                              "id": 667,
+                              "path": "patrol-scan-photos/img_69ea2af28aaa20.42299103.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2af28aaa20.42299103.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/667/inline"
+                          },
+                          {
+                              "id": 668,
+                              "path": "patrol-scan-photos/img_69ea2af29bd1f4.05030125.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2af29bd1f4.05030125.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/668/inline"
+                          },
+                          {
+                              "id": 669,
+                              "path": "patrol-scan-photos/img_69ea2af2ade389.49993542.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2af2ade389.49993542.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/669/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 166,
+                      "tanggal": "2026-04-23",
+                      "nama_danru": "Danru buj 1.1",
+                      "user_id": 15,
+                      "titik_patroli": "POS LIFT PARKING TOWER A",
+                      "patrol_point_id": 162,
+                      "pos": {
+                          "id": 35,
+                          "name": "POS LIFT PARKING TOWER b"
+                      },
+                      "waktu_scan": "21:20",
+                      "waktu_scan_iso": "2026-04-23T14:20:39+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69ea2a6c062819.53473586.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69ea2a6c062819.53473586.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/164/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 662,
+                              "path": "patrol-scan-photos/img_69ea2ab81a77b9.02695219.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2ab81a77b9.02695219.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/662/inline"
+                          },
+                          {
+                              "id": 663,
+                              "path": "patrol-scan-photos/img_69ea2ab82feab4.74295081.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2ab82feab4.74295081.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/663/inline"
+                          },
+                          {
+                              "id": 664,
+                              "path": "patrol-scan-photos/img_69ea2ab8415c82.42037865.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2ab8415c82.42037865.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/664/inline"
+                          },
+                          {
+                              "id": 665,
+                              "path": "patrol-scan-photos/img_69ea2ab852e9a5.11392251.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69ea2ab852e9a5.11392251.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/665/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 124,
+                      "tanggal": "2026-04-20",
+                      "nama_danru": "Danru buj 1.1",
+                      "user_id": 15,
+                      "titik_patroli": "POS LIFT PARKING TOWER A",
+                      "patrol_point_id": 159,
+                      "pos": {
+                          "id": 33,
+                          "name": "POS LIFT PARKING TOWER A"
+                      },
+                      "waktu_scan": "02:54",
+                      "waktu_scan_iso": "2026-04-20T19:54:25+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69e65f82cc9b15.00375170.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e65f82cc9b15.00375170.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/151/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 494,
+                              "path": "patrol-scan-photos/img_69e68471f2ad45.96199624.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e68471f2ad45.96199624.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/494/inline"
+                          },
+                          {
+                              "id": 495,
+                              "path": "patrol-scan-photos/img_69e684720ff382.27019647.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e684720ff382.27019647.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/495/inline"
+                          },
+                          {
+                              "id": 496,
+                              "path": "patrol-scan-photos/img_69e68472205a35.75582706.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e68472205a35.75582706.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/496/inline"
+                          },
+                          {
+                              "id": 497,
+                              "path": "patrol-scan-photos/img_69e6847231d499.02591066.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e6847231d499.02591066.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/497/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 21,
+                      "tanggal": "2026-04-10",
+                      "nama_danru": "Danru buj 1.1",
+                      "user_id": 15,
+                      "titik_patroli": "POS LIFT PARKING TOWER A",
+                      "patrol_point_id": 159,
+                      "pos": {
+                          "id": 33,
+                          "name": "POS LIFT PARKING TOWER A"
+                      },
+                      "waktu_scan": "21:23",
+                      "waktu_scan_iso": "2026-04-10T14:23:44+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69d8fa2f2d1438.02882473.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69d8fa2f2d1438.02882473.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/107/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 82,
+                              "path": "patrol-scan-photos/img_69d907f011e961.68058334.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d907f011e961.68058334.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/82/inline"
+                          },
+                          {
+                              "id": 83,
+                              "path": "patrol-scan-photos/img_69d907f01f5c62.47450460.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d907f01f5c62.47450460.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/83/inline"
+                          },
+                          {
+                              "id": 84,
+                              "path": "patrol-scan-photos/img_69d907f02ea4f6.99159878.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d907f02ea4f6.99159878.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/84/inline"
+                          },
+                          {
+                              "id": 85,
+                              "path": "patrol-scan-photos/img_69d907f03c1f85.32046879.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d907f03c1f85.32046879.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/85/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  }
+              ],
+              "pagination": {
+                  "total": 4,
+                  "per_page": 15,
+                  "current_page": 1,
+                  "last_page": 1
+              },
+              "field_descriptions": {
+                  "tanggal": "Tanggal attendance (shift).",
+                  "nama_danru": "Komandan regu.",
+                  "titik_patroli": "Patrol point dari QR.",
+                  "waktu_scan": "Waktu scan (timezone project).",
+                  "notes": "Catatan scan.",
+                  "photo_attendance": "Foto absen kehadiran (selfie) beserta url publiknya.",
+                  "photo_scan": "Array foto; url = link publik /storage (butuh storage:link)."
+              }
+          }

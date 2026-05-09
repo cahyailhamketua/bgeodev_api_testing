@@ -1,0 +1,35 @@
+info:
+  name: delete activity by post or project
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/activities/delete?
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: current_time
+      value: 2026-03-01
+      type: query
+      disabled: true
+    - name: ""
+      value: ""
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "project_id": 3,
+        "activity_ids": [24]
+      }
+  auth:
+    type: bearer
+    token: 74|oK0RRzRu30aehJHkVl9nFs481JEBOFLGx3iurLZte76989b7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

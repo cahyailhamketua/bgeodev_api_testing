@@ -1,0 +1,20 @@
+info:
+  name: show_user
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/users/4
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 1404|V6rQhCn9s21tw4mZiHTY7BDhr93I0yWUmQJHbcV6aa89bccc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

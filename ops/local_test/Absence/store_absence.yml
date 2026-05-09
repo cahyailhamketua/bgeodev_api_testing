@@ -1,0 +1,29 @@
+info:
+  name: store_absence
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/absences
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: schedule_id
+        type: text
+        value: "35"
+      - name: absence_type
+        type: text
+        value: I
+  auth:
+    type: bearer
+    token: 2|f2VkHfpmrknNN2U4VyPCsaWdblQh2LbJTctA2RE0a34b2902
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,1127 @@
+info:
+  name: get_by_month
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/6/schedules/sheet?month=2026-05
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: month
+      value: 2026-05
+      type: query
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: 1993|fdApeRT7buFGHqTjEvZbzMzkZi8NZJlina6EeyHrc8a37573
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get_by_month
+    request:
+      url: https://epatrol.bgeodev.cloud/api/projects/1/schedules/sheet?month=2026-04
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: month
+          value: 2026-04
+          type: query
+      body:
+        type: multipart-form
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 27 Apr 2026 17:22:06 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "meta": {
+                  "project_id": 1,
+                  "month": "2026-04",
+                  "start_date": "2026-04-01T00:00:00.000000Z",
+                  "end_date": "2026-04-30T23:59:59.999999Z",
+                  "generated_at": "2026-04-27T17:19:42.336257Z",
+                  "days": [
+                      {
+                          "date": "2026-04-01",
+                          "day_name": "Wednesday"
+                      },
+                      {
+                          "date": "2026-04-02",
+                          "day_name": "Thursday"
+                      },
+                      {
+                          "date": "2026-04-03",
+                          "day_name": "Friday"
+                      },
+                      {
+                          "date": "2026-04-04",
+                          "day_name": "Saturday"
+                      },
+                      {
+                          "date": "2026-04-05",
+                          "day_name": "Sunday"
+                      },
+                      {
+                          "date": "2026-04-06",
+                          "day_name": "Monday"
+                      },
+                      {
+                          "date": "2026-04-07",
+                          "day_name": "Tuesday"
+                      },
+                      {
+                          "date": "2026-04-08",
+                          "day_name": "Wednesday"
+                      },
+                      {
+                          "date": "2026-04-09",
+                          "day_name": "Thursday"
+                      },
+                      {
+                          "date": "2026-04-10",
+                          "day_name": "Friday"
+                      },
+                      {
+                          "date": "2026-04-11",
+                          "day_name": "Saturday"
+                      },
+                      {
+                          "date": "2026-04-12",
+                          "day_name": "Sunday"
+                      },
+                      {
+                          "date": "2026-04-13",
+                          "day_name": "Monday"
+                      },
+                      {
+                          "date": "2026-04-14",
+                          "day_name": "Tuesday"
+                      },
+                      {
+                          "date": "2026-04-15",
+                          "day_name": "Wednesday"
+                      },
+                      {
+                          "date": "2026-04-16",
+                          "day_name": "Thursday"
+                      },
+                      {
+                          "date": "2026-04-17",
+                          "day_name": "Friday"
+                      },
+                      {
+                          "date": "2026-04-18",
+                          "day_name": "Saturday"
+                      },
+                      {
+                          "date": "2026-04-19",
+                          "day_name": "Sunday"
+                      },
+                      {
+                          "date": "2026-04-20",
+                          "day_name": "Monday"
+                      },
+                      {
+                          "date": "2026-04-21",
+                          "day_name": "Tuesday"
+                      },
+                      {
+                          "date": "2026-04-22",
+                          "day_name": "Wednesday"
+                      },
+                      {
+                          "date": "2026-04-23",
+                          "day_name": "Thursday"
+                      },
+                      {
+                          "date": "2026-04-24",
+                          "day_name": "Friday"
+                      },
+                      {
+                          "date": "2026-04-25",
+                          "day_name": "Saturday"
+                      },
+                      {
+                          "date": "2026-04-26",
+                          "day_name": "Sunday"
+                      },
+                      {
+                          "date": "2026-04-27",
+                          "day_name": "Monday"
+                      },
+                      {
+                          "date": "2026-04-28",
+                          "day_name": "Tuesday"
+                      },
+                      {
+                          "date": "2026-04-29",
+                          "day_name": "Wednesday"
+                      },
+                      {
+                          "date": "2026-04-30",
+                          "day_name": "Thursday"
+                      }
+                  ]
+              },
+              "overall_summary": {
+                  "SCHEDULE_COUNT": 66,
+                  "HK": 2,
+                  "OT": 3,
+                  "OFF": 21,
+                  "SAKIT": 2,
+                  "IZIN": 0,
+                  "CUTI": 0,
+                  "ALPA": 0,
+                  "SOC_A": 0
+              },
+              "rows": [
+                  {
+                      "user": {
+                          "id": 4,
+                          "name": "Admin Ofc 1.1",
+                          "team_id": 1,
+                          "team_name": "regu 1",
+                          "membership_status": "FULL_EXISTING"
+                      },
+                      "summary": {
+                          "SCHEDULE_COUNT": 22,
+                          "HK": 0,
+                          "OT": 0,
+                          "OFF": 8,
+                          "SAKIT": 2,
+                          "IZIN": 0,
+                          "CUTI": 0,
+                          "ALPA": 0,
+                          "SOC_A": 0
+                      },
+                      "days": {
+                          "2026-04-01": {
+                              "schedule_id": 338,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": {
+                                  "type": "S",
+                                  "label": "Sakit",
+                                  "summary_key": "SAKIT"
+                              },
+                              "overtime": null
+                          },
+                          "2026-04-02": {
+                              "schedule_id": 339,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": {
+                                  "type": "S",
+                                  "label": "Sakit",
+                                  "summary_key": "SAKIT"
+                              },
+                              "overtime": null
+                          },
+                          "2026-04-03": {
+                              "schedule_id": 340,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-04": {
+                              "schedule_id": 341,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-05": {
+                              "schedule_id": 342,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-06": {
+                              "schedule_id": 343,
+                              "assignment": "SOC/M",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-07": {
+                              "schedule_id": 344,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-08": {
+                              "schedule_id": 345,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-09": {
+                              "schedule_id": 346,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-10": {
+                              "schedule_id": 347,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-11": {
+                              "schedule_id": 348,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-12": {
+                              "schedule_id": 349,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-13": {
+                              "schedule_id": 350,
+                              "assignment": "SOC/M",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-14": {
+                              "schedule_id": 351,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-15": {
+                              "schedule_id": 352,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-16": {
+                              "schedule_id": 353,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-17": {
+                              "schedule_id": 354,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-18": {
+                              "schedule_id": 355,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-19": {
+                              "schedule_id": 356,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-20": {
+                              "schedule_id": 357,
+                              "assignment": "SOC/M",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-21": {
+                              "schedule_id": 358,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-22": {
+                              "schedule_id": 359,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-23": {
+                              "schedule_id": 360,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-24": {
+                              "schedule_id": 361,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-25": {
+                              "schedule_id": 362,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-26": {
+                              "schedule_id": 363,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-27": {
+                              "schedule_id": 364,
+                              "assignment": "SOC/M",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-28": {
+                              "schedule_id": 365,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-29": {
+                              "schedule_id": 366,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-30": {
+                              "schedule_id": 367,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          }
+                      }
+                  },
+                  {
+                      "user": {
+                          "id": 6,
+                          "name": "Danru Ofc 1.1",
+                          "team_id": 1,
+                          "team_name": "regu 1",
+                          "membership_status": "FULL_EXISTING"
+                      },
+                      "summary": {
+                          "SCHEDULE_COUNT": 22,
+                          "HK": 0,
+                          "OT": 2,
+                          "OFF": 6,
+                          "SAKIT": 0,
+                          "IZIN": 0,
+                          "CUTI": 0,
+                          "ALPA": 0,
+                          "SOC_A": 0
+                      },
+                      "days": {
+                          "2026-04-01": {
+                              "schedule_id": 5098,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-02": {
+                              "schedule_id": 5100,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-03": {
+                              "schedule_id": 5102,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-04": {
+                              "schedule_id": 5104,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-05": {
+                              "schedule_id": 5106,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-06": {
+                              "schedule_id": 5108,
+                              "assignment": "SOC/M",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-07": {
+                              "schedule_id": 5110,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-08": {
+                              "schedule_id": 5112,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-09": {
+                              "schedule_id": 5114,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-10": {
+                              "schedule_id": 5116,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-11": {
+                              "schedule_id": 5118,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-12": {
+                              "schedule_id": 5120,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-13": {
+                              "schedule_id": 5122,
+                              "assignment": "SOC/M",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-14": {
+                              "schedule_id": 5124,
+                              "assignment": "o/m",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": {
+                                  "id": 125,
+                                  "check_in_at": "2026-04-14T12:48:20.000000Z",
+                                  "check_out_at": "2026-04-15T07:12:00.000000Z",
+                                  "status": "HADIR TELAT",
+                                  "late_minutes": -28
+                              },
+                              "absence": null,
+                              "overtime": {
+                                  "display_code": "o/m",
+                                  "work_assignment_code": "m"
+                              }
+                          },
+                          "2026-04-15": {
+                              "schedule_id": 5126,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-16": {
+                              "schedule_id": 5128,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-17": {
+                              "schedule_id": 5130,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-18": {
+                              "schedule_id": 5132,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-19": {
+                              "schedule_id": 5134,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-20": {
+                              "schedule_id": 5136,
+                              "assignment": "SOC/M",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-21": {
+                              "schedule_id": 5138,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-22": {
+                              "schedule_id": 5140,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-23": {
+                              "schedule_id": 5142,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-24": {
+                              "schedule_id": 5144,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-25": {
+                              "schedule_id": 5146,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-26": {
+                              "schedule_id": 5148,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-27": {
+                              "schedule_id": 5150,
+                              "assignment": "o/p",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/M",
+                              "attendance": {
+                                  "id": 168,
+                                  "check_in_at": "2026-04-27T05:21:11.000000Z",
+                                  "check_out_at": "2026-04-27T15:14:00.000000Z",
+                                  "status": "HADIR TELAT",
+                                  "late_minutes": -381
+                              },
+                              "absence": null,
+                              "overtime": {
+                                  "display_code": "o/p",
+                                  "work_assignment_code": "p"
+                              }
+                          },
+                          "2026-04-28": {
+                              "schedule_id": 5152,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-29": {
+                              "schedule_id": 5154,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-30": {
+                              "schedule_id": 5156,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          }
+                      }
+                  },
+                  {
+                      "user": {
+                          "id": 9,
+                          "name": "Anggota Ofc 1.2",
+                          "team_id": 1,
+                          "team_name": "regu 1",
+                          "membership_status": "PRORATE_IN"
+                      },
+                      "summary": {
+                          "SCHEDULE_COUNT": 22,
+                          "HK": 2,
+                          "OT": 1,
+                          "OFF": 7,
+                          "SAKIT": 0,
+                          "IZIN": 0,
+                          "CUTI": 0,
+                          "ALPA": 0,
+                          "SOC_A": 0
+                      },
+                      "days": {
+                          "2026-04-01": {
+                              "schedule_id": 5158,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-02": {
+                              "schedule_id": 5159,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-03": {
+                              "schedule_id": 5160,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-04": {
+                              "schedule_id": 5161,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-05": {
+                              "schedule_id": 5162,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-06": {
+                              "schedule_id": 5163,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-07": {
+                              "schedule_id": 5164,
+                              "assignment": "SOC/P",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/P",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-08": {
+                              "schedule_id": 5165,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-09": {
+                              "schedule_id": 5166,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-10": {
+                              "schedule_id": 5167,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-11": {
+                              "schedule_id": 5168,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-12": {
+                              "schedule_id": 5169,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-13": {
+                              "schedule_id": 5170,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-14": {
+                              "schedule_id": 5171,
+                              "assignment": "SOC/P",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/P",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-15": {
+                              "schedule_id": 5172,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-16": {
+                              "schedule_id": 5173,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-17": {
+                              "schedule_id": 5174,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-18": {
+                              "schedule_id": 5175,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-19": {
+                              "schedule_id": 5176,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-20": {
+                              "schedule_id": 5177,
+                              "assignment": "O",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-21": {
+                              "schedule_id": 5178,
+                              "assignment": "SOC/P",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/P",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-22": {
+                              "schedule_id": 5179,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": {
+                                  "id": 161,
+                                  "check_in_at": "2026-04-22T13:12:40.000000Z",
+                                  "check_out_at": "2026-04-22T13:15:00.000000Z",
+                                  "status": "HADIR TELAT",
+                                  "late_minutes": -853
+                              },
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-23": {
+                              "schedule_id": 5180,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-24": {
+                              "schedule_id": 5181,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": {
+                                  "id": 165,
+                                  "check_in_at": "2026-04-24T07:26:03.000000Z",
+                                  "check_out_at": "2026-04-27T05:16:53.000000Z",
+                                  "status": "HADIR TELAT",
+                                  "late_minutes": -506
+                              },
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-25": {
+                              "schedule_id": 5182,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-26": {
+                              "schedule_id": 5183,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-27": {
+                              "schedule_id": 5184,
+                              "assignment": "o/p",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": null,
+                              "attendance": {
+                                  "id": 167,
+                                  "check_in_at": "2026-04-27T05:17:05.000000Z",
+                                  "check_out_at": "2026-04-27T15:14:00.000000Z",
+                                  "status": "HADIR TELAT",
+                                  "late_minutes": -377
+                              },
+                              "absence": null,
+                              "overtime": {
+                                  "display_code": "o/p",
+                                  "work_assignment_code": "p"
+                              }
+                          },
+                          "2026-04-28": {
+                              "schedule_id": 5185,
+                              "assignment": "SOC/P",
+                              "scheduled_assignment_code": "O",
+                              "soc_label": "SOC/P",
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-29": {
+                              "schedule_id": 5186,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          },
+                          "2026-04-30": {
+                              "schedule_id": 5187,
+                              "assignment": "P",
+                              "scheduled_assignment_code": "P",
+                              "soc_label": null,
+                              "attendance": null,
+                              "absence": null,
+                              "overtime": null
+                          }
+                      }
+                  }
+              ]
+          }

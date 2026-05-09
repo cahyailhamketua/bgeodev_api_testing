@@ -1,0 +1,29 @@
+info:
+  name: deactivate
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: https://epatrol.bgeodev.cloud/api/users/8/deactivate
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: active
+        type: text
+        value: "1"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 425|CWnBSdQzQbWXRmKl1ZOKhi13PAIUKLfd9PjJezgXdea01414
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

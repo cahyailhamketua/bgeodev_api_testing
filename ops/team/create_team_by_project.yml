@@ -1,0 +1,29 @@
+info:
+  name: create_team_by_project
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/1/teams
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: test12
+      - name: leader_id
+        type: text
+        value: "6"
+  auth:
+    type: bearer
+    token: 1755|zj33Y07fnuQxlOtJcimtVubbMdyM6vV9JG4WVKr12d4fcc3d
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

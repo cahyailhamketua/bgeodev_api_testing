@@ -1,0 +1,17 @@
+info:
+  name: delete absen
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/attendances/check-in/162
+  auth:
+    type: bearer
+    token: 1703|60NfWcJfJFv0asIfw6PtA37blIroyELrsis06ITBc9c49b8e
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

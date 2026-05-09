@@ -1,0 +1,23 @@
+info:
+  name: delete_absence_by_schedule
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/schedules/645/absence
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: 976|lJAZaiIUha5oQSNKzecKiJyGl5lMqjVYd3mJZdlu71face8d
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

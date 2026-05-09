@@ -1,0 +1,43 @@
+info:
+  name: pengecekan qrcode
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/patrol-scan/check-qr
+  params:
+    - name: attendance_id
+      value: "46"
+      type: query
+      disabled: true
+    - name: project_id
+      value: "3"
+      type: query
+      disabled: true
+    - name: assignment_id
+      value: "6"
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: attendance_id
+        type: text
+        value: "97"
+      - name: current_time
+        type: text
+        value: ""
+        disabled: true
+      - name: qr_code
+        type: text
+        value: 4C35D392-706D-45D9-82A2-E42C3651FB39
+  auth:
+    type: bearer
+    token: 4C35D392-706D-45D9-82A2-E42C3651FB39
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

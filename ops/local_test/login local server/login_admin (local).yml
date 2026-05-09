@@ -1,0 +1,24 @@
+info:
+  name: login_admin (local)
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/login
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: adminofc1.1
+      - name: password
+        type: text
+        value: admin123
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

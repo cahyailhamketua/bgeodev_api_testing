@@ -1,0 +1,57 @@
+info:
+  name: update_project Copy
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: organization_id
+        type: text
+        value: "1"
+        disabled: true
+      - name: name
+        type: text
+        value: project 1
+        disabled: true
+      - name: code
+        type: text
+        value: p-2
+        disabled: true
+      - name: location_longitude
+        type: text
+        value: "106.81029"
+        disabled: true
+      - name: location_address
+        type: text
+        value: ""
+        disabled: true
+      - name: location_latitude
+        type: text
+        value: "-6.59671"
+        disabled: true
+      - name: location_city
+        type: text
+        value: bogor
+        disabled: true
+      - name: radius
+        type: text
+        value: "10"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 1824|tc2iYlVMfkw2fMVa4C7niNiLwLQOH6MUaZ0hUMJL8f6fb1dc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,668 @@
+info:
+  name: progressteam detail all
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/attendances/progressall?project_id=3&danru_id=15
+  params:
+    - name: attendance_id
+      value: "55"
+      type: query
+      disabled: true
+    - name: assignment_id
+      value: "6"
+      type: query
+      disabled: true
+    - name: current_time
+      value: 2026-04-06 20:34:00
+      type: query
+      disabled: true
+    - name: user_id
+      value: "67"
+      type: query
+      disabled: true
+    - name: project_id
+      value: "3"
+      type: query
+    - name: post_id
+      value: "4"
+      type: query
+      disabled: true
+    - name: danru_id
+      value: "15"
+      type: query
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+        disabled: true
+      - name: longitude
+        type: text
+        value: "106.78906"
+        disabled: true
+      - name: current_time
+        type: text
+        value: 2026-04-02 07:10:30
+        disabled: true
+      - name: post_type
+        type: text
+        value: mobile
+        disabled: true
+      - name: post_name
+        type: text
+        value: patroli luar
+        disabled: true
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+        disabled: true
+      - name: project_id
+        type: text
+        value: "1"
+        disabled: true
+      - name: attendance_id
+        type: text
+        value: "46"
+      - name: current_time
+        type: text
+        value: 2026-04-02 21:10:30
+  auth:
+    type: bearer
+    token: 1923|bQEk3RKxcEwxDQIjQI6jorZorjbCWZZTRgM9YQMicb06765c
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: response danru
+    request:
+      url: https://epatrol.bgeodev.cloud/api/attendances/progressall?project_id=3&danru_id=15
+      method: GET
+      params:
+        - name: attendance_id
+          value: "55"
+          type: query
+          disabled: true
+        - name: assignment_id
+          value: "6"
+          type: query
+          disabled: true
+        - name: current_time
+          value: 2026-04-06 20:34:00
+          type: query
+          disabled: true
+        - name: user_id
+          value: "67"
+          type: query
+          disabled: true
+        - name: project_id
+          value: "3"
+          type: query
+        - name: post_id
+          value: "4"
+          type: query
+          disabled: true
+        - name: danru_id
+          value: "15"
+          type: query
+      body:
+        type: multipart-form
+        data:
+          - name: latitude
+            type: text
+            value: "-6.54926"
+            disabled: true
+          - name: longitude
+            type: text
+            value: "106.78906"
+            disabled: true
+          - name: current_time
+            type: text
+            value: 2026-04-02 07:10:30
+            disabled: true
+          - name: post_type
+            type: text
+            value: mobile
+            disabled: true
+          - name: post_name
+            type: text
+            value: patroli luar
+            disabled: true
+          - name: selfie_photo
+            type: file
+            value:
+              - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+            disabled: true
+          - name: project_id
+            type: text
+            value: "1"
+            disabled: true
+          - name: attendance_id
+            type: text
+            value: "46"
+          - name: current_time
+            type: text
+            value: 2026-04-02 21:10:30
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 06 May 2026 13:06:29 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "data": {
+                  "user": {
+                      "id": 15,
+                      "name": "Danru buj 1.1",
+                      "check_in_at": "2026-05-06T11:46:36.000000Z",
+                      "check_out_at": null,
+                      "computed_status": "HADIR TELAT"
+                  },
+                  "post_progress": {
+                      "total_posts": 2,
+                      "total_members": 1,
+                      "checked_in_members": 1,
+                      "not_checked_in_members": 0,
+                      "total_patrol_points": 2,
+                      "scanned_patrol_points": 1,
+                      "remaining_patrol_points": 1,
+                      "progress_percentage": 50
+                  },
+                  "patrol_points": [
+                      {
+                          "post_id": 33,
+                          "post_name": "POS LIFT PARKING TOWER A",
+                          "post_type": "static",
+                          "id": 159,
+                          "name": "POS LIFT PARKING TOWER A",
+                          "sequence_order": 1,
+                          "latitude": "-6.5881000",
+                          "longitude": "106.8095000",
+                          "is_scanned": true,
+                          "scanned_count": 1,
+                          "last_scan_time": null,
+                          "last_scan_note": null,
+                          "last_scan_user": null
+                      },
+                      {
+                          "post_id": 35,
+                          "post_name": "POS LIFT PARKING TOWER b",
+                          "post_type": "static",
+                          "id": 162,
+                          "name": "POS LIFT PARKING TOWER A",
+                          "sequence_order": 1,
+                          "latitude": "-6.5493500",
+                          "longitude": "106.7890200",
+                          "is_scanned": false,
+                          "scanned_count": 0,
+                          "last_scan_time": null,
+                          "last_scan_note": null,
+                          "last_scan_user": null
+                      }
+                  ],
+                  "activity_list": [
+                      {
+                          "id": 165,
+                          "name": "Attendance",
+                          "location": "Main Gate",
+                          "assignment_times": [
+                              {
+                                  "id": 239,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "09:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 166,
+                          "name": "Patrol Area A",
+                          "location": "Basement",
+                          "assignment_times": [
+                              {
+                                  "id": 240,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "05:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      }
+                  ],
+                  "user_timesheet": [
+                      {
+                          "user_id": "15",
+                          "user_name": "Danru buj 1.1",
+                          "summary": {
+                              "total_hari": 3,
+                              "schedule_kerja": 3,
+                              "kode_kehadiran": 1,
+                              "telat": 1,
+                              "tidak_absen": 2
+                          },
+                          "history": [
+                              {
+                                  "date": "05",
+                                  "day_name": "Tuesday",
+                                  "full_date": "2026-05-05",
+                                  "schedule_code": "m",
+                                  "attendance_code": "-",
+                                  "check_in": "--:--",
+                                  "check_out": "--:--",
+                                  "status": "Tidak Absen"
+                              },
+                              {
+                                  "date": "06",
+                                  "day_name": "Wednesday",
+                                  "full_date": "2026-05-06",
+                                  "schedule_code": "m",
+                                  "attendance_code": "m",
+                                  "check_in": "18:46",
+                                  "check_out": "--:--",
+                                  "status": "Telat"
+                              },
+                              {
+                                  "date": "07",
+                                  "day_name": "Thursday",
+                                  "full_date": "2026-05-07",
+                                  "schedule_code": "m",
+                                  "attendance_code": "-",
+                                  "check_in": "--:--",
+                                  "check_out": "--:--",
+                                  "status": "Tidak Absen"
+                              }
+                          ]
+                      }
+                  ],
+                  "scan_details": [
+                      {
+                          "id": 181,
+                          "attendance_id": 186,
+                          "patrol_point_id": 159,
+                          "patrol_point_name": "POS LIFT PARKING TOWER A",
+                          "scan_time": "2026-05-06T12:02:38.000000Z",
+                          "note": "aman",
+                          "photos": [
+                              {
+                                  "id": 722,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2ddf52ed94.11864029.webp"
+                              },
+                              {
+                                  "id": 723,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2ddf61dde7.04194786.webp"
+                              },
+                              {
+                                  "id": 724,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2ddf6f6ef4.18486814.webp"
+                              },
+                              {
+                                  "id": 725,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2ddf7ceb24.48228609.webp"
+                              }
+                          ],
+                          "scan_user": {
+                              "id": 15,
+                              "full_name": "Danru buj 1.1"
+                          }
+                      }
+                  ]
+              }
+          }
+  - name: response anggota
+    request:
+      url: https://epatrol.bgeodev.cloud/api/attendances/progressall?project_id=3&post_id=4
+      method: GET
+      params:
+        - name: attendance_id
+          value: "55"
+          type: query
+          disabled: true
+        - name: assignment_id
+          value: "6"
+          type: query
+          disabled: true
+        - name: current_time
+          value: 2026-04-06 20:34:00
+          type: query
+          disabled: true
+        - name: user_id
+          value: "67"
+          type: query
+          disabled: true
+        - name: project_id
+          value: "3"
+          type: query
+        - name: post_id
+          value: "4"
+          type: query
+        - name: danru_id
+          value: "15"
+          type: query
+          disabled: true
+      body:
+        type: multipart-form
+        data:
+          - name: latitude
+            type: text
+            value: "-6.54926"
+            disabled: true
+          - name: longitude
+            type: text
+            value: "106.78906"
+            disabled: true
+          - name: current_time
+            type: text
+            value: 2026-04-02 07:10:30
+            disabled: true
+          - name: post_type
+            type: text
+            value: mobile
+            disabled: true
+          - name: post_name
+            type: text
+            value: patroli luar
+            disabled: true
+          - name: selfie_photo
+            type: file
+            value:
+              - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+            disabled: true
+          - name: project_id
+            type: text
+            value: "1"
+            disabled: true
+          - name: attendance_id
+            type: text
+            value: "46"
+          - name: current_time
+            type: text
+            value: 2026-04-02 21:10:30
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 06 May 2026 13:07:14 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "data": {
+                  "user": {
+                      "id": 17,
+                      "name": "Anggota buj 1.1",
+                      "check_in_at": "2026-05-06T10:57:49.000000Z",
+                      "check_out_at": null,
+                      "computed_status": "HADIR TELAT"
+                  },
+                  "post_progress": {
+                      "post_id": 4,
+                      "post_name": "Patroli luar",
+                      "post_type": "mobile",
+                      "project_id": 3,
+                      "assignment_id": 6,
+                      "total_members": 1,
+                      "checked_in_members": 1,
+                      "not_checked_in_members": 0,
+                      "total_patrol_points": 2,
+                      "scanned_patrol_points": 1,
+                      "remaining_patrol_points": 1,
+                      "progress_percentage": 50
+                  },
+                  "patrol_points": [
+                      {
+                          "id": 5,
+                          "name": "luar 1",
+                          "sequence_order": 1,
+                          "latitude": "-6.4520600",
+                          "longitude": "106.7311700",
+                          "is_scanned": true,
+                          "scanned_count": 1,
+                          "last_scan_time": null,
+                          "last_scan_note": null,
+                          "last_scan_user": null
+                      },
+                      {
+                          "id": 6,
+                          "name": "luar2",
+                          "sequence_order": 2,
+                          "latitude": "-6.4520600",
+                          "longitude": "106.7311700",
+                          "is_scanned": false,
+                          "scanned_count": 0,
+                          "last_scan_time": null,
+                          "last_scan_note": null,
+                          "last_scan_user": null
+                      }
+                  ],
+                  "activity_list": [
+                      {
+                          "id": 148,
+                          "name": "absen",
+                          "location": "test",
+                          "assignment_times": [
+                              {
+                                  "id": 221,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "00:00:00",
+                                  "end_time": "01:01:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 149,
+                          "name": "heh",
+                          "location": "he",
+                          "assignment_times": [
+                              {
+                                  "id": 223,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "19:00:00",
+                                  "end_time": "07:00:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 150,
+                          "name": "Attendance",
+                          "location": "Main Gate",
+                          "assignment_times": [
+                              {
+                                  "id": 224,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "09:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 151,
+                          "name": "Patrol Area A",
+                          "location": "Basement",
+                          "assignment_times": [
+                              {
+                                  "id": 225,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "05:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 152,
+                          "name": "Attendance",
+                          "location": "Main Gate",
+                          "assignment_times": [
+                              {
+                                  "id": 226,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "09:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 153,
+                          "name": "Patrol Area A",
+                          "location": "Basement",
+                          "assignment_times": [
+                              {
+                                  "id": 227,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "05:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 158,
+                          "name": "Attendance",
+                          "location": "Main Gate",
+                          "assignment_times": [
+                              {
+                                  "id": 232,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "09:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      },
+                      {
+                          "id": 159,
+                          "name": "Patrol Area A",
+                          "location": "Basement",
+                          "assignment_times": [
+                              {
+                                  "id": 233,
+                                  "assignment_id": 6,
+                                  "assignment_name": "malam 3",
+                                  "start_time": "05:00:00",
+                                  "end_time": "05:00:00"
+                              }
+                          ]
+                      }
+                  ],
+                  "user_timesheet": [
+                      {
+                          "user_id": 17,
+                          "user_name": "Anggota buj 1.1",
+                          "summary": {
+                              "total_hari": 3,
+                              "schedule_kerja": 3,
+                              "kode_kehadiran": 1,
+                              "telat": 1,
+                              "tidak_absen": 2
+                          },
+                          "history": [
+                              {
+                                  "date": "05",
+                                  "day_name": "Tuesday",
+                                  "full_date": "2026-05-05",
+                                  "schedule_code": "m",
+                                  "attendance_code": "-",
+                                  "check_in": "--:--",
+                                  "check_out": "--:--",
+                                  "status": "Tidak Absen"
+                              },
+                              {
+                                  "date": "06",
+                                  "day_name": "Wednesday",
+                                  "full_date": "2026-05-06",
+                                  "schedule_code": "m",
+                                  "attendance_code": "m",
+                                  "check_in": "17:57",
+                                  "check_out": "--:--",
+                                  "status": "Telat"
+                              },
+                              {
+                                  "date": "07",
+                                  "day_name": "Thursday",
+                                  "full_date": "2026-05-07",
+                                  "schedule_code": "m",
+                                  "attendance_code": "-",
+                                  "check_in": "--:--",
+                                  "check_out": "--:--",
+                                  "status": "Tidak Absen"
+                              }
+                          ]
+                      }
+                  ],
+                  "scan_details": [
+                      {
+                          "id": 182,
+                          "attendance_id": 184,
+                          "patrol_point_id": 5,
+                          "patrol_point_name": "luar 1",
+                          "scan_time": "2026-05-06T12:04:23.000000Z",
+                          "note": "halo",
+                          "photos": [
+                              {
+                                  "id": 726,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2e48b7f7c3.86076889.webp"
+                              },
+                              {
+                                  "id": 727,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2e48ca8403.46954913.webp"
+                              },
+                              {
+                                  "id": 728,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2e48d9dc04.23760649.webp"
+                              },
+                              {
+                                  "id": 729,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2e48e8e967.56150899.webp"
+                              },
+                              {
+                                  "id": 730,
+                                  "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69fb2e4903bfd1.56132245.webp"
+                              }
+                          ],
+                          "scan_user": {
+                              "id": 17,
+                              "full_name": "Anggota buj 1.1"
+                          }
+                      }
+                  ]
+              }
+          }

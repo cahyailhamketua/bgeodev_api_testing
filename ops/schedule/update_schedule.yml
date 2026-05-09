@@ -1,0 +1,27 @@
+info:
+  name: update_schedule
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: https://epatrol.bgeodev.cloud/api/schedules/348
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"assignment_code\": \"m\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 999|N8LXtZZHlTXS7Wwr9vI8NoB2ww833BzdXJztuzLh7d5e6717
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

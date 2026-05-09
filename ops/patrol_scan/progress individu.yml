@@ -1,0 +1,17 @@
+info:
+  name: progress individu
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/attendance/189/patrol-scan/progress
+  auth:
+    type: bearer
+    token: 1936|8Isnme81Gx3YkPMCT4wOYrnxQg9qfWoqWkRMOVURd9f12bb2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,82 @@
+info:
+  name: progressteam detail
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/posts/6/attendance/progress-detail
+  params:
+    - name: attendance_id
+      value: "55"
+      type: query
+      disabled: true
+    - name: assignment_id
+      value: "6"
+      type: query
+      disabled: true
+    - name: current_time
+      value: 2026-04-06 20:34:00
+      type: query
+      disabled: true
+    - name: user_id
+      value: "67"
+      type: query
+      disabled: true
+    - name: post_id
+      value: "4"
+      type: query
+      disabled: true
+    - name: project_id
+      value: "3"
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+        disabled: true
+      - name: longitude
+        type: text
+        value: "106.78906"
+        disabled: true
+      - name: current_time
+        type: text
+        value: 2026-04-02 07:10:30
+        disabled: true
+      - name: post_type
+        type: text
+        value: mobile
+        disabled: true
+      - name: post_name
+        type: text
+        value: patroli luar
+        disabled: true
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+        disabled: true
+      - name: project_id
+        type: text
+        value: "3"
+        disabled: true
+      - name: attendance_id
+        type: text
+        value: "46"
+        disabled: true
+      - name: current_time
+        type: text
+        value: 2026-04-02 21:10:30
+        disabled: true
+  auth:
+    type: bearer
+    token: 1940|yQBMv8EC0uUZs4N7x00Ab9EjXP0pG8MUgw3iFJdPc4eb4896
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

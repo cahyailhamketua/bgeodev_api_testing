@@ -1,0 +1,87 @@
+info:
+  name: Acivity_by_post_assignment
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/posts/activities
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \r
+
+      \    \"project_id\": 3,\r
+
+      \ \r
+
+      \r
+
+      \r
+
+      \  \"activities\": [\r
+
+      \    {\r
+
+      \      \"name\": \"Attendance\",\r
+
+      \      \"location\": \"Main Gate\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"assignment_id\": 6,\r
+
+      \          \"start_time\": \"09:00\",\r
+
+      \          \"end_time\": \"05:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"name\": \"Patrol Area A\",\r
+
+      \      \"location\": \"Basement\",\r
+
+      \      \"active\": true,\r
+
+      \      \"assignment_times\": [\r
+
+      \        {\r
+
+      \          \"assignment_id\": 6,\r
+
+      \          \"start_time\": \"05:00\",\r
+
+      \          \"end_time\": \"05:00\"\r
+
+      \        }\r
+
+      \      ]\r
+
+      \    }\r
+
+      \  ]\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: 1892|djiVxBzhF8casS0M4kLXbH1Ao0IRC12m25Xa6lJT989c7efb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

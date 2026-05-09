@@ -1,0 +1,52 @@
+info:
+  name: update_patrol_point
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/patrol-points/3
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Taman ballroom P2 Tower B
+        disabled: true
+      - name: sequence_order
+        type: text
+        value: ""
+        disabled: true
+      - name: latitude
+        type: text
+        value: "-6.5672487"
+      - name: longitude
+        type: text
+        value: "106.7818298"
+      - name: radius
+        type: text
+        value: "5"
+        disabled: true
+      - name: _method
+        type: text
+        value: PUT
+      - name: regenerate_qr
+        type: text
+        value: "1"
+        disabled: true
+      - name: code
+        type: text
+        value: ""
+        disabled: true
+  auth:
+    type: bearer
+    token: 985|ySfKR368LAyJDSMYPNUApdpmsIPRJyBqWqlYoqTl41a05fe8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

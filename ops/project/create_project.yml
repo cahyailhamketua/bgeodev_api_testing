@@ -1,0 +1,46 @@
+info:
+  name: create_project
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: organization_id
+        type: text
+        value: "4"
+      - name: name
+        type: text
+        value: Sopo Del Tower
+      - name: code
+        type: text
+        value: SDT
+      - name: location_latitude
+        type: text
+        value: "-6231058"
+      - name: location_longitude
+        type: text
+        value: "106823830"
+      - name: location_address
+        type: text
+        value: |-
+          Jl. Mega Kuningan Barat III, Lot 10. 1-6
+          Kawasan Mega Kuningan. Jakarta 12950.
+      - name: location_city
+        type: text
+        value: Jakarta Selatan
+  auth:
+    type: bearer
+    token: 309|0C2p78FznpiTsMH0mhisfSyCsggbpoBOkC4pmDHx3c11d336
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

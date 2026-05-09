@@ -1,0 +1,571 @@
+info:
+  name: laporan patrol pos
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/4/reports/patrol-pos
+  params:
+    - name: attendance_id
+      value: "55"
+      type: query
+      disabled: true
+    - name: assignment_id
+      value: "6"
+      type: query
+      disabled: true
+    - name: Accept
+      value: application/json
+      type: query
+      disabled: true
+    - name: p-danru
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+        disabled: true
+      - name: longitude
+        type: text
+        value: "106.78906"
+        disabled: true
+      - name: current_time
+        type: text
+        value: 2026-04-02 07:10:30
+        disabled: true
+      - name: post_type
+        type: text
+        value: mobile
+        disabled: true
+      - name: post_name
+        type: text
+        value: patroli luar
+        disabled: true
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+        disabled: true
+      - name: project_id
+        type: text
+        value: "3"
+        disabled: true
+      - name: attendance_id
+        type: text
+        value: "46"
+      - name: current_time
+        type: text
+        value: 2026-04-02 21:10:30
+  auth:
+    type: bearer
+    token: 1566|8EsWcY55OrpmK1CyZW1QbJqA2pq7dVqFTwTtN8XZ64c66e30
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: laporan patrol pos
+    request:
+      url: https://epatrol.bgeodev.cloud/api/projects/3/reports/patrol-pos
+      method: GET
+      params:
+        - name: attendance_id
+          value: "55"
+          type: query
+          disabled: true
+        - name: assignment_id
+          value: "6"
+          type: query
+          disabled: true
+        - name: Accept
+          value: application/json
+          type: query
+          disabled: true
+        - name: p-danru
+          value: ""
+          type: query
+          disabled: true
+      body:
+        type: multipart-form
+        data:
+          - name: latitude
+            type: text
+            value: "-6.54926"
+            disabled: true
+          - name: longitude
+            type: text
+            value: "106.78906"
+            disabled: true
+          - name: current_time
+            type: text
+            value: 2026-04-02 07:10:30
+            disabled: true
+          - name: post_type
+            type: text
+            value: mobile
+            disabled: true
+          - name: post_name
+            type: text
+            value: patroli luar
+            disabled: true
+          - name: selfie_photo
+            type: file
+            value:
+              - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+            disabled: true
+          - name: project_id
+            type: text
+            value: "3"
+            disabled: true
+          - name: attendance_id
+            type: text
+            value: "46"
+          - name: current_time
+            type: text
+            value: 2026-04-02 21:10:30
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 23 Apr 2026 14:26:45 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "report": "laporan_patrol_pos",
+              "project": {
+                  "id": 3,
+                  "name": "bujp project 1"
+              },
+              "filters_applied": {
+                  "dari_tanggal": "2026-04-01",
+                  "sampai_tanggal": "2026-04-30",
+                  "date_range_is_current_month_default": true,
+                  "current_time_anchor": "2026-04-23 21:26:45"
+              },
+              "summary": {
+                  "total_scan_rows": 8
+              },
+              "data": [
+                  {
+                      "scan_id": 122,
+                      "tanggal": "2026-04-20",
+                      "nama_anggota": "Anggota buj 1.2",
+                      "user_id": 18,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar 1",
+                      "patrol_point_id": 5,
+                      "waktu_scan": "00:57",
+                      "waktu_scan_iso": "2026-04-20T17:57:07+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69e668cae29141.73091658.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e668cae29141.73091658.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/152/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 486,
+                              "path": "patrol-scan-photos/img_69e668f4e84311.55629684.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e668f4e84311.55629684.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/486/inline"
+                          },
+                          {
+                              "id": 487,
+                              "path": "patrol-scan-photos/img_69e668f5054558.54698563.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e668f5054558.54698563.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/487/inline"
+                          },
+                          {
+                              "id": 488,
+                              "path": "patrol-scan-photos/img_69e668f514b767.33801649.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e668f514b767.33801649.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/488/inline"
+                          },
+                          {
+                              "id": 489,
+                              "path": "patrol-scan-photos/img_69e668f5235533.65530647.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e668f5235533.65530647.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/489/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 90,
+                      "tanggal": "2026-04-17",
+                      "nama_anggota": "Anggota buj 1.2",
+                      "user_id": 18,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar2",
+                      "patrol_point_id": 6,
+                      "waktu_scan": "00:55",
+                      "waktu_scan_iso": "2026-04-17T17:55:59+00:00",
+                      "notes": "man",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69e2636e316416.70078292.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e2636e316416.70078292.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/144/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 358,
+                              "path": "patrol-scan-photos/img_69e27430368227.02940800.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e27430368227.02940800.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/358/inline"
+                          },
+                          {
+                              "id": 359,
+                              "path": "patrol-scan-photos/img_69e2743046b2f0.68285960.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e2743046b2f0.68285960.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/359/inline"
+                          },
+                          {
+                              "id": 360,
+                              "path": "patrol-scan-photos/img_69e27430599504.02038652.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e27430599504.02038652.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/360/inline"
+                          },
+                          {
+                              "id": 361,
+                              "path": "patrol-scan-photos/img_69e27430682e25.64341259.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e27430682e25.64341259.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/361/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 89,
+                      "tanggal": "2026-04-17",
+                      "nama_anggota": "Anggota buj 1.2",
+                      "user_id": 18,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar 1",
+                      "patrol_point_id": 5,
+                      "waktu_scan": "00:55",
+                      "waktu_scan_iso": "2026-04-17T17:55:26+00:00",
+                      "notes": "yeah",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69e2636e316416.70078292.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e2636e316416.70078292.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/144/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 354,
+                              "path": "patrol-scan-photos/img_69e2740ee37ed8.35915497.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e2740ee37ed8.35915497.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/354/inline"
+                          },
+                          {
+                              "id": 355,
+                              "path": "patrol-scan-photos/img_69e2740ef2b198.53245256.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e2740ef2b198.53245256.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/355/inline"
+                          },
+                          {
+                              "id": 356,
+                              "path": "patrol-scan-photos/img_69e2740f0d7a84.22865711.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e2740f0d7a84.22865711.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/356/inline"
+                          },
+                          {
+                              "id": 357,
+                              "path": "patrol-scan-photos/img_69e2740f1c68b0.17439101.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69e2740f1c68b0.17439101.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/357/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 26,
+                      "tanggal": "2026-04-13",
+                      "nama_anggota": "Anggota buj 1.2",
+                      "user_id": 18,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar 1",
+                      "patrol_point_id": 5,
+                      "waktu_scan": "23:44",
+                      "waktu_scan_iso": "2026-04-13T16:44:04+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69dd1cf9810e73.65418709.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69dd1cf9810e73.65418709.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/116/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 102,
+                              "path": "patrol-scan-photos/img_69dd1d552ac542.67050680.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d552ac542.67050680.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/102/inline"
+                          },
+                          {
+                              "id": 103,
+                              "path": "patrol-scan-photos/img_69dd1d5545cdf8.39793732.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d5545cdf8.39793732.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/103/inline"
+                          },
+                          {
+                              "id": 104,
+                              "path": "patrol-scan-photos/img_69dd1d5557cfe3.56337042.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d5557cfe3.56337042.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/104/inline"
+                          },
+                          {
+                              "id": 105,
+                              "path": "patrol-scan-photos/img_69dd1d556636c6.66491911.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d556636c6.66491911.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/105/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 25,
+                      "tanggal": "2026-04-13",
+                      "nama_anggota": "Anggota buj 1.2",
+                      "user_id": 18,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar2",
+                      "patrol_point_id": 6,
+                      "waktu_scan": "23:43",
+                      "waktu_scan_iso": "2026-04-13T16:43:15+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69dd1cf9810e73.65418709.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69dd1cf9810e73.65418709.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/116/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 98,
+                              "path": "patrol-scan-photos/img_69dd1d24305a88.33344451.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d24305a88.33344451.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/98/inline"
+                          },
+                          {
+                              "id": 99,
+                              "path": "patrol-scan-photos/img_69dd1d24436157.60675755.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d24436157.60675755.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/99/inline"
+                          },
+                          {
+                              "id": 100,
+                              "path": "patrol-scan-photos/img_69dd1d2450fae1.77314103.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d2450fae1.77314103.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/100/inline"
+                          },
+                          {
+                              "id": 101,
+                              "path": "patrol-scan-photos/img_69dd1d2461ed76.99971645.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1d2461ed76.99971645.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/101/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 24,
+                      "tanggal": "2026-04-13",
+                      "nama_anggota": "Anggota buj 1.1",
+                      "user_id": 17,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar2",
+                      "patrol_point_id": 6,
+                      "waktu_scan": "23:14",
+                      "waktu_scan_iso": "2026-04-13T16:14:32+00:00",
+                      "notes": "aman bos",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69dd160833a301.30807627.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69dd160833a301.30807627.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/113/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 94,
+                              "path": "patrol-scan-photos/img_69dd1669cdb006.92345155.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1669cdb006.92345155.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/94/inline"
+                          },
+                          {
+                              "id": 95,
+                              "path": "patrol-scan-photos/img_69dd1669dafa67.09809283.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1669dafa67.09809283.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/95/inline"
+                          },
+                          {
+                              "id": 96,
+                              "path": "patrol-scan-photos/img_69dd1669e8d923.37960005.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd1669e8d923.37960005.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/96/inline"
+                          },
+                          {
+                              "id": 97,
+                              "path": "patrol-scan-photos/img_69dd166a02b6d0.00928232.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dd166a02b6d0.00928232.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/97/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 22,
+                      "tanggal": "2026-04-12",
+                      "nama_anggota": "Anggota buj 1.1",
+                      "user_id": 17,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar2",
+                      "patrol_point_id": 6,
+                      "waktu_scan": "20:41",
+                      "waktu_scan_iso": "2026-04-12T13:41:50+00:00",
+                      "notes": "aman",
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69db9f38655f18.72269058.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69db9f38655f18.72269058.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/109/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 86,
+                              "path": "patrol-scan-photos/img_69dba11fda4347.99498306.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dba11fda4347.99498306.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/86/inline"
+                          },
+                          {
+                              "id": 87,
+                              "path": "patrol-scan-photos/img_69dba11fed2d92.32125902.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dba11fed2d92.32125902.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/87/inline"
+                          },
+                          {
+                              "id": 88,
+                              "path": "patrol-scan-photos/img_69dba12009aa93.91124801.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dba12009aa93.91124801.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/88/inline"
+                          },
+                          {
+                              "id": 89,
+                              "path": "patrol-scan-photos/img_69dba1201b2e86.72126047.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69dba1201b2e86.72126047.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/89/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  },
+                  {
+                      "scan_id": 14,
+                      "tanggal": "2026-04-06",
+                      "nama_anggota": "Anggota buj 1.2",
+                      "user_id": 18,
+                      "pos": {
+                          "id": 4,
+                          "name": "Patroli luar",
+                          "type": "mobile"
+                      },
+                      "titik_patroli": "luar2",
+                      "patrol_point_id": 6,
+                      "waktu_scan": "22:16",
+                      "waktu_scan_iso": "2026-04-06T15:16:15+00:00",
+                      "notes": null,
+                      "photo_attendance": {
+                          "path": "attendances/selfies/img_69d3cdfd81c8d0.02785575.webp",
+                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69d3cdfd81c8d0.02785575.webp",
+                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/76/selfie-inline"
+                      },
+                      "photo_scan": [
+                          {
+                              "id": 54,
+                              "path": "patrol-scan-photos/img_69d3ce41762b42.58416982.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d3ce41762b42.58416982.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/54/inline"
+                          },
+                          {
+                              "id": 55,
+                              "path": "patrol-scan-photos/img_69d3ce418372b4.14835750.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d3ce418372b4.14835750.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/55/inline"
+                          },
+                          {
+                              "id": 56,
+                              "path": "patrol-scan-photos/img_69d3ce41927e80.09021858.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d3ce41927e80.09021858.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/56/inline"
+                          },
+                          {
+                              "id": 57,
+                              "path": "patrol-scan-photos/img_69d3ce419eaaa1.23706004.webp",
+                              "url": "https://epatrol.bgeodev.cloud/storage/patrol-scan-photos/img_69d3ce419eaaa1.23706004.webp",
+                              "api_inline_url": "https://epatrol.bgeodev.cloud/api/patrol-scan-photo/57/inline"
+                          }
+                      ],
+                      "timezone": "Asia/Jakarta"
+                  }
+              ],
+              "pagination": {
+                  "total": 8,
+                  "per_page": 15,
+                  "current_page": 1,
+                  "last_page": 1
+              },
+              "field_descriptions": {
+                  "tanggal": "Tanggal attendance.",
+                  "nama_anggota": "Anggota yang scan.",
+                  "pos": "Pos (plotting).",
+                  "titik_patroli": "Patrol point.",
+                  "waktu_scan": "Waktu scan (timezone project).",
+                  "notes": "Catatan.",
+                  "photo_attendance": "Foto absen kehadiran (selfie) beserta url publiknya.",
+                  "photo_scan": "Array foto patrol; url publik /storage."
+              }
+          }

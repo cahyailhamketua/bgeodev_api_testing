@@ -1,0 +1,44 @@
+info:
+  name: check-in validate time
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/attendances/check-in
+  params:
+    - name: contentttttttttttttttttttttttttttttttttttt
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.548973052510065"
+      - name: longitude
+        type: text
+        value: "106.78894868181371"
+      - name: current_time
+        type: text
+        value: 2026-02-14 01:10:30
+      - name: selfie_photo
+        type: file
+        value:
+          - /Users/fadhil/Documents/screenshot/Screenshot 2026-04-05 at 20.04.37.png
+      - name: post_type
+        type: text
+        value: mobile
+      - name: post_name
+        type: text
+        value: patroli luar
+  auth:
+    type: bearer
+    token: 937|sCGGBFGHIQbUURXA1xybGO7qRVc7jFSeWwIcGKRQe1e06599
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

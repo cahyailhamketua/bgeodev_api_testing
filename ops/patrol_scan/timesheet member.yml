@@ -1,0 +1,67 @@
+info:
+  name: timesheet member
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/posts/2/members-timesheet?user_id=9&current_time=2026-04-27 15:43:00
+  params:
+    - name: attendance_id
+      value: "46"
+      type: query
+      disabled: true
+    - name: assignment_id
+      value: "6"
+      type: query
+      disabled: true
+    - name: user_id
+      value: "9"
+      type: query
+    - name: current_time
+      value: 2026-04-27 15:43:00
+      type: query
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+        disabled: true
+      - name: longitude
+        type: text
+        value: "106.78906"
+        disabled: true
+      - name: current_time
+        type: text
+        value: 2026-04-02 07:10:30
+      - name: post_type
+        type: text
+        value: mobile
+        disabled: true
+      - name: post_name
+        type: text
+        value: patroli luar
+        disabled: true
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+        disabled: true
+      - name: project_id
+        type: text
+        value: "3"
+        disabled: true
+      - name: attendance_id
+        type: text
+        value: "43"
+        disabled: true
+  auth:
+    type: bearer
+    token: 1638|ADHWCF5RULk6huoNZhkTqFz4t5fMH05TS3elJdKyd8f531ff
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: update_absence
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: https://epatrol.bgeodev.cloud/api/absences/35
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"absence_type\": \"SOC-A\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 1787|nlxCCtVx4bzak9y52EKb2wZ2HLu5WO5pZ2q2Wp21102c29e3
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: user_by_organization
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: |-
+    https://epatrol.bgeodev.cloud
+    /api/organizations/2/users
+  headers:
+    - name: Accept
+      value: Application/json
+  auth:
+    type: bearer
+    token: 8|xoZlfqIXaaIad8Kk4fBl5D4p7dq0hjK26JwTam94b5cff94c
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

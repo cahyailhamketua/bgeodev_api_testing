@@ -1,0 +1,29 @@
+info:
+  name: generate_schedule_template
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/1/teams/22/schedule-template
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"pattern\": [\"p\", \"p\", \"p\", \"p\", \"p\", \"p\", \"p\"],\r
+
+      \  \"start_date\": \"2026-05-01\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: 1783|d3fDIKFctWDVMPDvE1DJOVsHWytIRhSeyzJfbQKcda74bbf4
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

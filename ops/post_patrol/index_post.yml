@@ -1,0 +1,146 @@
+info:
+  name: index_post
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/posts
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 1249|x0Q6ru87eAUO0zbucOSmmRVNHQF65TX8XMhfgA6A2af01fbe
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: index_post
+    request:
+      url: https://epatrol.bgeodev.cloud/api/posts
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: :status
+          value: "200"
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 15 Apr 2026 18:35:28 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": 6,
+                      "project_id": 3,
+                      "name": "PATROLI DALAM T A",
+                      "type": "mobile",
+                      "project": {
+                          "id": 3,
+                          "organization_id": 2,
+                          "name": "bujp project 1",
+                          "organization": {
+                              "id": 2,
+                              "name": "BUJP",
+                              "logo": null
+                          }
+                      },
+                      "patrol_points": [
+                          {
+                              "id": 8,
+                              "post_id": 6,
+                              "name": "depan 3",
+                              "sequence_order": 1,
+                              "latitude": "-6.5548300",
+                              "longitude": "106.7978200",
+                              "altitude": null,
+                              "radius": 5
+                          }
+                      ]
+                  },
+                  {
+                      "id": 4,
+                      "project_id": 3,
+                      "name": "Patroli luar",
+                      "type": "mobile",
+                      "project": {
+                          "id": 3,
+                          "organization_id": 2,
+                          "name": "bujp project 1",
+                          "organization": {
+                              "id": 2,
+                              "name": "BUJP",
+                              "logo": null
+                          }
+                      },
+                      "patrol_points": [
+                          {
+                              "id": 5,
+                              "post_id": 4,
+                              "name": "luar 1",
+                              "sequence_order": 1,
+                              "latitude": "-6.4520600",
+                              "longitude": "106.7311700",
+                              "altitude": "0.00",
+                              "radius": 5
+                          },
+                          {
+                              "id": 6,
+                              "post_id": 4,
+                              "name": "luar2",
+                              "sequence_order": 2,
+                              "latitude": "-6.4520600",
+                              "longitude": "106.7311700",
+                              "altitude": "0.00",
+                              "radius": 5
+                          }
+                      ]
+                  },
+                  {
+                      "id": 33,
+                      "project_id": 3,
+                      "name": "POS LIFT PARKING TOWER A",
+                      "type": "static",
+                      "project": {
+                          "id": 3,
+                          "organization_id": 2,
+                          "name": "bujp project 1",
+                          "organization": {
+                              "id": 2,
+                              "name": "BUJP",
+                              "logo": null
+                          }
+                      },
+                      "patrol_points": [
+                          {
+                              "id": 159,
+                              "post_id": 33,
+                              "name": "POS LIFT PARKING TOWER A",
+                              "sequence_order": 1,
+                              "latitude": "-6.5881000",
+                              "longitude": "106.8095000",
+                              "altitude": null,
+                              "radius": 5
+                          }
+                      ]
+                  }
+              ]
+          }

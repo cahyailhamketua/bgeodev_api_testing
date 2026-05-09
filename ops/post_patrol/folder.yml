@@ -1,0 +1,7 @@
+info:
+  name: post_patrol
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

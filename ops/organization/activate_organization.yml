@@ -1,0 +1,17 @@
+info:
+  name: activate_organization
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: http://127.0.0.1:8000/api/organizations/1/activate
+  auth:
+    type: bearer
+    token: 26|IBxbnG0h1G4gUFwUmuG7lUvJ1wNdZnx4x39NF0kjaf80364b
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,44 @@
+info:
+  name: check-in Copy
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/attendances/check-in
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.54926"
+      - name: longitude
+        type: text
+        value: "106.78906"
+      - name: current_time
+        type: text
+        value: 2026-04-04 21:48:30
+      - name: post_type
+        type: text
+        value: mobile
+      - name: post_name
+        type: text
+        value: patroli luar
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+  auth:
+    type: bearer
+    token: 329|SrldMR7L61hHScZf1zqd64VyS6RL6KUWXdrxHEpWcc3d48b8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

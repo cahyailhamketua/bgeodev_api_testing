@@ -1,0 +1,20 @@
+info:
+  name: delete_post
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: http://127.0.0.1:8000/api/posts/1
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 3|ojHA6RzosyS6KIaoQxkSCpRHebTtfX7vTue5yWfA2bf436ca
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

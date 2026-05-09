@@ -1,0 +1,34 @@
+info:
+  name: timesheet Copy
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/attendances/timesheet-three-days
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: current_time
+      value: 2026-03-01
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: project_id
+        type: text
+        value: "3"
+      - name: assignment_id
+        type: text
+        value: "10"
+  auth:
+    type: bearer
+    token: 1478|dXPhm8i8LY1bDzTIMdlG4US55U0Tj3nRSMNkifuA81b656d2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

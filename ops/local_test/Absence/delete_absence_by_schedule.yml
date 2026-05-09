@@ -1,0 +1,23 @@
+info:
+  name: delete_absence_by_schedule
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: http://127.0.0.1:8000/api/schedules/5/absence
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: 2|f2VkHfpmrknNN2U4VyPCsaWdblQh2LbJTctA2RE0a34b2902
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

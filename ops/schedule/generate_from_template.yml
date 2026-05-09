@@ -1,0 +1,31 @@
+info:
+  name: generate_from_template
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/1/teams/22/schedules/generate-from-template
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \  \"month\": \"2026-05\",\r
+
+      \  \"template_month\": \"2026-05\",\r
+
+      \  \"overwrite_existing\": false\r
+
+      }"
+  auth:
+    type: bearer
+    token: 1717|67ZXG6SWusWPV9EBWOHuUCotY7LPxUMwsMUgCLmPacae01cd
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

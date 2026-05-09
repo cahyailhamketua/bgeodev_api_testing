@@ -1,0 +1,17 @@
+info:
+  name: check out
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/attendances/check-out
+  auth:
+    type: bearer
+    token: 1492|ii65yBcTNYnRoGV0fMcniQ8LFBwP8IYtF1nTMfF258368011
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,41 @@
+info:
+  name: delete_patrol_point
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://127.0.0.1:8000/api/patrol-points/11
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: belakang3
+      - name: sequence_order
+        type: text
+        value: "4"
+      - name: latitude
+        type: text
+        value: "6.5553"
+      - name: longitude
+        type: text
+        value: "106.7229"
+      - name: radius
+        type: text
+        value: "5"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 27|cHXbrNeHpIUdcSBlw7jqTkcmrywj2FGFKacVh4wa008bb7b3
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

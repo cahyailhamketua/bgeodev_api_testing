@@ -1,0 +1,27 @@
+info:
+  name: login_dev Copy
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/login
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: developer2
+      - name: password
+        type: text
+        value: developer123
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

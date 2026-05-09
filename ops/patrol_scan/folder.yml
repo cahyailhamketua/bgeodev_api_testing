@@ -1,0 +1,7 @@
+info:
+  name: patrol_scan
+  type: folder
+  seq: 8
+
+request:
+  auth: inherit

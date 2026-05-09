@@ -1,0 +1,20 @@
+info:
+  name: activate_project
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: https://epatrol.bgeodev.cloud/api/projects/1/activate
+  headers:
+    - name: Accept
+      value: Application/json
+  auth:
+    type: bearer
+    token: 22|NhbXhBK9MNY7dZw1WYj7ALoHcdPpCbT3ljTzdrdS9d972ab5
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

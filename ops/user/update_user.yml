@@ -1,0 +1,87 @@
+info:
+  name: update_user
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/users/13
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: organization_id
+        type: text
+        value: ""
+        disabled: true
+      - name: project_id
+        type: text
+        value: ""
+        disabled: true
+      - name: full_name
+        type: text
+        value: Cahya Ilham
+        disabled: true
+      - name: email
+        type: text
+        value: cahyailham@gmail.com
+        disabled: true
+      - name: phone
+        type: text
+        value: "08121344583"
+        disabled: true
+      - name: nik
+        type: text
+        value: "32000000000000"
+        disabled: true
+      - name: npwp
+        type: text
+        value: "13234543"
+        disabled: true
+      - name: bpjs_kesehatan
+        type: text
+        value: "123214512"
+        disabled: true
+      - name: bpjs_ketenagakerjaan
+        type: text
+        value: "123456"
+        disabled: true
+      - name: bank_name
+        type: text
+        value: bsi
+        disabled: true
+      - name: bank_account
+        type: text
+        value: "12344524"
+        disabled: true
+      - name: join_date
+        type: text
+        value: 2026-01-19
+        disabled: true
+      - name: active
+        type: text
+        value: "1"
+        disabled: true
+      - name: avatar
+        type: file
+        value:
+          - postman-cloud:///1f13029a-0606-43e0-b6a9-b6fb9fdcb0b0
+      - name: _method
+        type: text
+        value: PUT
+      - name: ktp_photo
+        type: file
+        value:
+          - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+        disabled: true
+  auth:
+    type: bearer
+    token: 1504|UOOutwvCKRmXFjGtLzHDms8Fp4tO53brcRdnH1oJ0b69925d
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

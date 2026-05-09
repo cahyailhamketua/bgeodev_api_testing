@@ -1,0 +1,44 @@
+info:
+  name: check-in danru Copy
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/attendances/check-in
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: contentttttttttttttttttttttttttttttttttttt
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: latitude
+        type: text
+        value: "-6.575819"
+      - name: longitude
+        type: text
+        value: "106.800084"
+      - name: current_time
+        type: text
+        value: 2026-03-20 10:10:30
+      - name: selfie_photo
+        type: file
+        value:
+          - postman-cloud:///1f12828f-62db-46f0-bf90-24fec27b6443
+      - name: overtime_work_code
+        type: text
+        value: p
+  auth:
+    type: bearer
+    token: 2|UfwbFZ6hOlm7CwoSMQgfVOfarCZBUy3fKIE6pk8wd69c82ec
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

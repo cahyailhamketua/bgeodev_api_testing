@@ -1,0 +1,41 @@
+info:
+  name: store_assignment_by_project
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/6/assignments
+  headers:
+    - name: Accept
+      value: Application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: off
+      - name: code
+        type: text
+        value: o
+      - name: start_time
+        type: text
+        value: ""
+      - name: end_time
+        type: text
+        value: ""
+      - name: grace_period
+        type: text
+        value: "15"
+      - name: is_off
+        type: text
+        value: "1"
+  auth:
+    type: bearer
+    token: 309|0C2p78FznpiTsMH0mhisfSyCsggbpoBOkC4pmDHx3c11d336
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

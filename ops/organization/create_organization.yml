@@ -1,0 +1,48 @@
+info:
+  name: create_organization
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/organizations
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: PT Satu Solid Indonesia
+      - name: email
+        type: text
+        value: solidesecurity@gmail.com
+      - name: phone
+        type: text
+        value: "0892134562"
+      - name: logo
+        type: file
+        value:
+          - postman-cloud:///1f13029a-0606-43e0-b6a9-b6fb9fdcb0b0
+      - name: code
+        type: text
+        value: SSI
+      - name: address
+        type: text
+        value: Wisma Daria, Jl. Iskandarsyah Raya No.7, Melawai, Kebayoran Baru, Jakarta Selatan
+      - name: start_date
+        type: text
+        value: 2026-04-04
+      - name: end_date
+        type: text
+        value: 2026-12-31
+  auth:
+    type: bearer
+    token: 309|0C2p78FznpiTsMH0mhisfSyCsggbpoBOkC4pmDHx3c11d336
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

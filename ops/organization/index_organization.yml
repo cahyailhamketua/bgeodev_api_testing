@@ -1,0 +1,29 @@
+info:
+  name: index_organization
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/organizations
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: active
+        type: text
+        value: "1"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 522|0qPzmYUWiSTExldxBHVezZtb3i0a80Io4cRysACi35ce797c
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
