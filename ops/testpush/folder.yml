@@ -1,7 +1,0 @@
-info:
-  name: testpush
-  type: folder
-  seq: 16
-
-request:
-  auth: inherit
