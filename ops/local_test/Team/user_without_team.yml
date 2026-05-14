@@ -5,8 +5,13 @@ info:
 
 http:
   method: GET
-  url: ""
-  auth: inherit
+  url: https://epatrol.bgeodev.cloud/api/projects/1/users/without-team
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 2245|bPuA0KXLuToURZ1vDkwnAbVMO0QoFrEtzxoGJ6lqdcd0e9de
 
 settings:
   encodeUrl: true
