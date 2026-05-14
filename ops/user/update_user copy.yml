@@ -1,7 +1,7 @@
 info:
-  name: update_user
+  name: update_user copy
   type: http
-  seq: 4
+  seq: 13
 
 http:
   method: POST
@@ -38,7 +38,7 @@ http:
         disabled: true
       - name: npwp
         type: text
-        value: ""
+        value: "123"
       - name: bpjs_kesehatan
         type: text
         value: "123214512"

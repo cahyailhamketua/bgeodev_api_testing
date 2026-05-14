@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/6/schedules/sheet?month=2026-05
+  url: https://epatrol.bgeodev.cloud/api/projects/1/schedules/sheet?month=2026-05
   headers:
     - name: Accept
       value: application/json
@@ -17,7 +17,7 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 1993|fdApeRT7buFGHqTjEvZbzMzkZi8NZJlina6EeyHrc8a37573
+    token: 2234|MuyNmcgygmWgMoRtK8FRanT4VDRWHx6K92hD7lZA1b90d943
 
 settings:
   encodeUrl: true

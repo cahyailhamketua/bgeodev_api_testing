@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: https://epatrol.bgeodev.cloud/api/projects/6/assignments
+  url: https://epatrol.bgeodev.cloud/api/projects/2/assignments
   headers:
     - name: Accept
       value: Application/json
@@ -32,7 +32,7 @@ http:
         value: "1"
   auth:
     type: bearer
-    token: 309|0C2p78FznpiTsMH0mhisfSyCsggbpoBOkC4pmDHx3c11d336
+    token: 2117|j6JDrOWbOKmoLFsXXtoP2bdRvBb7xvj6oDmSdpjG44b2dbc7
 
 settings:
   encodeUrl: true
