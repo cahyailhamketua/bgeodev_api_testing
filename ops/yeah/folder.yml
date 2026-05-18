@@ -1,7 +1,0 @@
-info:
-  name: yeah
-  type: folder
-  seq: 16
-
-request:
-  auth: inherit
