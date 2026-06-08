@@ -1,0 +1,31 @@
+info:
+  name: login_ho Copy 3
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/login?username=headbuj2&password=headoffice123
+  params:
+    - name: username
+      value: headbuj2
+      type: query
+    - name: password
+      value: headoffice123
+      type: query
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: satusolid2
+      - name: password
+        type: text
+        value: satusolid123
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
