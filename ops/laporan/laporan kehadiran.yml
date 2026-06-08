@@ -5,8 +5,12 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/reports/attendance?shift_name=pagi
+  url: https://epatrol.bgeodev.cloud/api/projects/3/reports/attendance
   params:
+    - name: tanpa_paginasi
+      value: "1"
+      type: query
+      disabled: true
     - name: attendance_id
       value: "55"
       type: query
@@ -46,6 +50,7 @@ http:
     - name: shift_name
       value: pagi
       type: query
+      disabled: true
   body:
     type: multipart-form
     data:
@@ -87,7 +92,7 @@ http:
         disabled: true
   auth:
     type: bearer
-    token: 1896|jKy03gyuaT37k292T8sb7NC1EBu6nZllr1vI1nxxfe45ec91
+    token: 2621|rpVX6okWIkt9s8AGdaBZJnobME6GjeaOGTz8K8mF582cabf3
 
 settings:
   encodeUrl: true
