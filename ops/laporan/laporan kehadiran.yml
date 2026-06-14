@@ -5,18 +5,20 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/reports/attendance
+  url: https://epatrol.bgeodev.cloud/api/projects/3/reports/attendance?tanpa_paginasi=1&assignment_id=10
   params:
     - name: tanpa_paginasi
       value: "1"
       type: query
+    - name: assignment_id
+      value: "10"
+      type: query
+    - name: user_id
+      value: "15"
+      type: query
       disabled: true
     - name: attendance_id
       value: "55"
-      type: query
-      disabled: true
-    - name: assignment_id
-      value: "6"
       type: query
       disabled: true
     - name: Accept
@@ -35,10 +37,6 @@ http:
       value: terlambat
       type: query
       disabled: true
-    - name: user_id
-      value: "15"
-      type: query
-      disabled: true
     - name: dari_tanggal
       value: 2026-05-01
       type: query
@@ -49,6 +47,10 @@ http:
       disabled: true
     - name: shift_name
       value: pagi
+      type: query
+      disabled: true
+    - name: per_page
+      value: "50"
       type: query
       disabled: true
   body:
@@ -76,7 +78,7 @@ http:
         disabled: true
       - name: selfie_photo
         type: file
-        value:
+        value: &a1
           - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
         disabled: true
       - name: project_id
@@ -92,7 +94,7 @@ http:
         disabled: true
   auth:
     type: bearer
-    token: 2621|rpVX6okWIkt9s8AGdaBZJnobME6GjeaOGTz8K8mF582cabf3
+    token: 2735|DeTSc9IKEf0tnbN8aZd57yy7NiN8zQxMHmjx7HY5f1c57e81
 
 settings:
   encodeUrl: true
@@ -103,550 +105,21 @@ settings:
 examples:
   - name: laporan kehadiran
     request:
-      url: https://epatrol.bgeodev.cloud/api/projects/3/reports/attendance?attendance_id=55&assignment_id=6&page=8
+      url: https://epatrol.bgeodev.cloud/api/projects/3/reports/attendance?tanpa_paginasi=1&assignment_id=10
       method: GET
       params:
-        - name: attendance_id
-          value: "55"
+        - name: tanpa_paginasi
+          value: "1"
           type: query
         - name: assignment_id
-          value: "6"
+          value: "10"
           type: query
-        - name: Accept
-          value: application/json
+        - name: user_id
+          value: "15"
           type: query
           disabled: true
-        - name: page
-          value: "8"
-          type: query
-      body:
-        type: multipart-form
-        data:
-          - name: latitude
-            type: text
-            value: "-6.54926"
-            disabled: true
-          - name: longitude
-            type: text
-            value: "106.78906"
-            disabled: true
-          - name: current_time
-            type: text
-            value: 2026-04-02 07:10:30
-            disabled: true
-          - name: post_type
-            type: text
-            value: mobile
-            disabled: true
-          - name: post_name
-            type: text
-            value: patroli luar
-            disabled: true
-          - name: selfie_photo
-            type: file
-            value:
-              - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
-            disabled: true
-          - name: project_id
-            type: text
-            value: "3"
-            disabled: true
-          - name: attendance_id
-            type: text
-            value: "46"
-          - name: current_time
-            type: text
-            value: 2026-04-02 21:10:30
-    response:
-      status: 200
-      statusText: OK
-      headers:
-        - name: :status
-          value: "200"
-        - name: server
-          value: nginx/1.24.0 (Ubuntu)
-        - name: content-type
-          value: application/json
-        - name: cache-control
-          value: no-cache, private
-        - name: date
-          value: Mon, 06 Apr 2026 07:30:15 GMT
-        - name: access-control-allow-origin
-          value: "*"
-      body:
-        type: json
-        data: |-
-          {
-              "success": true,
-              "report": "laporan_kehadiran",
-              "project": {
-                  "id": 3,
-                  "name": "bujp project 1"
-              },
-              "filters_applied": {
-                  "dari_tanggal": "2026-04-01",
-                  "sampai_tanggal": "2026-04-30",
-                  "date_range_is_current_month_default": true,
-                  "current_time_anchor": "2026-04-06 14:30:14"
-              },
-              "summary": {
-                  "total_hadir_tepat_waktu": 1,
-                  "total_telat": 5,
-                  "total_absen_tidak_masuk": 114,
-                  "total_karyawan_unik": 4,
-                  "total_baris_jadwal": 120
-              },
-              "data": [
-                  {
-                      "schedule_id": 129,
-                      "tanggal": "2026-04-04",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 130,
-                      "tanggal": "2026-04-04",
-                      "nama_karyawan": "Anggota buj 1.1",
-                      "user": {
-                          "id": 17,
-                          "full_name": "Anggota buj 1.1",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 525,
-                      "tanggal": "2026-04-04",
-                      "nama_karyawan": "Anggota buj 1.2",
-                      "user": {
-                          "id": 18,
-                          "full_name": "Anggota buj 1.2",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 494,
-                      "tanggal": "2026-04-03",
-                      "nama_karyawan": "Admin buj 1.1",
-                      "user": {
-                          "id": 13,
-                          "full_name": "Admin buj 1.1",
-                          "role": "admin_project"
-                      },
-                      "team_id": 15,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "21:48",
-                      "absen_keluar": null,
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -169,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 127,
-                      "tanggal": "2026-04-03",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "21:10",
-                      "absen_keluar": "19:52",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -131,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69d259a115d0f4.56551917.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69d259a115d0f4.56551917.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/59/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 128,
-                      "tanggal": "2026-04-03",
-                      "nama_karyawan": "Anggota buj 1.1",
-                      "user": {
-                          "id": 17,
-                          "full_name": "Anggota buj 1.1",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": {
-                          "id": 4,
-                          "name": "Patroli luar",
-                          "type": "mobile"
-                      },
-                      "absen_masuk": "21:48",
-                      "absen_keluar": "19:49",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -169,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69d22f596ade40.83795448.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69d22f596ade40.83795448.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/56/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 524,
-                      "tanggal": "2026-04-03",
-                      "nama_karyawan": "Anggota buj 1.2",
-                      "user": {
-                          "id": 18,
-                          "full_name": "Anggota buj 1.2",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 493,
-                      "tanggal": "2026-04-02",
-                      "nama_karyawan": "Admin buj 1.1",
-                      "user": {
-                          "id": 13,
-                          "full_name": "Admin buj 1.1",
-                          "role": "admin_project"
-                      },
-                      "team_id": 15,
-                      "shift": {
-                          "assignment_id": 10,
-                          "name": "pagi",
-                          "label": "pagi (07:00-19:00)",
-                          "code": "p",
-                          "start_time": "07:00:00",
-                          "end_time": "19:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "07:10",
-                      "absen_keluar": "19:10",
-                      "status": "tepat_waktu",
-                      "status_label": "Tepat Waktu",
-                      "late_minutes": null,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69ce5143681053.03296462.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69ce5143681053.03296462.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/43/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 125,
-                      "tanggal": "2026-04-02",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 126,
-                      "tanggal": "2026-04-02",
-                      "nama_karyawan": "Anggota buj 1.1",
-                      "user": {
-                          "id": 17,
-                          "full_name": "Anggota buj 1.1",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 523,
-                      "tanggal": "2026-04-02",
-                      "nama_karyawan": "Anggota buj 1.2",
-                      "user": {
-                          "id": 18,
-                          "full_name": "Anggota buj 1.2",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 492,
-                      "tanggal": "2026-04-01",
-                      "nama_karyawan": "Admin buj 1.1",
-                      "user": {
-                          "id": 13,
-                          "full_name": "Admin buj 1.1",
-                          "role": "admin_project"
-                      },
-                      "team_id": 15,
-                      "shift": {
-                          "assignment_id": 10,
-                          "name": "pagi",
-                          "label": "pagi (07:00-19:00)",
-                          "code": "p",
-                          "start_time": "07:00:00",
-                          "end_time": "19:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 123,
-                      "tanggal": "2026-04-01",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 124,
-                      "tanggal": "2026-04-01",
-                      "nama_karyawan": "Anggota buj 1.1",
-                      "user": {
-                          "id": 17,
-                          "full_name": "Anggota buj 1.1",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 522,
-                      "tanggal": "2026-04-01",
-                      "nama_karyawan": "Anggota buj 1.2",
-                      "user": {
-                          "id": 18,
-                          "full_name": "Anggota buj 1.2",
-                          "role": "anggota"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (19:00-07:00)",
-                          "code": "m",
-                          "start_time": "19:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": null,
-                      "absen_keluar": null,
-                      "status": "absen",
-                      "status_label": "Absen",
-                      "late_minutes": null,
-                      "photo_attendance": null,
-                      "timezone": "Asia/Jakarta"
-                  }
-              ],
-              "pagination": {
-                  "total": 120,
-                  "per_page": 15,
-                  "current_page": 8,
-                  "last_page": 8
-              },
-              "field_descriptions": {
-                  "tanggal": "Tanggal jadwal (shift).",
-                  "shift": "Assignment (nama, kode, jam).",
-                  "plotting": "Pos setelah check-in.",
-                  "absen_masuk": "Jam check-in (timezone project).",
-                  "absen_keluar": "Jam check-out (timezone project).",
-                  "status": "tepat_waktu | terlambat | absen | cuti | sakit | izin | alfa.",
-                  "late_minutes": "Menit terlambat jika status telat; null jika tidak telat.",
-                  "photo_attendance": "Foto absen kehadiran (selfie) beserta url publiknya."
-              }
-          }
-  - name: ada gambar
-    request:
-      url: https://epatrol.bgeodev.cloud/api/projects/3/reports/attendance?status=terlambat&user_id=15
-      method: GET
-      params:
         - name: attendance_id
           value: "55"
-          type: query
-          disabled: true
-        - name: assignment_id
-          value: "6"
           type: query
           disabled: true
         - name: Accept
@@ -664,9 +137,23 @@ examples:
         - name: status
           value: terlambat
           type: query
-        - name: user_id
-          value: "15"
+          disabled: true
+        - name: dari_tanggal
+          value: 2026-05-01
           type: query
+          disabled: true
+        - name: sampai_tanggal
+          value: 2026-05-01
+          type: query
+          disabled: true
+        - name: shift_name
+          value: pagi
+          type: query
+          disabled: true
+        - name: per_page
+          value: "50"
+          type: query
+          disabled: true
       body:
         type: multipart-form
         data:
@@ -692,8 +179,7 @@ examples:
             disabled: true
           - name: selfie_photo
             type: file
-            value:
-              - postman-cloud:///1f0efed1-0f62-45e0-99e7-1554ccfad09e
+            value: *a1
             disabled: true
           - name: project_id
             type: text
@@ -705,404 +191,1226 @@ examples:
           - name: current_time
             type: text
             value: 2026-04-02 21:10:30
+            disabled: true
     response:
       status: 200
       statusText: OK
       headers:
-        - name: :status
-          value: "200"
         - name: server
           value: nginx/1.24.0 (Ubuntu)
         - name: content-type
           value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
         - name: cache-control
           value: no-cache, private
         - name: date
-          value: Sun, 26 Apr 2026 13:11:59 GMT
+          value: Sun, 14 Jun 2026 07:42:30 GMT
         - name: access-control-allow-origin
           value: "*"
       body:
         type: json
         data: |-
           {
-              "success": true,
-              "report": "laporan_kehadiran",
-              "project": {
-                  "id": 3,
-                  "name": "bujp project 1"
+            "success": true,
+            "report": "laporan_kehadiran",
+            "project": {
+              "id": 3,
+              "name": "bujp project 1"
+            },
+            "filters_applied": {
+              "dari_tanggal": "2026-06-01",
+              "sampai_tanggal": "2026-06-30",
+              "date_range_is_current_month_default": true,
+              "current_time_anchor": "2026-06-14 14:42:30",
+              "assignment_id": "10",
+              "tanpa_paginasi": true
+            },
+            "summary": {
+              "total_hadir_tepat_waktu": 0,
+              "total_telat": 5,
+              "total_absen_tidak_masuk": 15,
+              "total_karyawan_unik": 4,
+              "total_baris_jadwal": 40
+            },
+            "data": [
+              {
+                "schedule_id": 21292,
+                "tanggal": "2026-06-01",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": {
+                  "id": 177,
+                  "type": "S",
+                  "label": "Sakit",
+                  "summary_key": "SAKIT"
+                }
               },
-              "filters_applied": {
-                  "dari_tanggal": "2026-04-01",
-                  "sampai_tanggal": "2026-04-30",
-                  "date_range_is_current_month_default": true,
-                  "current_time_anchor": "2026-04-26 20:11:59",
-                  "user_id": "15",
-                  "status": "terlambat"
+              {
+                "schedule_id": 21202,
+                "tanggal": "2026-06-01",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": {
+                  "id": 178,
+                  "type": "I",
+                  "label": "Izin",
+                  "summary_key": "IZIN"
+                }
               },
-              "summary": {
-                  "total_hadir_tepat_waktu": 0,
-                  "total_telat": 11,
-                  "total_absen_tidak_masuk": 19,
-                  "total_karyawan_unik": 1,
-                  "total_baris_jadwal": 30
+              {
+                "schedule_id": 21203,
+                "tanggal": "2026-06-01",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
               },
-              "data": [
-                  {
-                      "schedule_id": 167,
-                      "tanggal": "2026-04-23",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "21:19",
-                      "absen_keluar": "20:05",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -199,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69ea2a6c062819.53473586.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69ea2a6c062819.53473586.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/164/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 165,
-                      "tanggal": "2026-04-22",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "20:32",
-                      "absen_keluar": "09:01",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -153,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69e8ce0be6d727.57355262.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e8ce0be6d727.57355262.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/163/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 161,
-                      "tanggal": "2026-04-20",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "00:16",
-                      "absen_keluar": "20:32",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -377,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69e65f82cc9b15.00375170.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e65f82cc9b15.00375170.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/151/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 157,
-                      "tanggal": "2026-04-18",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "20:45",
-                      "absen_keluar": "00:16",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -165,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69e38af1ea87c5.06187765.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e38af1ea87c5.06187765.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/148/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 155,
-                      "tanggal": "2026-04-17",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "04:22",
-                      "absen_keluar": "19:16",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -622,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69e2a491164a54.07219342.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69e2a491164a54.07219342.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/147/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 151,
-                      "tanggal": "2026-04-15",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "00:12",
-                      "absen_keluar": "22:35",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -373,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69dfc70f5df338.16265685.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69dfc70f5df338.16265685.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/136/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 149,
-                      "tanggal": "2026-04-14",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "00:50",
-                      "absen_keluar": "00:00",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -410,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69de7e6366e367.28934990.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69de7e6366e367.28934990.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/130/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 147,
-                      "tanggal": "2026-04-13",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "00:17",
-                      "absen_keluar": "00:50",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -377,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69dd251c2ddf44.72453081.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69dd251c2ddf44.72453081.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/117/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 145,
-                      "tanggal": "2026-04-12",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "20:42",
-                      "absen_keluar": "16:50",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -162,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69dba13fdae8c1.96397672.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69dba13fdae8c1.96397672.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/110/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 141,
-                      "tanggal": "2026-04-10",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "20:25",
-                      "absen_keluar": "20:42",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -145,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69d8fa2f2d1438.02882473.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69d8fa2f2d1438.02882473.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/107/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  },
-                  {
-                      "schedule_id": 133,
-                      "tanggal": "2026-04-06",
-                      "nama_karyawan": "Danru buj 1.1",
-                      "user": {
-                          "id": 15,
-                          "full_name": "Danru buj 1.1",
-                          "role": "komandan_regu"
-                      },
-                      "team_id": 16,
-                      "shift": {
-                          "assignment_id": 6,
-                          "name": "malam 3",
-                          "label": "malam 3 (18:00-07:00)",
-                          "code": "m",
-                          "start_time": "18:00:00",
-                          "end_time": "07:00:00"
-                      },
-                      "plotting": null,
-                      "absen_masuk": "21:37",
-                      "absen_keluar": "22:19",
-                      "status": "terlambat",
-                      "status_label": "Terlambat",
-                      "late_minutes": -158,
-                      "photo_attendance": {
-                          "path": "attendances/selfies/img_69d3c5310ec9b4.44760746.webp",
-                          "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_69d3c5310ec9b4.44760746.webp",
-                          "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/73/selfie-inline"
-                      },
-                      "timezone": "Asia/Jakarta"
-                  }
-              ],
-              "pagination": {
-                  "total": 11,
-                  "per_page": 15,
-                  "current_page": 1,
-                  "last_page": 1
+              {
+                "schedule_id": 21204,
+                "tanggal": "2026-06-01",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
               },
-              "field_descriptions": {
-                  "tanggal": "Tanggal jadwal (shift).",
-                  "shift": "Assignment (nama, kode, jam).",
-                  "plotting": "Pos setelah check-in.",
-                  "absen_masuk": "Jam check-in (timezone project).",
-                  "absen_keluar": "Jam check-out (timezone project).",
-                  "status": "tepat_waktu | terlambat | absen | cuti | sakit | izin | alfa.",
-                  "late_minutes": "Menit terlambat jika status telat; null jika tidak telat.",
-                  "photo_attendance": "Foto absen kehadiran (selfie) beserta url publiknya."
+              {
+                "schedule_id": 21217,
+                "tanggal": "2026-06-06",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21218,
+                "tanggal": "2026-06-06",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21219,
+                "tanggal": "2026-06-06",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21298,
+                "tanggal": "2026-06-07",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21220,
+                "tanggal": "2026-06-07",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21221,
+                "tanggal": "2026-06-07",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21222,
+                "tanggal": "2026-06-07",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21299,
+                "tanggal": "2026-06-08",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": "admin project",
+                "absen_masuk": "14:47",
+                "absen_keluar": "17:00",
+                "status": "terlambat",
+                "status_label": "Terlambat",
+                "late_minutes": -708,
+                "photo_attendance": {
+                  "path": "attendances/selfies/img_6a2673adcc46c1.90015888.webp",
+                  "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_6a2673adcc46c1.90015888.webp",
+                  "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/225/selfie-inline"
+                },
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21303,
+                "tanggal": "2026-06-12",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21237,
+                "tanggal": "2026-06-12",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21304,
+                "tanggal": "2026-06-13",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21238,
+                "tanggal": "2026-06-13",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": "komandan_regu",
+                "absen_masuk": "12:16",
+                "absen_keluar": "17:00",
+                "status": "terlambat",
+                "status_label": "Terlambat",
+                "late_minutes": -556,
+                "photo_attendance": {
+                  "path": "attendances/selfies/img_6a2ce7a73865f0.53879794.webp",
+                  "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_6a2ce7a73865f0.53879794.webp",
+                  "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/231/selfie-inline"
+                },
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21239,
+                "tanggal": "2026-06-13",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": {
+                  "id": 6,
+                  "name": "PATROLI DALAM T A",
+                  "type": "mobile"
+                },
+                "absen_masuk": "12:33",
+                "absen_keluar": "17:00",
+                "status": "terlambat",
+                "status_label": "Terlambat",
+                "late_minutes": -574,
+                "photo_attendance": {
+                  "path": "attendances/selfies/img_6a2cebb871b9a4.20820287.webp",
+                  "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_6a2cebb871b9a4.20820287.webp",
+                  "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/232/selfie-inline"
+                },
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21240,
+                "tanggal": "2026-06-13",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": "absen",
+                "status_label": "Absen",
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21241,
+                "tanggal": "2026-06-14",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": "komandan_regu",
+                "absen_masuk": "12:12",
+                "absen_keluar": null,
+                "status": "terlambat",
+                "status_label": "Terlambat",
+                "late_minutes": -552,
+                "photo_attendance": {
+                  "path": "attendances/selfies/img_6a2e3824b43920.31317778.webp",
+                  "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_6a2e3824b43920.31317778.webp",
+                  "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/233/selfie-inline"
+                },
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21242,
+                "tanggal": "2026-06-14",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": {
+                  "id": 6,
+                  "name": "PATROLI DALAM T A",
+                  "type": "mobile"
+                },
+                "absen_masuk": "12:35",
+                "absen_keluar": null,
+                "status": "terlambat",
+                "status_label": "Terlambat",
+                "late_minutes": -576,
+                "photo_attendance": {
+                  "path": "attendances/selfies/img_6a2e3da7857561.41587107.webp",
+                  "url": "https://epatrol.bgeodev.cloud/storage/attendances/selfies/img_6a2e3da7857561.41587107.webp",
+                  "api_inline_url": "https://epatrol.bgeodev.cloud/api/attendances/234/selfie-inline"
+                },
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21309,
+                "tanggal": "2026-06-18",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21253,
+                "tanggal": "2026-06-18",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21254,
+                "tanggal": "2026-06-18",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21255,
+                "tanggal": "2026-06-18",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21310,
+                "tanggal": "2026-06-19",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21256,
+                "tanggal": "2026-06-19",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21257,
+                "tanggal": "2026-06-19",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21258,
+                "tanggal": "2026-06-19",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21315,
+                "tanggal": "2026-06-24",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21271,
+                "tanggal": "2026-06-24",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21272,
+                "tanggal": "2026-06-24",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21273,
+                "tanggal": "2026-06-24",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21316,
+                "tanggal": "2026-06-25",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21274,
+                "tanggal": "2026-06-25",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21275,
+                "tanggal": "2026-06-25",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21276,
+                "tanggal": "2026-06-25",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21321,
+                "tanggal": "2026-06-30",
+                "nama_karyawan": "Admin buj 1.1 test",
+                "user": {
+                  "id": 13,
+                  "full_name": "Admin buj 1.1 test",
+                  "role": "admin_project"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21289,
+                "tanggal": "2026-06-30",
+                "nama_karyawan": "Danru buj 1.1",
+                "user": {
+                  "id": 15,
+                  "full_name": "Danru buj 1.1",
+                  "role": "komandan_regu"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21290,
+                "tanggal": "2026-06-30",
+                "nama_karyawan": "Anggota buj 1.1",
+                "user": {
+                  "id": 17,
+                  "full_name": "Anggota buj 1.1",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
+              },
+              {
+                "schedule_id": 21291,
+                "tanggal": "2026-06-30",
+                "nama_karyawan": "Anggota buj 1.2",
+                "user": {
+                  "id": 18,
+                  "full_name": "Anggota buj 1.2",
+                  "role": "anggota"
+                },
+                "team_id": 55,
+                "shift": {
+                  "assignment_id": 10,
+                  "name": "pagi",
+                  "label": "pagi (03:00-15:00)",
+                  "code": "p",
+                  "start_time": "03:00:00",
+                  "end_time": "15:00:00"
+                },
+                "plotting": null,
+                "absen_masuk": null,
+                "absen_keluar": null,
+                "status": null,
+                "status_label": null,
+                "late_minutes": null,
+                "photo_attendance": null,
+                "timezone": "Asia/Jakarta",
+                "absence": null
               }
+            ],
+            "pagination": {
+              "total": 40,
+              "per_page": 40,
+              "current_page": 1,
+              "last_page": 1,
+              "tanpa_paginasi": true
+            },
+            "field_descriptions": {
+              "tanggal": "Tanggal jadwal (shift).",
+              "shift": "Assignment (nama, kode, jam).",
+              "plotting": "Pos dari attendance.post; komandan_regu / admin project jika role sesuai; null jika belum ada data.",
+              "absen_masuk": "Jam check-in (timezone project).",
+              "absen_keluar": "Jam check-out (timezone project).",
+              "status": "tepat_waktu | terlambat | absen | cuti | sakit | izin | alfa | null (jadwal mendatang tanpa attendance).",
+              "absence": "Data absence dari schedule sheet; hanya ada jika status absen.",
+              "late_minutes": "Menit terlambat jika status telat; null jika tidak telat.",
+              "photo_attendance": "Foto absen kehadiran (selfie) beserta url publiknya."
+            }
           }
