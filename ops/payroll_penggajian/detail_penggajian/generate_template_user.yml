@@ -19,7 +19,7 @@ http:
           "bpjs_tk_tambah": 316368,
           "bpjs_kes_tambah": 203800,
           "tukin_budget": 200000,
-          "bonus_thr": 100000,
+          "bonus_thr": 200000,
           "bpjs_tk_potongan": 450000,
           "bpjs_kes_potongan": 250000,
           "sanksi_sp": 0,
@@ -29,7 +29,7 @@ http:
       }
   auth:
     type: bearer
-    token: 2889|TQIjd8CwaVOj7ucc3obIvROet2uasUQkndfbNrrM43fcd233
+    token: 3006|Iz8CNIRTRqLrJ23jwxMJpRrjuFxNxIwkYy8RFC2h9321fcd8
 
 settings:
   encodeUrl: true

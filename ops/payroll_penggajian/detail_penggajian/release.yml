@@ -1,20 +1,23 @@
 info:
-  name: get_history
+  name: release
   type: http
-  seq: 5
+  seq: 4
 
 http:
-  method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/history?year=2026
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/release
   headers:
     - name: Accept
       value: application/json
-  params:
-    - name: year
-      value: "2026"
-      type: query
   body:
     type: multipart-form
+    data:
+      - name: month
+        type: text
+        value: 2026-05
+      - name: notes
+        type: text
+        value: test release
   auth:
     type: bearer
     token: 3006|Iz8CNIRTRqLrJ23jwxMJpRrjuFxNxIwkYy8RFC2h9321fcd8

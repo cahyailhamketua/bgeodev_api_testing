@@ -1,24 +1,17 @@
 info:
-  name: login_ho Copy
+  name: login_ho ss
   type: http
-  seq: 4
+  seq: 3
 
 http:
   method: POST
-  url: https://epatrol.bgeodev.cloud/api/login?username=headbuj&password=ho
-  params:
-    - name: username
-      value: headbuj
-      type: query
-    - name: password
-      value: ho
-      type: query
+  url: https://epatrol.bgeodev.cloud/api/login
   body:
     type: multipart-form
     data:
       - name: username
         type: text
-        value: satusolid2
+        value: satusolid
       - name: password
         type: text
         value: satusolid123

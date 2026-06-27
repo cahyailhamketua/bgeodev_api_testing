@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/my/payroll/2026-06
+  url: https://epatrol.bgeodev.cloud/api/my/payroll/2026-05
   headers:
     - name: Accept
       value: application/json
@@ -13,7 +13,7 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 2996|ZUEr425DRzGn3SQxaz0uvu2X7viUqIkgAhZrNr8n77188a6b
+    token: 3007|Hte3Pc7AnX3Y0z5oiXIkDmPkUt7FPLkOb8hNMIOudd9fb181
 
 settings:
   encodeUrl: true

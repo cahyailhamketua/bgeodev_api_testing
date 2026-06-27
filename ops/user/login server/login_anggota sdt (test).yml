@@ -1,7 +1,7 @@
 info:
   name: login_anggota sdt (test)
   type: http
-  seq: 13
+  seq: 15
 
 http:
   method: POST
