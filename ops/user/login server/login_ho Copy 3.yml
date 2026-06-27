@@ -5,23 +5,16 @@ info:
 
 http:
   method: POST
-  url: https://epatrol.bgeodev.cloud/api/login?username=headbuj2&password=headoffice123
-  params:
-    - name: username
-      value: headbuj2
-      type: query
-    - name: password
-      value: headoffice123
-      type: query
+  url: https://epatrol.bgeodev.cloud/api/login
   body:
     type: multipart-form
     data:
       - name: username
         type: text
-        value: satusolid2
+        value: headbuj2
       - name: password
         type: text
-        value: satusolid123
+        value: headoffice123
   auth: inherit
 
 settings:

@@ -1,11 +1,11 @@
 info:
-  name: delete_ter_bracket
+  name: get_ter_bracket
   type: http
-  seq: 10
+  seq: 3
 
 http:
-  method: DELETE
-  url: https://epatrol.bgeodev.cloud/api/payroll/ter-brackets/126
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/payroll/ter-brackets
   headers:
     - name: Accept
       value: application/json
@@ -13,7 +13,7 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 2951|SGnlEGOq9q2nuYUZHB9xB6MraDf2o8CrjWjwWGxX26d1287a
+    token: 2889|TQIjd8CwaVOj7ucc3obIvROet2uasUQkndfbNrrM43fcd233
 
 settings:
   encodeUrl: true

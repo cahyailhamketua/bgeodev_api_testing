@@ -1,11 +1,11 @@
 info:
-  name: get_rule
+  name: get_myslip
   type: http
-  seq: 4
+  seq: 2
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/rules
+  url: https://epatrol.bgeodev.cloud/api/my/payroll/2026-06
   headers:
     - name: Accept
       value: application/json
@@ -13,7 +13,7 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 2889|TQIjd8CwaVOj7ucc3obIvROet2uasUQkndfbNrrM43fcd233
+    token: 2996|ZUEr425DRzGn3SQxaz0uvu2X7viUqIkgAhZrNr8n77188a6b
 
 settings:
   encodeUrl: true

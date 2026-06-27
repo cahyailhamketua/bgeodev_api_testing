@@ -1,20 +1,16 @@
 info:
-  name: recalculate
+  name: delete_rule
   type: http
-  seq: 3
+  seq: 1
 
 http:
-  method: POST
-  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/recalculate
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/rules
   headers:
     - name: Accept
       value: application/json
   body:
     type: multipart-form
-    data:
-      - name: month
-        type: text
-        value: 2026-06
   auth:
     type: bearer
     token: 2889|TQIjd8CwaVOj7ucc3obIvROet2uasUQkndfbNrrM43fcd233

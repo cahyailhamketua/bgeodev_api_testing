@@ -1,0 +1,7 @@
+info:
+  name: ter_bracket
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit
