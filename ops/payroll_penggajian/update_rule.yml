@@ -1,0 +1,44 @@
+info:
+  name: update_rule
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/rules
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: backup_rate
+        type: text
+        value: "250000"
+      - name: potongan_sakit
+        type: text
+        value: "250000"
+      - name: potongan_izin
+        type: text
+        value: "250000"
+      - name: potongan_cuti
+        type: text
+        value: "0"
+      - name: potongan_alpha
+        type: text
+        value: "500000"
+      - name: potongan_soc_a
+        type: text
+        value: "250000"
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 2889|TQIjd8CwaVOj7ucc3obIvROet2uasUQkndfbNrrM43fcd233
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

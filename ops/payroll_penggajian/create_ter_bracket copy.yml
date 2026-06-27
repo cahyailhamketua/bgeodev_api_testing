@@ -1,0 +1,41 @@
+info:
+  name: create_ter_bracket copy
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/payroll/ter-brackets
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: category
+        type: text
+        value: C
+      - name: ptkp_group
+        type: text
+        value: K/4
+      - name: min_income
+        type: text
+        value: "1419000001.00"
+      - name: max_income
+        type: text
+        value: ""
+      - name: rate
+        type: text
+        value: "0.350000"
+      - name: sort_order
+        type: text
+        value: "126"
+  auth:
+    type: bearer
+    token: 2951|SGnlEGOq9q2nuYUZHB9xB6MraDf2o8CrjWjwWGxX26d1287a
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

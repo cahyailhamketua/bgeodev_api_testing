@@ -1,0 +1,22 @@
+info:
+  name: delete_ter_bracket
+  type: http
+  seq: 10
+
+http:
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/payroll/ter-brackets/126
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: 2951|SGnlEGOq9q2nuYUZHB9xB6MraDf2o8CrjWjwWGxX26d1287a
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

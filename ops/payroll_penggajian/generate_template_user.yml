@@ -5,72 +5,31 @@ info:
 
 http:
   method: POST
-  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/templates?month=2026-04
+  url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/templates
   headers:
     - name: Accept
       value: application/json
-  params:
-    - name: month
-      value: 2026-04
-      type: query
   body:
     type: json
-    data: "{\r
-
-      \  \"user_id\": 15,\r
-
-      \  \"components\": [\r
-
-      \    { \"key\": \"gaji_pokok\", \"name\": \"Gaji Pokok (I)\", \"group\": \"earning\", \"amount\": 5729876 },\r
-
-      \    { \"key\": \"bpjs_tk_tambah\", \"name\": \"BPJS TK (J) Tambah\", \"group\": \"earning\", \"amount\": 316368 },\r
-
-      \    { \"key\": \"bpjs_kes_tambah\", \"name\": \"BPJS KES (K) Tambah\", \"group\": \"earning\", \"amount\": 203800 },\r
-
-      \    { \"key\": \"tukin_budget\", \"name\": \"TUKIN Budget (L)\", \"group\": \"earning\", \"amount\": 200000 },\r
-
-      \r
-
-      \    { \"key\": \"backup_rate\", \"name\": \"Backup Nominal (U)\", \"group\": \"earning\", \"amount\": 250000 },\r
-
-      \    { \"key\": \"bonus_thr\", \"name\": \"Bonus/THR (X)\", \"group\": \"earning\", \"amount\": 0 },\r
-
-      \r
-
-      \    { \"key\": \"potongan_sakit\", \"name\": \"Potongan Sakit (S)\", \"group\": \"deduction\", \"amount\": 250000 },\r
-
-      \    { \"key\": \"potongan_izin\", \"name\": \"Potongan Izin (I)\", \"group\": \"deduction\", \"amount\": 250000 },\r
-
-      \    { \"key\": \"potongan_cuti\", \"name\": \"Potongan Cuti (C)\", \"group\": \"deduction\", \"amount\": 0 },\r
-
-      \    { \"key\": \"potongan_alpha\", \"name\": \"Potongan TK/A (TK)\", \"group\": \"deduction\", \"amount\": 500000 },\r
-
-      \    { \"key\": \"potongan_soc_a\", \"name\": \"Potongan SOC-A\", \"group\": \"deduction\", \"amount\": 250000 },\r
-
-      \r
-
-      \    { \"key\": \"bpjs_tk_potongan\", \"name\": \"BPJS TK potongan (AF)\", \"group\": \"deduction\", \"amount\": 450000 },\r
-
-      \    { \"key\": \"bpjs_kes_potongan\", \"name\": \"BPJS KES potongan (AG)\", \"group\": \"deduction\", \"amount\": 250000 },\r
-
-      \    { \"key\": \"sanksi_sp\", \"name\": \"SP/Sanksi (AH)\", \"group\": \"deduction\", \"amount\": 0 },\r
-
-      \    { \"key\": \"pinjaman_potongan\", \"name\": \"Pinjaman (AJ)\", \"group\": \"deduction\", \"amount\": 0 },\r
-
-      \    { \"key\": \"lain_lain_potongan\", \"name\": \"Lain-lain (AL)\", \"group\": \"deduction\", \"amount\": 0 },\r
-
-      \r
-
-      \    { \"key\": \"ptkp_status\", \"name\": \"TK/0\", \"group\": \"other\", \"amount\": 0 },\r
-
-      \    { \"key\": \"ter_category\", \"name\": \"A\", \"group\": \"other\", \"amount\": 0 }\r
-
-      \  ]\r
-
-      }"
+    data: |-
+      {
+          "month": "2026-06",
+          "user_id": 15,
+          "gaji_pokok": 5729876,
+          "bpjs_tk_tambah": 316368,
+          "bpjs_kes_tambah": 203800,
+          "tukin_budget": 200000,
+          "bonus_thr": 100000,
+          "bpjs_tk_potongan": 450000,
+          "bpjs_kes_potongan": 250000,
+          "sanksi_sp": 0,
+          "pinjaman_potongan": 0,
+          "lain_lain_potongan": 0,
+          "ptkp_status": "TK/0"
+      }
   auth:
     type: bearer
-    token: 1900|aNQ7viRF1kNPl8N9hCvE4NvklmNW2foSePTSIOxt6895556c
+    token: 2889|TQIjd8CwaVOj7ucc3obIvROet2uasUQkndfbNrrM43fcd233
 
 settings:
   encodeUrl: true
