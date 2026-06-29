@@ -24,3 +24,478 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: example
+    request:
+      url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/sheet?month=2026-06
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: month
+          value: 2026-06
+          type: query
+      body:
+        type: multipart-form
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 29 Jun 2026 12:55:20 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "meta": {
+              "project_id": 3,
+              "month": "2026-06",
+              "sheet_name": "06. Juni 26",
+              "status": "DRAFT",
+              "generated_at": "2026-06-28T20:09:42.000000Z",
+              "released_at": null
+            },
+            "project_rules": {
+              "project_id": 3,
+              "backup_rate": 250000,
+              "potongan_sakit": 250000,
+              "potongan_izin": 250000,
+              "potongan_cuti": 0,
+              "potongan_alpha": 500000,
+              "potongan_soc_a": 250000
+            },
+            "rows": [
+              {
+                "no": 1,
+                "user_id": 13,
+                "identitas": {
+                  "nik": "123123123456",
+                  "nama": "Admin buj 1.1 test",
+                  "bank": "BCA",
+                  "nomor_rekening": "082112212",
+                  "jabatan": "admin_project",
+                  "status_keanggotaan": "PRORATE - MASUK"
+                },
+                "template": {
+                  "user_id": 13,
+                  "nama": "Admin buj 1.1 test",
+                  "nik": "123123123456",
+                  "gaji_pokok": 5729876,
+                  "bpjs_tk_tambah": 316368,
+                  "bpjs_kes_tambah": 203800,
+                  "tukin_budget": 200000,
+                  "bonus_thr": 0,
+                  "bpjs_tk_potongan": 468468,
+                  "bpjs_kes_potongan": 253500,
+                  "sanksi_sp": 0,
+                  "pinjaman_potongan": 0,
+                  "lain_lain_potongan": 0,
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A"
+                },
+                "penambah": {
+                  "gaji_pokok": 1145975.2,
+                  "bpjs_tk": 316368,
+                  "bpjs_kes": 203800,
+                  "tukin_budget": 200000,
+                  "tukin_per_hari": 10000,
+                  "hari_kerja": 6,
+                  "total_schedule": 20,
+                  "total_tukin": 60000,
+                  "kroscek": {
+                    "budget": 1866143.2,
+                    "realisasi": 1866143.2,
+                    "minus": 0
+                  },
+                  "backup": {
+                    "nominal": 250000,
+                    "hari_ot": 0,
+                    "total": 0
+                  },
+                  "bonus_thr": 0,
+                  "subtotal": 1726143.2
+                },
+                "pengurang": {
+                  "ketidakhadiran": {
+                    "sakit": {
+                      "hari": 2,
+                      "potongan": 500000
+                    },
+                    "izin": {
+                      "hari": 1,
+                      "potongan": 250000
+                    },
+                    "cuti": {
+                      "hari": 1,
+                      "potongan": 0
+                    },
+                    "alpha": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "soc_a": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "total": 750000
+                  },
+                  "bpjs_tk": 468468,
+                  "bpjs_kes": 253500,
+                  "sanksi_sp": 0,
+                  "pinjaman": 0,
+                  "lain_lain": 0,
+                  "subtotal": 1471968
+                },
+                "upah": {
+                  "bruto": 254175.19999999995,
+                  "pph21": 0,
+                  "setelah_pajak": 254175.19999999995,
+                  "setelah_thr": 254175.19999999995,
+                  "thp": 254200
+                },
+                "pajak": {
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A",
+                  "gaji_pokok": 1145975.2,
+                  "tukin": 60000,
+                  "backup": 0,
+                  "bonus_thr": 0,
+                  "bpjs_jkk": 2750.34048,
+                  "bpjs_jkm": 3437.9256,
+                  "bpjs_kes_4_persen": 45839.008,
+                  "base_pajak": 1258002.4740799998,
+                  "tarif_ter": 0,
+                  "pph21": 0
+                }
+              },
+              {
+                "no": 2,
+                "user_id": 15,
+                "identitas": {
+                  "nik": "517374",
+                  "nama": "Danru buj 1.1",
+                  "bank": "BNI",
+                  "nomor_rekening": "1234567890",
+                  "jabatan": "komandan_regu",
+                  "status_keanggotaan": "PRORATE - MASUK"
+                },
+                "template": {
+                  "user_id": 15,
+                  "nama": "Danru buj 1.1",
+                  "nik": "517374",
+                  "gaji_pokok": 5729876,
+                  "bpjs_tk_tambah": 316368,
+                  "bpjs_kes_tambah": 203800,
+                  "tukin_budget": 200000,
+                  "bonus_thr": 200000,
+                  "bpjs_tk_potongan": 450000,
+                  "bpjs_kes_potongan": 250000,
+                  "sanksi_sp": 0,
+                  "pinjaman_potongan": 0,
+                  "lain_lain_potongan": 0,
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A"
+                },
+                "penambah": {
+                  "gaji_pokok": 2100954.53,
+                  "bpjs_tk": 316368,
+                  "bpjs_kes": 203800,
+                  "tukin_budget": 200000,
+                  "tukin_per_hari": 9090.90909090909,
+                  "hari_kerja": 11,
+                  "total_schedule": 22,
+                  "total_tukin": 100000.01,
+                  "kroscek": {
+                    "budget": 2821122.53,
+                    "realisasi": 2821122.53,
+                    "minus": 0
+                  },
+                  "backup": {
+                    "nominal": 250000,
+                    "hari_ot": 0,
+                    "total": 0
+                  },
+                  "bonus_thr": 200000,
+                  "subtotal": 2921122.5399999996
+                },
+                "pengurang": {
+                  "ketidakhadiran": {
+                    "sakit": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "izin": {
+                      "hari": 1,
+                      "potongan": 250000
+                    },
+                    "cuti": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "alpha": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "soc_a": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "total": 250000
+                  },
+                  "bpjs_tk": 450000,
+                  "bpjs_kes": 250000,
+                  "sanksi_sp": 0,
+                  "pinjaman": 0,
+                  "lain_lain": 0,
+                  "subtotal": 950000
+                },
+                "upah": {
+                  "bruto": 1971122.5399999996,
+                  "pph21": 0,
+                  "setelah_pajak": 1971122.5399999996,
+                  "setelah_thr": 1771122.5399999996,
+                  "thp": 1771100
+                },
+                "pajak": {
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A",
+                  "gaji_pokok": 2100954.53,
+                  "tukin": 100000.01,
+                  "backup": 0,
+                  "bonus_thr": 200000,
+                  "bpjs_jkk": 5042.290871999999,
+                  "bpjs_jkm": 6302.86359,
+                  "bpjs_kes_4_persen": 84038.18119999999,
+                  "base_pajak": 2496337.875662,
+                  "tarif_ter": 0,
+                  "pph21": 0
+                }
+              },
+              {
+                "no": 3,
+                "user_id": 17,
+                "identitas": {
+                  "nik": "1234567899",
+                  "nama": "Anggota buj 1.1",
+                  "bank": "BNI",
+                  "nomor_rekening": "1234567899",
+                  "jabatan": "anggota",
+                  "status_keanggotaan": "PRORATE - MASUK"
+                },
+                "template": {
+                  "user_id": 17,
+                  "nama": "Anggota buj 1.1",
+                  "nik": "1234567899",
+                  "gaji_pokok": 5729876,
+                  "bpjs_tk_tambah": 316368,
+                  "bpjs_kes_tambah": 203800,
+                  "tukin_budget": 200000,
+                  "bonus_thr": 0,
+                  "bpjs_tk_potongan": 468468,
+                  "bpjs_kes_potongan": 253500,
+                  "sanksi_sp": 0,
+                  "pinjaman_potongan": 0,
+                  "lain_lain_potongan": 0,
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A"
+                },
+                "penambah": {
+                  "gaji_pokok": 1718962.8,
+                  "bpjs_tk": 316368,
+                  "bpjs_kes": 203800,
+                  "tukin_budget": 200000,
+                  "tukin_per_hari": 10000,
+                  "hari_kerja": 9,
+                  "total_schedule": 20,
+                  "total_tukin": 90000,
+                  "kroscek": {
+                    "budget": 2439130.8,
+                    "realisasi": 2439130.8,
+                    "minus": 0
+                  },
+                  "backup": {
+                    "nominal": 250000,
+                    "hari_ot": 1,
+                    "total": 250000
+                  },
+                  "bonus_thr": 0,
+                  "subtotal": 2579130.8
+                },
+                "pengurang": {
+                  "ketidakhadiran": {
+                    "sakit": {
+                      "hari": 1,
+                      "potongan": 250000
+                    },
+                    "izin": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "cuti": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "alpha": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "soc_a": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "total": 250000
+                  },
+                  "bpjs_tk": 468468,
+                  "bpjs_kes": 253500,
+                  "sanksi_sp": 0,
+                  "pinjaman": 0,
+                  "lain_lain": 0,
+                  "subtotal": 971968
+                },
+                "upah": {
+                  "bruto": 1607162.7999999998,
+                  "pph21": 0,
+                  "setelah_pajak": 1607162.7999999998,
+                  "setelah_thr": 1607162.7999999998,
+                  "thp": 1607200
+                },
+                "pajak": {
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A",
+                  "gaji_pokok": 1718962.8,
+                  "tukin": 90000,
+                  "backup": 250000,
+                  "bonus_thr": 0,
+                  "bpjs_jkk": 4125.510719999999,
+                  "bpjs_jkm": 5156.8884,
+                  "bpjs_kes_4_persen": 68758.512,
+                  "base_pajak": 2137003.71112,
+                  "tarif_ter": 0,
+                  "pph21": 0
+                }
+              },
+              {
+                "no": 4,
+                "user_id": 18,
+                "identitas": {
+                  "nik": "1234567889",
+                  "nama": "Anggota buj 1.2",
+                  "bank": "BRI",
+                  "nomor_rekening": "1234567889",
+                  "jabatan": "anggota",
+                  "status_keanggotaan": "PRORATE - MASUK"
+                },
+                "template": {
+                  "user_id": 18,
+                  "nama": "Anggota buj 1.2",
+                  "nik": "1234567889",
+                  "gaji_pokok": 5729876,
+                  "bpjs_tk_tambah": 316368,
+                  "bpjs_kes_tambah": 203800,
+                  "tukin_budget": 200000,
+                  "bonus_thr": 0,
+                  "bpjs_tk_potongan": 468468,
+                  "bpjs_kes_potongan": 253500,
+                  "sanksi_sp": 0,
+                  "pinjaman_potongan": 0,
+                  "lain_lain_potongan": 0,
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A"
+                },
+                "penambah": {
+                  "gaji_pokok": 954979.33,
+                  "bpjs_tk": 316368,
+                  "bpjs_kes": 203800,
+                  "tukin_budget": 200000,
+                  "tukin_per_hari": 11111.111111111111,
+                  "hari_kerja": 5,
+                  "total_schedule": 18,
+                  "total_tukin": 55555.55,
+                  "kroscek": {
+                    "budget": 1675147.33,
+                    "realisasi": 1675147.33,
+                    "minus": 0
+                  },
+                  "backup": {
+                    "nominal": 250000,
+                    "hari_ot": 3,
+                    "total": 750000
+                  },
+                  "bonus_thr": 0,
+                  "subtotal": 2280702.88
+                },
+                "pengurang": {
+                  "ketidakhadiran": {
+                    "sakit": {
+                      "hari": 2,
+                      "potongan": 500000
+                    },
+                    "izin": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "cuti": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "alpha": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "soc_a": {
+                      "hari": 0,
+                      "potongan": 0
+                    },
+                    "total": 500000
+                  },
+                  "bpjs_tk": 468468,
+                  "bpjs_kes": 253500,
+                  "sanksi_sp": 0,
+                  "pinjaman": 0,
+                  "lain_lain": 0,
+                  "subtotal": 1221968
+                },
+                "upah": {
+                  "bruto": 1058734.88,
+                  "pph21": 0,
+                  "setelah_pajak": 1058734.88,
+                  "setelah_thr": 1058734.88,
+                  "thp": 1058700
+                },
+                "pajak": {
+                  "ptkp_status": "TK/0",
+                  "ter_category": "A",
+                  "gaji_pokok": 954979.33,
+                  "tukin": 55555.55,
+                  "backup": 750000,
+                  "bonus_thr": 0,
+                  "bpjs_jkk": 2291.9503919999997,
+                  "bpjs_jkm": 2864.93799,
+                  "bpjs_kes_4_persen": 38199.1732,
+                  "base_pajak": 1803890.941582,
+                  "tarif_ter": 0,
+                  "pph21": 0
+                }
+              }
+            ],
+            "summary": {
+              "total_employees": 4,
+              "total_payroll_amount": 4691200,
+              "total_deductions": 4615904,
+              "total_additions": 3586227.56
+            }
+          }

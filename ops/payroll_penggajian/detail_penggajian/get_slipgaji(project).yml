@@ -24,3 +24,277 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: example
+    request:
+      url: https://epatrol.bgeodev.cloud/api/projects/3/payroll/slips?month=2026-05
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json
+      params:
+        - name: month
+          value: 2026-05
+          type: query
+      body:
+        type: multipart-form
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Sat, 27 Jun 2026 14:07:45 GMT
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "data": {
+              "meta": {
+                "project_id": 3,
+                "month": "2026-05",
+                "period": "1 S.D 31 MEI 2026",
+                "status": "FINALIZED",
+                "released_at": "2026-06-27T14:02:03.000000Z",
+                "total_employees": 4
+              },
+              "slips": [
+                {
+                  "organization": {
+                    "logo": null,
+                    "address": null,
+                    "phone": "0892134562",
+                    "email": "bujp@gmail.com"
+                  },
+                  "period": "1 S.D 31 MEI 2026",
+                  "employee": {
+                    "nama": "Admin buj 1.1 test",
+                    "jabatan": "Admin Project",
+                    "lokasi_kerja": "bujp project 1",
+                    "bank_name": "BSI",
+                    "bank_account": "082112212"
+                  },
+                  "pendapatan": {
+                    "gaji_pokok": 0,
+                    "total_tukin": 0,
+                    "bpjs_kes": 203800,
+                    "bpjs_tk": 316368,
+                    "lembur_backup": {
+                      "total": 0,
+                      "hari_ot": 0
+                    },
+                    "bonus_thr": 0,
+                    "total": 520168
+                  },
+                  "biaya": {
+                    "ketidakhadiran": {
+                      "total": 0,
+                      "total_hari": 0,
+                      "detail": {
+                        "sakit": 0,
+                        "izin": 0,
+                        "cuti": 0,
+                        "alpha": 0,
+                        "soc_a": 0
+                      }
+                    },
+                    "bpjs_kes": 253500,
+                    "bpjs_tk": 468468,
+                    "sanksi_administrasi": 0,
+                    "pinjaman": 0,
+                    "lain_lain": 0,
+                    "total": 721968
+                  },
+                  "lain_lain": {
+                    "pph21": 0,
+                    "total": -201800,
+                    "pembulatan": 0
+                  },
+                  "thp": 0,
+                  "month": "2026-05",
+                  "project_id": 3,
+                  "user_id": 13
+                },
+                {
+                  "organization": {
+                    "logo": null,
+                    "address": null,
+                    "phone": "0892134562",
+                    "email": "bujp@gmail.com"
+                  },
+                  "period": "1 S.D 31 MEI 2026",
+                  "employee": {
+                    "nama": "Danru buj 1.1",
+                    "jabatan": "Komandan Regu",
+                    "lokasi_kerja": "bujp project 1",
+                    "bank_name": null,
+                    "bank_account": null
+                  },
+                  "pendapatan": {
+                    "gaji_pokok": 2291950.4,
+                    "total_tukin": 114285.72,
+                    "bpjs_kes": 203800,
+                    "bpjs_tk": 316368,
+                    "lembur_backup": {
+                      "total": 0,
+                      "hari_ot": 0
+                    },
+                    "bonus_thr": 100000,
+                    "total": 3026404.12
+                  },
+                  "biaya": {
+                    "ketidakhadiran": {
+                      "total": 0,
+                      "total_hari": 0,
+                      "detail": {
+                        "sakit": 0,
+                        "izin": 0,
+                        "cuti": 0,
+                        "alpha": 0,
+                        "soc_a": 0
+                      }
+                    },
+                    "bpjs_kes": 250000,
+                    "bpjs_tk": 450000,
+                    "sanksi_administrasi": 0,
+                    "pinjaman": 0,
+                    "lain_lain": 0,
+                    "total": 700000
+                  },
+                  "lain_lain": {
+                    "pph21": 0,
+                    "total": 2326404.12,
+                    "pembulatan": 2226400
+                  },
+                  "thp": 2226400,
+                  "month": "2026-05",
+                  "project_id": 3,
+                  "user_id": 15
+                },
+                {
+                  "organization": {
+                    "logo": null,
+                    "address": null,
+                    "phone": "0892134562",
+                    "email": "bujp@gmail.com"
+                  },
+                  "period": "1 S.D 31 MEI 2026",
+                  "employee": {
+                    "nama": "Anggota buj 1.1",
+                    "jabatan": "Anggota",
+                    "lokasi_kerja": "bujp project 1",
+                    "bank_name": null,
+                    "bank_account": null
+                  },
+                  "pendapatan": {
+                    "gaji_pokok": 1527966.93,
+                    "total_tukin": 76190.48,
+                    "bpjs_kes": 203800,
+                    "bpjs_tk": 316368,
+                    "lembur_backup": {
+                      "total": 0,
+                      "hari_ot": 0
+                    },
+                    "bonus_thr": 0,
+                    "total": 2124325.41
+                  },
+                  "biaya": {
+                    "ketidakhadiran": {
+                      "total": 0,
+                      "total_hari": 0,
+                      "detail": {
+                        "sakit": 0,
+                        "izin": 0,
+                        "cuti": 0,
+                        "alpha": 0,
+                        "soc_a": 0
+                      }
+                    },
+                    "bpjs_kes": 253500,
+                    "bpjs_tk": 468468,
+                    "sanksi_administrasi": 0,
+                    "pinjaman": 0,
+                    "lain_lain": 0,
+                    "total": 721968
+                  },
+                  "lain_lain": {
+                    "pph21": 0,
+                    "total": 1402357.41,
+                    "pembulatan": 1402400
+                  },
+                  "thp": 1402400,
+                  "month": "2026-05",
+                  "project_id": 3,
+                  "user_id": 17
+                },
+                {
+                  "organization": {
+                    "logo": null,
+                    "address": null,
+                    "phone": "0892134562",
+                    "email": "bujp@gmail.com"
+                  },
+                  "period": "1 S.D 31 MEI 2026",
+                  "employee": {
+                    "nama": "Anggota buj 1.2",
+                    "jabatan": "Anggota",
+                    "lokasi_kerja": "bujp project 1",
+                    "bank_name": null,
+                    "bank_account": null
+                  },
+                  "pendapatan": {
+                    "gaji_pokok": 763983.47,
+                    "total_tukin": 38095.24,
+                    "bpjs_kes": 203800,
+                    "bpjs_tk": 316368,
+                    "lembur_backup": {
+                      "total": 0,
+                      "hari_ot": 0
+                    },
+                    "bonus_thr": 0,
+                    "total": 1322246.71
+                  },
+                  "biaya": {
+                    "ketidakhadiran": {
+                      "total": 0,
+                      "total_hari": 0,
+                      "detail": {
+                        "sakit": 0,
+                        "izin": 0,
+                        "cuti": 0,
+                        "alpha": 0,
+                        "soc_a": 0
+                      }
+                    },
+                    "bpjs_kes": 253500,
+                    "bpjs_tk": 468468,
+                    "sanksi_administrasi": 0,
+                    "pinjaman": 0,
+                    "lain_lain": 0,
+                    "total": 721968
+                  },
+                  "lain_lain": {
+                    "pph21": 0,
+                    "total": 600278.71,
+                    "pembulatan": 600300
+                  },
+                  "thp": 600300,
+                  "month": "2026-05",
+                  "project_id": 3,
+                  "user_id": 18
+                }
+              ]
+            }
+          }

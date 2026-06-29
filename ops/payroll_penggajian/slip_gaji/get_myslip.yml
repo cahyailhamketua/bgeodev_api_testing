@@ -13,7 +13,7 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 3007|Hte3Pc7AnX3Y0z5oiXIkDmPkUt7FPLkOb8hNMIOudd9fb181
+    token: 3027|nSlNhFetKv2zidURgLn0XQlDKQJcoJYR6VjwrhcHe80ae99d
 
 settings:
   encodeUrl: true
