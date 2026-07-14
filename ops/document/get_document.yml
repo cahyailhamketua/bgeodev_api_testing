@@ -5,13 +5,16 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/documents?month=2026-07
+  url: https://epatrol.bgeodev.cloud/api/projects/3/documents?month=2026-07&document_type_id=4
   headers:
     - name: Accept
       value: application/json
   params:
     - name: month
       value: 2026-07
+      type: query
+    - name: document_type_id
+      value: "4"
       type: query
   body:
     type: multipart-form
