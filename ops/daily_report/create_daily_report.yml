@@ -1,0 +1,116 @@
+info:
+  name: create_daily_report
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/daily-reports
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "report_date": "2026-07-18",
+          "bos_name": "Cahya Ilham",
+          "bos_position": "Chief Security",
+          "shift": "Pagi",
+          "total_personnel": 10,
+
+          "absent_personnel": [
+              {
+                  "employee_name": "Anggotabuj1",
+                  "reason": "Sakit",
+                  "backup_name": "Anggotabuj2",
+                  "origin": "Pos Lobby"
+              }
+          ],
+
+          "general_information": "Situasi area aman dan terkendali.",
+          "further_escalation": "Tidak ada eskalasi lanjutan.",
+
+          "incidents": [
+              {
+                  "component": "Komplain",
+                  "description": "AC rusak"
+              },
+              {
+                  "component": "Pelanggaran Anggota",
+                  "description": "Anggota cabul"
+              }
+          ],
+
+          "berita_acara": [
+              {
+                  "berita_acara": "Patroli",
+                  "description": "Patroli rutin berjalan normal"
+              },
+              {
+                  "berita_acara": "Serah Terima",
+                  "description": "Serah terima shift pukul 19.00"
+              }
+          ],
+
+          "personnel_conditions": [
+              {
+                  "user_id": 13,
+                  "position": "Admin Security",
+                  "physical_condition": "baik",
+                  "remarks": "Sehat"
+              },
+              {
+                  "user_id": 17,
+                  "position": "Security",
+                  "physical_condition": "perlu_perhatian",
+                  "remarks": "Batuk ringan"
+              }
+          ],
+
+          "uniform_personnels": [
+              {
+                  "user_id": 13,
+                  "overall_status": "lengkap",
+                  "notes": null,
+                  "checks": [
+                      {
+                          "uniform_component_id": 4,
+                          "status": "ada"
+                      },
+                      {
+                          "uniform_component_id": 5,
+                          "status": "ada"
+                      },
+                      {
+                          "uniform_component_id": 6,
+                          "status": "ada"
+                      }
+                  ]
+              }
+          ],
+
+          "equipment_checks": [
+             {
+                "equipment_component_id": 3,
+                "available_quantity": 1,
+                "condition": "baik",
+                "remarks": "-"
+            },
+            {
+                "equipment_component_id": 4,
+                "available_quantity": 1,
+                "condition": "rusak",
+                "remarks": "Lampu redup"
+            }
+          ]
+      }
+  auth:
+    type: bearer
+    token: 3171|wNlXjJnIwtS5gNg20s445sMAjq9zwtXx4K3rSK5cf392eb13
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,5 +1,5 @@
 info:
-  name: regenerate_qr_by_bost
+  name: regenerate_qr_by_post
   type: http
   seq: 10
 

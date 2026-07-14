@@ -1,0 +1,122 @@
+info:
+  name: create_daily_report (new_uniform & new_equipment)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/daily-reports
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "report_date": "2026-07-11",
+          "bos_name": "Cahya Ilham",
+          "bos_position": "Chief Security",
+          "shift": "Pagi",
+          "total_personnel": 10,
+
+          "absent_personnel": [
+              {
+                  "employee_name": "Anggotabuj1",
+                  "reason": "Sakit",
+                  "backup_name": "Anggotabuj2"
+              }
+          ],
+
+          "general_information": "Situasi area aman dan terkendali.",
+          "further_escalation": "Tidak ada eskalasi lanjutan.",
+
+          "incidents": [
+              {
+                  "component": "1.Komplaain",
+                  "description": "Ditemukan kendaraan parkir tidak sesuai area."
+              }
+          ],
+
+          "berita_acara": [
+              "Patroli rutin berjalan normal.",
+              "Serah terima shift dilakukan pukul 19:00."
+          ],
+
+          "personnel_conditions": [
+              {
+                  "user_id": 13,
+                  "position": "Admin Security",
+                  "physical_condition": "baik",
+                  "remarks": "Sehat"
+              },
+              {
+                  "user_id": 17,
+                  "position": "Security",
+                  "physical_condition": "perlu_perhatian",
+                  "remarks": "Batuk ringan"
+              }
+          ],
+
+          "new_uniform_components": [
+              "Topi",
+              "Sepatu",
+              "Rompi"
+          ],
+
+          "uniform_personnels": [
+              {
+                  "user_id": 13,
+                  "overall_status": "lengkap",
+                  "notes": null,
+                  "checks": [
+                      {
+                          "uniform_component_name": "Topi",
+                          "status": "ada"
+                      },
+                      {
+                          "uniform_component_name": "Sepatu",
+                          "status": "ada"
+                      },
+                      {
+                          "uniform_component_name": "Rompi",
+                          "status": "ada"
+                      }
+                  ]
+              }
+          ],
+
+          "new_equipment_components": [
+              {
+                  "name": "HT",
+                  "standard_quantity": 1
+              },
+              {
+                  "name": "Senter",
+                  "standard_quantity": 1
+              }
+          ],
+
+          "equipment_checks": [
+             {
+                "equipment_component_name": "HT",
+                "available_quantity": 1,
+                "condition": "baik",
+                "remarks": "-"
+            },
+            {
+                "equipment_component_name": "Senter",
+                "available_quantity": 1,
+                "condition": "rusak",
+                "remarks": "Lampu redup"
+            }
+          ]
+      }
+  auth:
+    type: bearer
+    token: 3105|dVcWh4RHYXARkNol78vyUnVHabxJUcENi61Zbf0b25948a50
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

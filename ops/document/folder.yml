@@ -1,7 +1,7 @@
 info:
-  name: user
+  name: document
   type: folder
-  seq: 17
+  seq: 15
 
 request:
   auth: inherit

@@ -1,0 +1,23 @@
+info:
+  name: download_daily_report
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://epatrol.bgeodev.cloud/api/projects/3/daily-reports/12/download
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: 3176|f4308jJCYueHKhuE6fzr6Rd6naivbEIo30m34Q1t32722716
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

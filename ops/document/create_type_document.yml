@@ -1,0 +1,26 @@
+info:
+  name: create_type_document
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/document-types
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Surat Izin
+  auth:
+    type: bearer
+    token: 3105|dVcWh4RHYXARkNol78vyUnVHabxJUcENi61Zbf0b25948a50
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

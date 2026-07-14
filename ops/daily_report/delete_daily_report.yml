@@ -1,0 +1,23 @@
+info:
+  name: delete_daily_report
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/projects/3/daily-reports/5
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: 3175|hOaFk11hit9zsqS5wmOz7G5BI4HbGfPTjNX5tAr9dc090fe1
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

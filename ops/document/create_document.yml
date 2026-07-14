@@ -1,0 +1,38 @@
+info:
+  name: create_document
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/documents
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: document_type_id
+        type: text
+        value: "1"
+      - name: document_date
+        type: text
+        value: 2026-07-07
+      - name: file
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\Soal Kompetensi software engineering 2025.pdf
+        contentType: application/pdf
+      - name: new_document_type
+        type: text
+        value: Surat Makan
+        disabled: true
+  auth:
+    type: bearer
+    token: 3105|dVcWh4RHYXARkNol78vyUnVHabxJUcENi61Zbf0b25948a50
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
