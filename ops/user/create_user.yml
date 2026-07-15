@@ -14,28 +14,28 @@ http:
     data:
       - name: organization_id
         type: text
-        value: "1"
+        value: "2"
       - name: project_id
         type: text
-        value: "1"
+        value: "3"
       - name: full_name
         type: text
-        value: danruofc1.2
+        value: akun ke 3 buj
       - name: username
         type: text
-        value: danruofc1.2
+        value: headbuj3
       - name: email
         type: text
-        value: danruofc1.2@gmail.com
+        value: buj3@gmail.com
       - name: phone
         type: text
-        value: "08123456542"
+        value: "081234565429"
       - name: role
         type: text
-        value: komandan_regu
+        value: ho
   auth:
     type: bearer
-    token: 1656|ZI8r21TIr2DSs1f4lTbuIjudbEubh2bTk8h2W7Dl812e3d34
+    token: 3155|2xdFbhqnomKedUzRqqnnR59cxpi0Xu5GSSN7hukq487c42bd
 
 settings:
   encodeUrl: true

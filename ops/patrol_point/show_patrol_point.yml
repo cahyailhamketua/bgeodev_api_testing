@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/patrol-points/5
+  url: https://epatrol.bgeodev.cloud/api/patrol-points/8
   headers:
     - name: Accept
       value: application/json
@@ -13,7 +13,7 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 1762|VnPWJVaFSdXbljOXnAsRjGyD5j8pl423fvxjHhwhcb4a8906
+    token: 3132|FZh8Y6VdV1UkaP4wvJYeoKL4sE14kReKJYYIlmqV268c3938
 
 settings:
   encodeUrl: true

@@ -11,7 +11,7 @@ http:
       value: application/json
   auth:
     type: bearer
-    token: 1938|mbu84z5kaXt9WNfOO3nuMs9H5fy4L2l6Pzqf91Vl7bc24408
+    token: 3120|rBN1fxGIroQfvgRbUcvbUZB4oerC117XPXGyTydk9a97748d
 
 settings:
   encodeUrl: true

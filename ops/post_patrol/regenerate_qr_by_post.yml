@@ -17,7 +17,7 @@ http:
         value: "1"
   auth:
     type: bearer
-    token: 563|vWZs9DELgxYxEq3pxxzJD6GMU6VQOhEu9dh2CTnoada48555
+    token: 3120|rBN1fxGIroQfvgRbUcvbUZB4oerC117XPXGyTydk9a97748d
 
 settings:
   encodeUrl: true

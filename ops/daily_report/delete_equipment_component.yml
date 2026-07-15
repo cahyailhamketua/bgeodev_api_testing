@@ -1,0 +1,23 @@
+info:
+  name: delete_equipment_component
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/projects/3/equipment-components/3
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: 3203|l8abOA597iB6lG5OsRTbvxNQpoRmi6KkeJaSydNV4b4d5e7f
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: delete_uniform_component
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: https://epatrol.bgeodev.cloud/api/projects/3/uniform-components/4
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: 3197|li93K1TLUnr2MBifAls8rePPXTXvHe0AZtuZugBY37198cf6
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

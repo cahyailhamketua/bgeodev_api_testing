@@ -15,9 +15,10 @@ http:
       - name: document_type_id
         type: text
         value: "1"
+        disabled: true
       - name: document_date
         type: text
-        value: 2026-07-07
+        value: 2026-07-14
       - name: file
         type: file
         value:
@@ -25,11 +26,10 @@ http:
         contentType: application/pdf
       - name: new_document_type
         type: text
-        value: Surat Makan
-        disabled: true
+        value: padil
   auth:
     type: bearer
-    token: 3105|dVcWh4RHYXARkNol78vyUnVHabxJUcENi61Zbf0b25948a50
+    token: 3182|Z5BhUq4XDskhK0oDu7EfCVt90FRWNMJIDJxumym9d3216ed1
 
 settings:
   encodeUrl: true
