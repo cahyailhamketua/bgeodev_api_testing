@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/1/users
+  url: https://epatrol.bgeodev.cloud/api/projects/3/users
   headers:
     - name: Accept
       value: Application/json
   auth:
     type: bearer
-    token: 999|N8LXtZZHlTXS7Wwr9vI8NoB2ww833BzdXJztuzLh7d5e6717
+    token: 3215|zpDcoZNSQcQlQEZnINGBk0Yf2QXfnCji81dIbjbva255f30f
 
 settings:
   encodeUrl: true

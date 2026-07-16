@@ -5,19 +5,19 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/document-types?month=2026-06
+  url: https://epatrol.bgeodev.cloud/api/projects/3/document-types?month=2026-07
   headers:
     - name: Accept
       value: application/json
   params:
     - name: month
-      value: 2026-06
+      value: 2026-07
       type: query
   body:
     type: multipart-form
   auth:
     type: bearer
-    token: 3225|L3HC368acHnGVv3QWhnhYrhAQN2oNZ0ftzDcKRin8c977b80
+    token: 3229|D9XAye8cBA3lYAlkj2rsluaFkvtw16Xin7PxYplyeea15d8b
 
 settings:
   encodeUrl: true
