@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: https://epatrol.bgeodev.cloud/api/projects/2
+  url: https://epatrol.bgeodev.cloud/api/projects/7
   headers:
     - name: Accept
       value: application/json
@@ -27,6 +27,7 @@ http:
       - name: location_longitude
         type: text
         value: "106.7310158895468"
+        disabled: true
       - name: location_address
         type: text
         value: ""
@@ -34,6 +35,7 @@ http:
       - name: location_latitude
         type: text
         value: "-6.444505056358776"
+        disabled: true
       - name: location_city
         type: text
         value: bogor
@@ -41,12 +43,18 @@ http:
       - name: radius
         type: text
         value: "1000"
+        disabled: true
+      - name: logo
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\WhatsApp Image 2026-07-12 at 17.09.26.jpeg
+        contentType: image/jpeg
       - name: _method
         type: text
         value: PUT
   auth:
     type: bearer
-    token: 3021|wZVc0MUVfvixKQmtTpFjq3v0JaZFroHLzrrQRbrv91fd9ce6
+    token: 3240|RqyJFT1sHRevqYypwwTtFl3IF6BMuoRRpmr7IstW9e56a43d
 
 settings:
   encodeUrl: true

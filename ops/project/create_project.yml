@@ -14,13 +14,13 @@ http:
     data:
       - name: organization_id
         type: text
-        value: "4"
+        value: "2"
       - name: name
         type: text
-        value: Sopo Del Tower
+        value: bujp project 3
       - name: code
         type: text
-        value: SDT
+        value: buj3
       - name: location_latitude
         type: text
         value: "-6231058"
@@ -29,15 +29,18 @@ http:
         value: "106823830"
       - name: location_address
         type: text
-        value: |-
-          Jl. Mega Kuningan Barat III, Lot 10. 1-6
-          Kawasan Mega Kuningan. Jakarta 12950.
+        value: Bukit Cimanggu City Blok HH 12 no. 1
       - name: location_city
         type: text
-        value: Jakarta Selatan
+        value: Bogor
+      - name: logo
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\Download Free Vectors, Images, Photos & Videos _ Vecteezy.jpg
+        contentType: image/jpeg
   auth:
     type: bearer
-    token: 309|0C2p78FznpiTsMH0mhisfSyCsggbpoBOkC4pmDHx3c11d336
+    token: 3240|RqyJFT1sHRevqYypwwTtFl3IF6BMuoRRpmr7IstW9e56a43d
 
 settings:
   encodeUrl: true
