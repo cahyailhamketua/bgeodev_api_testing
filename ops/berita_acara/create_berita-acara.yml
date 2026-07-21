@@ -1,0 +1,57 @@
+info:
+  name: create_berita-acara
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://epatrol.bgeodev.cloud/api/projects/3/berita-acara
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "document_number": "BA/015/VII/2026/SECURITY",
+          "incident_date": "2026-07-21",
+          "incident_time": "14:30",
+
+          "subject": "Kehilangan Kunci Ruang Server",
+
+          "location": "Ruang Server Gedung A",
+
+          "description": "Pada saat pemeriksaan rutin ditemukan bahwa kunci ruang server tidak berada pada tempat penyimpanan yang seharusnya. Setelah dilakukan pengecekan kepada petugas jaga, diketahui bahwa kunci terakhir digunakan untuk kegiatan maintenance pada pagi hari.",
+
+          "chronologies": [
+              "Petugas melakukan patroli rutin pukul 14:00 WIB.",
+              "Kunci ruang server tidak ditemukan pada lemari penyimpanan.",
+              "Dilakukan konfirmasi kepada petugas shift sebelumnya.",
+              "Petugas maintenance mengakui terakhir menggunakan kunci tersebut.",
+              "Pencarian dilakukan di area kerja namun belum ditemukan."
+          ],
+
+          "actions_taken": [
+              "Melakukan pencarian di sekitar area server.",
+              "Menghubungi petugas maintenance terkait penggunaan terakhir.",
+              "Membuat laporan kepada atasan langsung.",
+              "Melakukan penggantian kunci sementara untuk keamanan area."
+          ],
+
+          "inspector_name": "Hasto Priambodo",
+
+          "inspector_position": "Chief Security",
+
+          "acknowledged_by": "Nazzil",
+
+          "acknowledged_position": "Building Management"
+      }
+  auth:
+    type: bearer
+    token: 3267|6KGnXlO5qFPOs8PPFFQXlVeLHNdNVvKYdr790Bsud611859a
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,7 +1,7 @@
 info:
-  name: login_anggota sdt (test)
+  name: login_ho buj3
   type: http
-  seq: 16
+  seq: 9
 
 http:
   method: POST
@@ -11,10 +11,10 @@ http:
     data:
       - name: username
         type: text
-        value: budiyanto
+        value: headbuj3
       - name: password
         type: text
-        value: budiyanto123
+        value: headoffice123
   auth: inherit
 
 settings:

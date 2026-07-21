@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-          "report_date": "2026-07-20",
+          "report_date": "2026-07-25",
           "bos_name": "Cahya Ilham",
           "bos_position": "Chief Security",
           "shift": "Pagi",
@@ -100,7 +100,7 @@ http:
             },
             {
                 "equipment_component_id": 5,
-                "standard_quantity": 12,
+                "standard_quantity": 6,
                 "available_quantity": 2,
                 "condition": "rusak",
                 "remarks": "Lampu redup"
@@ -109,7 +109,7 @@ http:
       }
   auth:
     type: bearer
-    token: 3217|DxWWYwrEJj6eVz7L7FuOtOMrnxIcxahNsFYZqxulac8a71ce
+    token: 3236|3RETDKH1oK0bXvVRMKvMZ7UbIvgrb7TIrjBovKjbcf30efa5
 
 settings:
   encodeUrl: true

@@ -1,7 +1,7 @@
 info:
   name: login_anggota Copy 2
   type: http
-  seq: 14
+  seq: 15
 
 http:
   method: POST

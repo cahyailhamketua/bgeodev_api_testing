@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: https://epatrol.bgeodev.cloud/api/projects/7
+  url: https://epatrol.bgeodev.cloud/api/projects/3
   headers:
     - name: Accept
       value: application/json

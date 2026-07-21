@@ -1,11 +1,11 @@
 info:
-  name: get_equipment_component
+  name: get_number-suggestion
   type: http
-  seq: 8
+  seq: 2
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/equipment-components
+  url: https://epatrol.bgeodev.cloud/api/projects/3/berita-acara-number-suggestion
   headers:
     - name: Content-Type
       value: application/json
@@ -14,7 +14,7 @@ http:
     data: ""
   auth:
     type: bearer
-    token: 3236|3RETDKH1oK0bXvVRMKvMZ7UbIvgrb7TIrjBovKjbcf30efa5
+    token: 3267|6KGnXlO5qFPOs8PPFFQXlVeLHNdNVvKYdr790Bsud611859a
 
 settings:
   encodeUrl: true

@@ -33,7 +33,7 @@ http:
 
           "incidents": [
               {
-                  "component": "Komplaain",
+                  "component": "Komplain",
                   "description": "Ditemukan kendaraan parkir tidak sesuai area."
               },
               {
@@ -103,14 +103,14 @@ http:
               },
               {
                   "name": "Senter",
-                  "standard_quantity": 1
+                  "standard_quantity": 2
               }
           ],
 
           "equipment_checks": [
              {
                 "equipment_component_name": "HT",
-                "available_quantity": 1,
+                "available_quantity": 5,
                 "condition": "baik",
                 "remarks": "-"
             },
