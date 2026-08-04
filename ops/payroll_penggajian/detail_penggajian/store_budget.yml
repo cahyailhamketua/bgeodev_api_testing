@@ -1,0 +1,30 @@
+info:
+  name: store_budget
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: https://epatrol.bgeodev.cloud/api/payroll/budget
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "project_id": 1,
+          "year": 2026,
+          "month": 10,
+          "budget_amount": 40000000,
+          "apply_next": true
+      }
+  auth:
+    type: bearer
+    token: 3605|yToMpdS7rvCRuA2u7eaCLMkusmwHleQ5r3ZxGiUj2f22bb2e
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
