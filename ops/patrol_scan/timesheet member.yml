@@ -5,21 +5,10 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/posts/2/members-timesheet?user_id=9&current_time=2026-04-27 15:43:00
+  url: https://epatrol.bgeodev.cloud/api/members-timesheet/17?project_id=3
   params:
-    - name: attendance_id
-      value: "46"
-      type: query
-      disabled: true
-    - name: assignment_id
-      value: "6"
-      type: query
-      disabled: true
-    - name: user_id
-      value: "9"
-      type: query
-    - name: current_time
-      value: 2026-04-27 15:43:00
+    - name: project_id
+      value: "3"
       type: query
   body:
     type: multipart-form
@@ -58,7 +47,7 @@ http:
         disabled: true
   auth:
     type: bearer
-    token: 1638|ADHWCF5RULk6huoNZhkTqFz4t5fMH05TS3elJdKyd8f531ff
+    token: 3721|ulM39ktjCq3qtcu9XGZ7mzcdi76Me1EQeavVaJnH012312e6
 
 settings:
   encodeUrl: true
