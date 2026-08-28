@@ -31,7 +31,7 @@ http:
         disabled: true
   auth:
     type: bearer
-    token: 3725|PFJexdyXsv8McheYK2ol9IR4hYEXS8EnYPPFoAFeef344e79
+    token: 3735|zECSBgHJPJ9lYD1qRIEwA6dzHR52K9MzjJEvxQlKd603eeb4
 
 settings:
   encodeUrl: true

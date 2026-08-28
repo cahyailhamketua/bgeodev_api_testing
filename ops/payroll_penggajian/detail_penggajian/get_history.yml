@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/payroll/history?year=2026
+  url: https://epatrol.bgeodev.cloud/api/payroll/history?year=2025
   headers:
     - name: Accept
       value: application/json
   params:
     - name: year
-      value: "2026"
+      value: "2025"
       type: query
     - name: project_id
       value: "2"
@@ -21,7 +21,7 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 3539|onf6oQxBRqsrmi7IQPddm3qrflWeIrDP5rfbsHcd6084cea9
+    token: 3736|or7OyQImUAOSCrRSMiEeQNIX7uiLUgHnxj2wfcRj6bcc8af0
 
 settings:
   encodeUrl: true

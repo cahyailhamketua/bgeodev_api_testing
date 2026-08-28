@@ -56,13 +56,14 @@ http:
     type: multipart-form
   auth:
     type: bearer
-    token: 3721|ulM39ktjCq3qtcu9XGZ7mzcdi76Me1EQeavVaJnH012312e6
+    token: 3870|p6jxBvUeTH8cfJZAXicQi0jFudfb5TKfwlmeoZ0zfb9271d9
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: laporan danru

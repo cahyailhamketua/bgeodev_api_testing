@@ -5,20 +5,20 @@ info:
 
 http:
   method: GET
-  url: https://epatrol.bgeodev.cloud/api/projects/3/daily-reports?month=2026-07
+  url: https://epatrol.bgeodev.cloud/api/projects/3/daily-reports?month=2026-08
   headers:
     - name: Content-Type
       value: application/json
   params:
     - name: month
-      value: 2026-07
+      value: 2026-08
       type: query
   body:
     type: json
     data: ""
   auth:
     type: bearer
-    token: 3217|DxWWYwrEJj6eVz7L7FuOtOMrnxIcxahNsFYZqxulac8a71ce
+    token: 3748|2qsrhbLWcRnUUcBf8708f1hTDIVqhLaTiOyBzZcP7f4f0868
 
 settings:
   encodeUrl: true
