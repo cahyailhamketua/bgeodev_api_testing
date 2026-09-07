@@ -1,0 +1,27 @@
+info:
+  name: create_pemerian_obat
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/admin/master/pemerian
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "reff_name": "test"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4NzY5MzE1LCJuYmYiOjE3ODg3NjkzMTUsImV4cCI6MTc4ODc3MjkxNSwianRpIjoiNmRmODRjMTAzZGVjNGJkYSJ9.dE04cnU-aglfYarA5G25svJ9wEEF_Ai9vceVmJpl3e8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

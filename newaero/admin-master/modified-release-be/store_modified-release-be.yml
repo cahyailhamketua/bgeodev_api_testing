@@ -1,0 +1,29 @@
+info:
+  name: store_modified-release-be
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/admin/master/modified-release-be
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "forms_name": "test",
+          "modified_release": 0,
+          "bioekivalensi": 0
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4NzczOTcyLCJuYmYiOjE3ODg3NzM5NzIsImV4cCI6MTc4ODc3NzU3MiwianRpIjoiZmFlYWY0ZjQwNGM0M2QwYiJ9.sBKoGalcPmGkucJmEoj9R0I6PAn1mCvdtV2WIjVXRX8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

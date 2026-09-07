@@ -1,0 +1,7 @@
+info:
+  name: hari_libur
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

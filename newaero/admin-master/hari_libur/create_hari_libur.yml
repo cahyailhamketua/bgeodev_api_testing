@@ -1,0 +1,28 @@
+info:
+  name: create_hari_libur
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/admin/master/hari-libur
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "tanggal_libur": "2025-09-09",
+          "keterangan_libur": "test"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4NzYzNTA4LCJuYmYiOjE3ODg3NjM1MDgsImV4cCI6MTc4ODc2NzEwOCwianRpIjoiYjExODBkYTY1MTVlZmExOCJ9.TxfDKC1B5zpAWzDMn9LOwe_h7zWFd529hbPZUP5ELNE
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,7 @@
+info:
+  name: modified-release-be
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit

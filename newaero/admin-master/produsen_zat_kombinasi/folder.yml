@@ -1,0 +1,7 @@
+info:
+  name: produsen_zat_kombinasi
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit
