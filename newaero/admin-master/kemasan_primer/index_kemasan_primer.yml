@@ -1,0 +1,21 @@
+info:
+  name: index_kemasan_primer
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://127.0.0.1:8000/api/admin/master/kemasan-primer
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4ODUxNjAzLCJuYmYiOjE3ODg4NTE2MDMsImV4cCI6MTc4ODg1NTIwMywianRpIjoiMmNhMmE5ZjI2NTZkY2Q5ZCJ9.-p-VXdnmJtaKijhguc043sPROjFWsbNWQ2cbe2naF8M
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

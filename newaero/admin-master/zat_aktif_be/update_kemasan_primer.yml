@@ -1,0 +1,27 @@
+info:
+  name: update_kemasan_primer
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://127.0.0.1:8000/api/admin/master/zat-aktif-be/470
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "substance_id": 3698
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4ODU4MzMyLCJuYmYiOjE3ODg4NTgzMzIsImV4cCI6MTc4ODg2MTkzMiwianRpIjoiNjI5MTI1MDRkZDA2Y2I5MCJ9.inRycK_JlXgExRRgfddwE5vs04WO7ZDt43gak7ABNro
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,7 @@
+info:
+  name: zat_aktif_be
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit
