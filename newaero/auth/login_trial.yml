@@ -1,7 +1,7 @@
 info:
-  name: login
+  name: login_trial
   type: http
-  seq: 1
+  seq: 2
 
 http:
   method: POST
@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-        "username": "affandi",
+        "username": "trial",
         "password": "123123"
       }
   auth: inherit
