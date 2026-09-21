@@ -1,0 +1,29 @@
+info:
+  name: update_flag_variasi
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://127.0.0.1:8000/api/admin/master/flag-variasi/1770
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "var_desc": "testis",
+          "var_code": "testis",
+          "var_process": "2"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg5OTc3NjE5LCJuYmYiOjE3ODk5Nzc2MTksImV4cCI6MTc4OTk4MTIxOSwianRpIjoiN2I3NzQwMjlkNTMxMDY0YiJ9.m0N-xB4vzqxDBOJJnBzH9t_332HMpCUCIrrSaZLoALU
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
