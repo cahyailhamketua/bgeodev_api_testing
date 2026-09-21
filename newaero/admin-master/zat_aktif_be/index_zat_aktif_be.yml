@@ -5,13 +5,17 @@ info:
 
 http:
   method: GET
-  url: http://127.0.0.1:8000/api/admin/master/zat-aktif-be
+  url: http://127.0.0.1:8000/api/admin/master/zat-aktif-be?per_page=500
   headers:
     - name: Content-Type
       value: application/json
+  params:
+    - name: per_page
+      value: "500"
+      type: query
   auth:
     type: bearer
-    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4ODU4MzMyLCJuYmYiOjE3ODg4NTgzMzIsImV4cCI6MTc4ODg2MTkzMiwianRpIjoiNjI5MTI1MDRkZDA2Y2I5MCJ9.inRycK_JlXgExRRgfddwE5vs04WO7ZDt43gak7ABNro
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg5OTc4ODcxLCJuYmYiOjE3ODk5Nzg4NzEsImV4cCI6MTc4OTk4MjQ3MSwianRpIjoiYjE3MmU3ZDI2ZWEwZGM1NyJ9.IjHWemEYA5pFcQgmZ2YjUQgeOLVQHnctWpDjOK7oYPU
 
 settings:
   encodeUrl: true
