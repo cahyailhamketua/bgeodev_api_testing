@@ -13,13 +13,13 @@ http:
     type: json
     data: |-
       {
-          "var_desc": "test",
-          "var_code": "test",
+          "var_desc": "testos",
+          "var_code": "testos",
           "var_process": "1"
       }
   auth:
     type: bearer
-    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg5OTc3NjE5LCJuYmYiOjE3ODk5Nzc2MTksImV4cCI6MTc4OTk4MTIxOSwianRpIjoiN2I3NzQwMjlkNTMxMDY0YiJ9.m0N-xB4vzqxDBOJJnBzH9t_332HMpCUCIrrSaZLoALU
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg5OTgyNDM2LCJuYmYiOjE3ODk5ODI0MzYsImV4cCI6MTc4OTk4NjAzNiwianRpIjoiYjFiZjk4ZjEzMTI0MzhiNiJ9.EVeSzV3UoGW5pexOWN9JwiCfgFzdUvctL89xa1Utd-g
 
 settings:
   encodeUrl: true
