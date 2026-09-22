@@ -5,13 +5,21 @@ info:
 
 http:
   method: GET
-  url: http://127.0.0.1:8000/api/admin/master/hari-libur
+  url: http://127.0.0.1:8000/api/admin/master/hari-libur?tanggal_libur=05-09-2025
   headers:
     - name: Content-Type
       value: application/json
+  params:
+    - name: keterangan_libur
+      value: nyepi
+      type: query
+      disabled: true
+    - name: tanggal_libur
+      value: 05-09-2025
+      type: query
   auth:
     type: bearer
-    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4NzYzNTA4LCJuYmYiOjE3ODg3NjM1MDgsImV4cCI6MTc4ODc2NzEwOCwianRpIjoiYjExODBkYTY1MTVlZmExOCJ9.TxfDKC1B5zpAWzDMn9LOwe_h7zWFd529hbPZUP5ELNE
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkwMDYxMzM0LCJuYmYiOjE3OTAwNjEzMzQsImV4cCI6MTc5MDA2NDkzNCwianRpIjoiOWZhMWVjZTM0ODkyYjgxOSJ9.5sonVaFL5i775rpaHZLHcKt7KNBB_4V_1fcKubPTzx4
 
 settings:
   encodeUrl: true
