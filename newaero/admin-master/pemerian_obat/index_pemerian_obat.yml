@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: http://127.0.0.1:8000/api/admin/master/pemerian?per_page=100
+  url: http://127.0.0.1:8000/api/admin/master/pemerian?per_page=100&q=INHALASI
   headers:
     - name: Content-Type
       value: application/json
@@ -13,9 +13,12 @@ http:
     - name: per_page
       value: "100"
       type: query
+    - name: q
+      value: INHALASI
+      type: query
   auth:
     type: bearer
-    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzg4NzY5MzE1LCJuYmYiOjE3ODg3NjkzMTUsImV4cCI6MTc4ODc3MjkxNSwianRpIjoiNmRmODRjMTAzZGVjNGJkYSJ9.dE04cnU-aglfYarA5G25svJ9wEEF_Ai9vceVmJpl3e8
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkwNTc3Mjk0LCJuYmYiOjE3OTA1NzcyOTQsImV4cCI6MTc5MDU4MDg5NCwianRpIjoiYjViYmM5Y2IxNGI3MWViNyJ9.TgkXghqDjAXAq0o1ZCpld77YPBXExmRKb-ZM66joRVc
 
 settings:
   encodeUrl: true
