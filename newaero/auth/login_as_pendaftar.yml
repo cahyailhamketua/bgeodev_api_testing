@@ -1,0 +1,27 @@
+info:
+  name: login_as_pendaftar
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/admin/master/user-pendaftar/login
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": 533
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxMjc5Mjg1LCJuYmYiOjE3OTEyNzkyODUsImV4cCI6MTc5MTI4Mjg4NSwianRpIjoiMGZhNjg2MmZhMDAyYjA2OSJ9.r5pUUJldgj7t6-pH6Q6WByJT2vttsGJm3NsXDwGONDQ
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

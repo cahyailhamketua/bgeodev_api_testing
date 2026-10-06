@@ -14,7 +14,7 @@ http:
     data: |-
       {
         "username": "affandi",
-        "password": "123123"
+        "password": "aff4nd1"
       }
   auth: inherit
 
