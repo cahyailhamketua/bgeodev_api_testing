@@ -1,7 +1,7 @@
 info:
-  name: candidate_renewal
+  name: index_candidate_renewal
   type: http
-  seq: 2
+  seq: 4
 
 http:
   method: GET
@@ -16,7 +16,7 @@ http:
       description: renewal/renewal_murni
   auth:
     type: bearer
-    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUzMywidXNyIjoidHJpYWwiLCJncnAiOjMsInRyZCI6MTYsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxNDI1MDA5LCJuYmYiOjE3OTE0MjUwMDksImV4cCI6MTc5MTQyODYwOSwianRpIjoiZGViNWQ2MjFmNzZhNGQyMSJ9.Gesie0t0y7E2E1m0qiuxdasPd19WOti52GsSmEsysKU
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUzMywidXNyIjoidHJpYWwiLCJncnAiOjMsInRyZCI6MTYsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxNDI5OTk0LCJuYmYiOjE3OTE0Mjk5OTQsImV4cCI6MTc5MTQzMzU5NCwianRpIjoiZjZjMTNkYzI2N2VjZDNjZCJ9.7T-YKy9Anl1VwZkS0SPeeFw1y4cUaQdgWnZe7u0o4yA
 
 settings:
   encodeUrl: true

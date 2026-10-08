@@ -1,28 +1,22 @@
 info:
-  name: index_renewal
+  name: create_renewal
   type: http
-  seq: 1
+  seq: 3
 
 http:
-  method: GET
+  method: POST
   url: http://127.0.0.1:8000/api/renewal
   headers:
     - name: Content-Type
       value: application/json
-  params:
-    - name: status
-      value: "05"
-      type: query
-      disabled: true
-    - name: search
-      value: EREG1003730102300021
-      type: query
-      description: reg_id, reg_name, reg_nie
-      disabled: true
-    - name: per_page
-      value: "200"
-      type: query
-      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "product_reg_id": "EREG1003730102300022",
+        //"reg_type": "{{pilihan_code_dari_form_options}}",
+        "flag_renewal_variasi": "TRUE"
+      }
   auth:
     type: bearer
     token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUzMywidXNyIjoidHJpYWwiLCJncnAiOjMsInRyZCI6MTYsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxNDI5OTk0LCJuYmYiOjE3OTE0Mjk5OTQsImV4cCI6MTc5MTQzMzU5NCwianRpIjoiZjZjMTNkYzI2N2VjZDNjZCJ9.7T-YKy9Anl1VwZkS0SPeeFw1y4cUaQdgWnZe7u0o4yA
