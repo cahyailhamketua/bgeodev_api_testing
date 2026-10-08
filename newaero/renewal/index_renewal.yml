@@ -1,0 +1,35 @@
+info:
+  name: index_renewal
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: http://127.0.0.1:8000/api/renewal
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: status
+      value: "05"
+      type: query
+      disabled: true
+    - name: search
+      value: DBL8821003363A1
+      type: query
+      description: reg_id, reg_name, reg_nie
+      disabled: true
+    - name: per_page
+      value: "200"
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUzMywidXNyIjoidHJpYWwiLCJncnAiOjMsInRyZCI6MTYsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxMzU0Njg3LCJuYmYiOjE3OTEzNTQ2ODcsImV4cCI6MTc5MTM1ODI4NywianRpIjoiYTY2NGE4MzE3YzcyNTI2OCJ9.HsSVwmRjU4Xb6e5kqXMLcs4o_QMqpoqzmV1Gc32_V68
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

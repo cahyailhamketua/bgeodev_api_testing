@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: http://127.0.0.1:8000/api/admin/master/user-pendaftar?q=trial&search_field=NAMA
+  url: http://127.0.0.1:8000/api/admin/master/user-pendaftar?q=trial
   headers:
     - name: Content-Type
       value: application/json
@@ -18,6 +18,7 @@ http:
       value: NAMA
       type: query
       description: USER_NAME, NAMA, atau JABATAN
+      disabled: true
     - name: per_page
       value: ""
       type: query
@@ -30,7 +31,7 @@ http:
       disabled: true
   auth:
     type: bearer
-    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxMjc5Mjg1LCJuYmYiOjE3OTEyNzkyODUsImV4cCI6MTc5MTI4Mjg4NSwianRpIjoiMGZhNjg2MmZhMDAyYjA2OSJ9.r5pUUJldgj7t6-pH6Q6WByJT2vttsGJm3NsXDwGONDQ
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjczLCJ1c3IiOiJhZmZhbmRpIiwiZ3JwIjoxLCJ0cmQiOjAsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxNDI0OTQwLCJuYmYiOjE3OTE0MjQ5NDAsImV4cCI6MTc5MTQyODU0MCwianRpIjoiOTY2ZmVmMDI5OTM4NThlMiJ9.Ea91STxJrr8TT-aaKocwu4WMDoOZDk1iXwcbNamgA-o
 
 settings:
   encodeUrl: true

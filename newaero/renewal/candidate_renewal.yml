@@ -1,0 +1,26 @@
+info:
+  name: candidate_renewal
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: http://127.0.0.1:8000/api/renewal/candidates?type=renewal
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: type
+      value: renewal
+      type: query
+      description: renewal/renewal_murni
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUzMywidXNyIjoidHJpYWwiLCJncnAiOjMsInRyZCI6MTYsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxNDI1MDA5LCJuYmYiOjE3OTE0MjUwMDksImV4cCI6MTc5MTQyODYwOSwianRpIjoiZGViNWQ2MjFmNzZhNGQyMSJ9.Gesie0t0y7E2E1m0qiuxdasPd19WOti52GsSmEsysKU
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
