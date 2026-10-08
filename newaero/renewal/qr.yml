@@ -1,11 +1,11 @@
 info:
-  name: show_candidate_renewal
+  name: qr
   type: http
-  seq: 5
+  seq: 6
 
 http:
   method: GET
-  url: http://127.0.0.1:8000/api/renewal/candidates/1003730102300021/preview?type=renewal
+  url: http://127.0.0.1:8000/api/renewal/candidates/1003730102300021/qr?type=renewal
   headers:
     - name: Content-Type
       value: application/json
@@ -13,6 +13,7 @@ http:
     - name: type
       value: renewal
       type: query
+      description: renewal/renewal_murni
   auth:
     type: bearer
     token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjUzMywidXNyIjoidHJpYWwiLCJncnAiOjMsInRyZCI6MTYsInR5cCI6ImFjY2VzcyIsImlzcyI6Im5ld2Flcm8tYXBpIiwiYXVkIjoib3JjcmVnLWZlIiwiaWF0IjoxNzkxNDQwMjkyLCJuYmYiOjE3OTE0NDAyOTIsImV4cCI6MTc5MTQ0Mzg5MiwianRpIjoiODA0YzBmMTlkYTkxMDRlYSJ9.6SWny96CHN1OtabNp9J61Jko1UD-ibyEiMfGukzRZDQ
