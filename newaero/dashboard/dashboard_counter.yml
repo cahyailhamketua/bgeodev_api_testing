@@ -1,0 +1,18 @@
+info:
+  name: dashboard_counter
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://127.0.0.1:8000/api/dashboard/menu-counters
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE4OTM5NTIsInVzciI6ImFzdGlfcHB1YiIsImdycCI6NiwidHJkIjowLCJ0eXAiOiJhY2Nlc3MiLCJpc3MiOiJuZXdhZXJvLWFwaSIsImF1ZCI6Im9yY3JlZy1mZSIsImlhdCI6MTc5MzE4MzQ2OSwibmJmIjoxNzkzMTgzNDY5LCJleHAiOjE3OTMxODcwNjksImp0aSI6ImQ0OWY5NmRlNzkwODkxODUifQ.3uPdJRzPBmKzQm9vzh05OoVV-7-jNr5h7ruFVx9AGys
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
